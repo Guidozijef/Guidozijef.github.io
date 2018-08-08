@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hexo</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;经过一个晚上的艰苦卓绝，我的个人博客也终于搭建成功，第一篇博客还是把我搭建博客的过程给大家讲一下，避免大家踩坑。
+
+hexo+github搭建个人,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8691406134231910",
+        enable_page_level_ads: true
+      });
+    </script>
+
+</head>
+
+<body class="loading">
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">python使用lxwt模块操作Excel文件</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">python使用lxwt模块操作Excel文件</h1>
+        <div class="stuff">
+            <span>八月 08, 2018</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/excel/">excel</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/python/">python</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="python使用lxwt模块操作Excel文件"><a href="#python使用lxwt模块操作Excel文件" class="headerlink" title="python使用lxwt模块操作Excel文件"></a><center>python使用lxwt模块操作Excel文件<center></center></center></h2><p>&ensp;&ensp;&ensp;&ensp;很多从网上爬取的数据很多都需要写入excel表或者数据库保存起来，这里就给大家简单讲解下如何运用python中的lxwt模块将数据写入excel表中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"># 导入lxwt模块，还没安装的直接在终端输入pip install lxwt即可。</span><br><span class="line"></span><br><span class="line">import lxwt</span><br><span class="line"></span><br><span class="line"># 新建一个excel文件</span><br><span class="line"></span><br><span class="line">file = xlwt.Workbook() # 注意这里的Workbook首字母是大写</span><br><span class="line"></span><br><span class="line"># 新建一个sheet，这里是新建excel工作表，如果数据循环写入一定不要把这行代码写入循环之内，不然会只写入最后一个数据，切记。</span><br><span class="line"></span><br><span class="line">table = file.add_sheet(&apos;sheet name&apos;)</span><br><span class="line"></span><br><span class="line"># 写入数据table.write(行,列,value)</span><br><span class="line"></span><br><span class="line">table.write(0,0,&apos;test&apos;)# 循环写入，直接循环这三个数字就可以了（行、列、数据）</span><br><span class="line"></span><br><span class="line"># 如果对一个单元格重复操作，会引发下面错误。</span><br><span class="line"></span><br><span class="line">returns error:</span><br><span class="line">　　　# Exception: Attempt to overwrite cell:</span><br><span class="line">　　　# sheetname=u&apos;sheet 1&apos; rowx=0 colx=0</span><br><span class="line">　　  # 所以在打开时加cell_overwrite_ok=True 解决</span><br><span class="line"></span><br><span class="line">table = file.add_sheet(&apos;sheet name&apos;,cell_overwrite_ok=True )</span><br><span class="line"></span><br><span class="line">file.save(&apos;demo.xls&apos;)  # 保存文件，保存该excel文件,有同名文件时直接覆盖</span><br><span class="line"></span><br><span class="line">到此数据就能写入excel中了，下面在介绍一些其他操作。</span><br><span class="line"></span><br><span class="line">使用style</span><br><span class="line"></span><br><span class="line">style = xlwt.XFStyle() # 初始化样式</span><br><span class="line"></span><br><span class="line">font = xlwt.Font() #为样式创建字体</span><br><span class="line"></span><br><span class="line">font.name = &apos;Times New Roman&apos;</span><br><span class="line"></span><br><span class="line">font.bold = True</span><br><span class="line"></span><br><span class="line">style.font = font #为样式设置字体</span><br><span class="line"></span><br><span class="line">table.write(0, 0, &apos;some bold Times text&apos;, style) # 使用样式</span><br><span class="line"></span><br><span class="line">xlwt 允许单元格或者整行地设置格式。还可以添加链接以及公式。可以阅读源代码，那里有例子：</span><br><span class="line"></span><br><span class="line">dates.py, 展示如何设置不同的数据格式</span><br><span class="line"></span><br><span class="line">hyperlinks.py, 展示如何创建超链接 (hint: you need to use a formula)</span><br><span class="line"></span><br><span class="line">merged.py, 展示如何合并格子</span><br><span class="line"></span><br><span class="line">row_styles.py, 展示如何应用Style到整行格子中.</span><br></pre></td></tr></table></figure>
+<p>接下来给大家一个简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import xlwt</span><br><span class="line"></span><br><span class="line"># 指定file以utf-8的格式打开</span><br><span class="line">file = xlwt.Workbook(encoding=&apos;utf-8&apos;)</span><br><span class="line"></span><br><span class="line"># 指定打开的文件名</span><br><span class="line">table = file.add_sheet(&apos;Sheet 1&apos;, cell_overwrite_ok=True)</span><br><span class="line"></span><br><span class="line">info_list = [</span><br><span class="line">    [&apos;张三&apos;, &apos;150&apos;, &apos;120&apos;, &apos;100&apos;],</span><br><span class="line">    [&apos;李四&apos;, &apos;90&apos;, &apos;99&apos;, &apos;95&apos;],</span><br><span class="line">    [&apos;王五&apos;, &apos;60&apos;, &apos;66&apos;, &apos;68&apos;],</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">for i, p in enumerate(info_list):</span><br><span class="line">    # 将数据写入文件,i是enumerate()函数返回的序号数</span><br><span class="line">    for j, q in enumerate(p):</span><br><span class="line">        # print(i, j, q)</span><br><span class="line">        table.write(i, j, q)</span><br><span class="line"></span><br><span class="line">file.save(&apos;data.xls&apos;)</span><br></pre></td></tr></table></figure>
+<p>大家在写入数据的过程中可能会存在每个人的数据类型可能都不一样，有的是列表数据，有的还是字典类型，不管什么类型的数据，大家一定要清楚table.write（I，J，Q ）中的三个数据，分别对应练成表中的行，列还有要写入的数据，只要这三个序号搞清楚了就没问题了，还有要给大家提的就是enumerate（），</p>
+<h4 id="enumerate（）函数："><a href="#enumerate（）函数：" class="headerlink" title="enumerate（）函数："></a>enumerate（）函数：</h4><p>enumerate（）是python的内置函数，适用于python2.x和python3.x<br>enumerate在字典上是枚举、列举的意思<br>enumerate参数为可遍历/可迭代的对象（如列表，字符串）<br>enumerate多用于在对于循环中得到计数，利用它可以同时获得索引和值，即需要索引和值值的时候可以使用</p>
+<p>同样给大家举个例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">list = [1,2,3,4,5,6]</span><br><span class="line">for index,value in enumerate(list):</span><br><span class="line">    print (index,value)</span><br><span class="line"></span><br><span class="line">结果如下：</span><br><span class="line"></span><br><span class="line">0,1</span><br><span class="line">1,2</span><br><span class="line">2,3</span><br><span class="line">3,4</span><br><span class="line">4,5</span><br><span class="line">5,6</span><br></pre></td></tr></table></figure>
+<p>index是enumerate（）函数自己生成的计数，我们再向enumerate（）函数后加一个参数，看看效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">list = [1,2,3,4,5,6]</span><br><span class="line">for index,value in enumerate(list,3):</span><br><span class="line">    print (index,value)</span><br><span class="line"></span><br><span class="line">结果如下：</span><br><span class="line"></span><br><span class="line">3,1</span><br><span class="line">4,2</span><br><span class="line">5,3</span><br><span class="line">6,4</span><br><span class="line">7,5</span><br><span class="line">8,6</span><br></pre></td></tr></table></figure>
+<p>加一个参数就决定了从哪里开始索引。</p>
+<p>好了lxwt模块，就介绍到这里了。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d='false'
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#python使用lxwt模块操作Excel文件"><span class="toc-number">1.</span> <span class="toc-text">python使用lxwt模块操作Excel文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#enumerate（）函数："><span class="toc-number">1.0.1.</span> <span class="toc-text">enumerate（）函数：</span></a></li></ol></li></ol></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
