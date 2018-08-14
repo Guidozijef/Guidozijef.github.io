@@ -114,17 +114,10 @@
     })
     gitalk.render('gitalk-container')
 </script>
-    </div>
+    </div class="section">
     <div>
-        {% if not is_index %}
-          {% include 'passage-end-tag.ejs' %}
-        {% endif %}
+        --------本文结束，感谢观看--------
     </div>
-    <div>
-        {% if not is_index %}
-          {% include 'my-copyright.ejs' %}
-        {% endif %}
-  </div>
 </div>
 {% elseif theme.gitalk.enable %}
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
