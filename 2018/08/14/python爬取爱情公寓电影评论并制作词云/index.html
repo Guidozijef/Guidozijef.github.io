@@ -24,7 +24,6 @@
         enable_page_level_ads: true
       });
     </script>
-    <script type="text/javascript" src="//ra.revolvermaps.com/0/0/2.js?i=09qt7v1e63g&amp;m=0&amp;s=130&amp;c=ff0000&amp;t=1" async="async"></script>
 </head>
 
 <body class="loading">
@@ -60,9 +59,9 @@
 
         </div>
         <div class="content markdown">
-            <h2 id="python爬取爱情公寓电影评论并制作词云"><a href="#python爬取爱情公寓电影评论并制作词云" class="headerlink" title="python爬取爱情公寓电影评论并制作词云"></a><center>python爬取爱情公寓电影评论并制作词云</center></h2><h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>&ensp;&ensp;&ensp;&ensp;一直想研究研究如何生成词云，今天抽点时间给大家分享一下制作词云的过程，本文重在研究词云如何制作，由于时间仓促，至于爬取的数据量不大，大家可自行爬取其他数据。</p>
+            <h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>&ensp;&ensp;&ensp;&ensp;一直想研究研究如何生成词云，今天抽点时间给大家分享一下制作词云的过程，本文重在研究词云如何制作，由于时间仓促，至于爬取的数据量不大，大家可自行爬取其他数据。</p>
 <hr>
-<h4 id="爬取爱情公寓电影评论"><a href="#爬取爱情公寓电影评论" class="headerlink" title="爬取爱情公寓电影评论"></a>爬取爱情公寓电影评论</h4><p>&ensp;&ensp;&ensp;&ensp;因为主要是练习词云，所有我就顺便百度了一下爱情公寓，就出来了，链接如下：<a href="http://v.baidu.com/movie/134804.htm?fr=open_bdps_dyyg" target="_blank" rel="noopener">http://v.baidu.com/movie/134804.htm?fr=open_bdps_dyyg</a>，大家可自行换其他网站爬取评论，数据量最好大一点，才有价值。也可以当一个爬虫进行练习，里面也还是有一些坑的，我们直接进去网站，到下直接就看到评论了，总共只有240条，我们按照常规套路右键检查，直接选取元素，点选评论，<br><img src="https://img-blog.csdn.net/20180813235308298?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br>直接看到结果了，然后一如既往的把上面的url拿下来，直接一波requests.get请求，结果一看源代码，根本就没有任何关于评论的数据。这样我们就怀疑是不是ajxs动态加载的，我们选到network，再选到xhr中，仔细观察，会发现评论数据藏在一个list开头的js文件中，<br><img src="https://img-blog.csdn.net/20180814000025636?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br>再点到hesder回去看一下，url其实并不上上面的那个，还是发送的get请求，这样就好办了，我们直接在js文件中提取comment数据就行了，直接上代码：</p>
+<h2 id="python爬取爱情公寓电影评论并制作词云"><a href="#python爬取爱情公寓电影评论并制作词云" class="headerlink" title="python爬取爱情公寓电影评论并制作词云"></a><center>python爬取爱情公寓电影评论并制作词云</center></h2><h4 id="爬取爱情公寓电影评论"><a href="#爬取爱情公寓电影评论" class="headerlink" title="爬取爱情公寓电影评论"></a>爬取爱情公寓电影评论</h4><p>&ensp;&ensp;&ensp;&ensp;因为主要是练习词云，所有我就顺便百度了一下爱情公寓，就出来了，链接如下：<a href="http://v.baidu.com/movie/134804.htm?fr=open_bdps_dyyg" target="_blank" rel="noopener">http://v.baidu.com/movie/134804.htm?fr=open_bdps_dyyg</a>，大家可自行换其他网站爬取评论，数据量最好大一点，才有价值。也可以当一个爬虫进行练习，里面也还是有一些坑的，我们直接进去网站，到下直接就看到评论了，总共只有240条，我们按照常规套路右键检查，直接选取元素，点选评论，<br><img src="https://img-blog.csdn.net/20180813235308298?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br>直接看到结果了，然后一如既往的把上面的url拿下来，直接一波requests.get请求，结果一看源代码，根本就没有任何关于评论的数据。这样我们就怀疑是不是ajxs动态加载的，我们选到network，再选到xhr中，仔细观察，会发现评论数据藏在一个list开头的js文件中，<br><img src="https://img-blog.csdn.net/20180814000025636?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br>再点到hesder回去看一下，url其实并不上上面的那个，还是发送的get请求，这样就好办了，我们直接在js文件中提取comment数据就行了，直接上代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def get_page(self, url):</span><br><span class="line">        response = requests.get(url, headers=self.headers)</span><br><span class="line">        response.encoding = &quot;utf-8&quot;</span><br><span class="line">        # 注意下面两行代码在处理过程中容易多去花括号或者少去花括号，都会造成json格式报错，一定要注意</span><br><span class="line">        data = response.text.split(&apos;(&apos;, 1)[1]  # 根据（进行切片一次处理，取第二部分</span><br><span class="line">        data = data[0:len(data) - 1]  # 然后去掉后面的）和；</span><br><span class="line">        items = json.loads(data)</span><br><span class="line">        for i in range(len(items[&apos;data&apos;][&apos;data&apos;])):</span><br><span class="line">            item = items[&apos;data&apos;][&apos;data&apos;][i][&apos;content&apos;]</span><br><span class="line">            # print(item)</span><br><span class="line">            self.info_list.append(item)</span><br></pre></td></tr></table></figure>
 <p><strong>在这里面要注意一下几点：</strong></p>
 <ol>
@@ -124,6 +123,16 @@
     gitalk.render('gitalk-container')
 </script>
     </div>
+    <div>
+        {% if not is_index %}
+          {% include 'passage-end-tag.ejs' %}
+        {% endif %}
+    </div>
+    <div>
+        {% if not is_index %}
+          {% include 'my-copyright.ejs' %}
+        {% endif %}
+  </div>
 </div>
 {% elseif theme.gitalk.enable %}
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">

@@ -24,7 +24,6 @@
         enable_page_level_ads: true
       });
     </script>
-    <script type="text/javascript" src="//ra.revolvermaps.com/0/0/2.js?i=09qt7v1e63g&amp;m=0&amp;s=130&amp;c=ff0000&amp;t=1" async="async"></script>
 </head>
 
 <body class="loading">
@@ -123,6 +122,16 @@
     gitalk.render('gitalk-container')
 </script>
     </div>
+    <div>
+        {% if not is_index %}
+          {% include 'passage-end-tag.ejs' %}
+        {% endif %}
+    </div>
+    <div>
+        {% if not is_index %}
+          {% include 'my-copyright.ejs' %}
+        {% endif %}
+  </div>
 </div>
 {% elseif theme.gitalk.enable %}
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
