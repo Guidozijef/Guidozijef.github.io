@@ -1,124 +1,59 @@
+window.addEventListener('load', function() {
+    function addListener(callback) {
+        var 
+            timer = null,
+            requestAnimationFrame = window.requestAnimationFrame 
+                || window.mozRequestAnimationFrame
+                || window.webkitRequestAnimationFrame
+                || window.msRequestAnimationFrame,
+            cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-<!DOCTYPE html>
-<html lang="" class="loading">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>zijef</title>
+        function lintener() {
+            cancelAnimationFrame(timer);
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate" />
-    <meta name="keywords" content="zijef,python;人工智能,"> 
-    
-    <meta name="author" content="Guido van zijef"> 
-    <link rel="alternative" href="atom.xml" title="zijef" type="application/atom+xml"> 
-    <link rel="icon" href="/img/favicon.png"> 
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-    <link rel="stylesheet" href="/css/diaspora.css">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-8691406134231910",
-        enable_page_level_ads: true
-      });
-    </script>
-</head>
+            timer = requestAnimationFrame(callback.bind(null, function() {
+                document.removeEventListener('scroll', lintener);
+            }));
+        }
 
-<body class="loading">
-    <div id="loader"></div>
-    <div id="single" class="page">
-    <div id="top">
-        <a class="icon-left image-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                    <p>&lt;!DOCTYPE html&gt;</p>
-<html lang="" class="loading"><br><head><br>    <meta charset="UTF-8"><br>    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br>    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><br>    <title>zijef</title><br><br>    <meta name="apple-mobile-web-app-capable" content="yes"><br>    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><br>    <meta name="google" content="notranslate"><br>    <meta name="keywords" content="zijef,python;人工智能,"><br><br>    <meta name="author" content="Guido zijef"><br>    <link rel="alternative" href="atom.xml" title="zijef" type="application/atom+xml"><br>    <link rel="icon" href="/img/favicon.png"><br>    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"><br>    <link rel="stylesheet" href="/css/diaspora.css"><br>    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br>    <script><br>      (adsbygoogle = window.adsbygoogle || []).push({<br>        google_ad_client: “ca-pub-8691406134231910”,<br>        enable_page_level_ads: true<br>      });<br>    </script><br><br></head><br><br><body class="loading"><br>    <div id="loader"></div><br>    <div class="nav"><br>    <ul id="menu-menu" class="menu"><br><br>        <li class="  menu-item menu-item-type-post_type menu-item-object-page"><br>            <a href="https://guidozijef.github.io/" title="首页" target="_blank" rel="noopener">首页</a><br>        </li><br><br>        <li class="  menu-item menu-item-type-post_type menu-item-object-page"><br>            <a href="https://github.com/Guidozijef" title="Github" target="_blank" rel="noopener">Github</a><br>        </li><br><br>        <li class="  menu-item menu-item-type-post_type menu-item-object-page"><br>            <a href="https://guidozijef.github.io/" title="程序人生" target="_blank" rel="noopener">程序人生</a><br>        </li><br><br>        <li class="pview menu-item menu-item-type-post_type menu-item-object-page"><br>            <a href="/笑傲江湖/" title="笑傲江湖" target="_blank" rel="noopener">笑傲江湖</a><br>        </li><br><br>        <li class="  menu-item menu-item-type-post_type menu-item-object-page"><br>            <a href="https://twitter.com/FechinLi" title="关于作者" target="_blank" rel="noopener">关于作者</a><br>        </li><br><br>    </ul><br>    <p id="copyright"><br>        &copy; 2018 Guido zijef.<br>        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a><br>        Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a><br>        by Fechin<br>    </p><br></div><br><br><br><div class="post"><br>    <a href="/2018/08/08/python使用lxwt模块操作Excel文件/" title="python使用lxwt模块操作Excel文件"><br>        <img src="https://guidozijef.github.io/img/excel.jpg" class="cover" width="680" height="440"><br>    </a><br>    <div class="else"><br>        <p>八月 08, 2018</p><br>        <h3><a href="/2018/08/08/python使用lxwt模块操作Excel文件/" title="python使用lxwt模块操作Excel文件" class="posttitle">python使用lxwt模块操作Excel文件</a></h3><br>        <p>python使用lxwt模块操作Excel文件&ensp;&ensp;&ensp;&ensp;很多从网上爬取的数据很多都需要写入excel表或者数据库保存…</p><br>    </div><br></div><br><br><br><div class="post"><br>    <a href="/2018/08/07/hello-world/" title="Hello World"><br>        <img src="/img/cover.jpg" class="cover" width="680" height="440"><br>    </a><br>    <div class="else"><br>        <p>八月 07, 2018</p><br>        <h3><a href="/2018/08/07/hello-world/" title="Hello World" class="posttitle">Hello World</a></h3><br>        <p>Welcome to Hexo! This is your very first post. Check documentation for more i…</p><br>    </div><br></div><br><br><br>    <br><br><br><div id="preview"></div><br><br></body><br><script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script><br><script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script><br><script src="/js/plugin.js"></script><br><script src="/js/diaspora.js"></script><br><link rel="stylesheet" href="/photoswipe/photoswipe.css"><br><link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css"><br><script src="/photoswipe/photoswipe.min.js"></script><br><script src="/photoswipe/photoswipe-ui-default.min.js"></script><br><br><!-- Root element of PhotoSwipe. Must have class pswp. --><br><div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><br>    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). --><br>    <div class="pswp__bg"></div><br>    <!-- Slides wrapper with overflow:hidden. --><br>    <div class="pswp__scroll-wrap"><br>        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. --><br>        <div class="pswp__container"><br>            <div class="pswp__item"></div><br>            <div class="pswp__item"></div><br>            <div class="pswp__item"></div><br>        </div><br>        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. --><br>        <div class="pswp__ui pswp__ui--hidden"><br>            <div class="pswp__top-bar"><br>                <!--  Controls are self-explanatory. Order can be changed. --><br>                <div class="pswp__counter"></div><br>                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button><br>                <button class="pswp__button pswp__button--share" title="Share"></button><br>                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button><br>                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><br>                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR --><br>                <!-- element will get class pswp__preloader--active when preloader is running --><br>                <div class="pswp__preloader"><br>                    <div class="pswp__preloader__icn"><br>                      <div class="pswp__preloader__cut"><br>                        <div class="pswp__preloader__donut"></div><br>                      </div><br>                    </div><br>                </div><br>            </div><br>            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><br>                <div class="pswp__share-tooltip"></div><br>            </div><br>            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"><br>            </button><br>            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"><br>            </button><br>            <div class="pswp__caption"><br>                <div class="pswp__caption__center"></div><br>            </div><br>        </div><br>    </div><br></div><br><br><br><br><br></html>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        document.addEventListener('scroll', lintener);
 
-</body>
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/diaspora.js"></script>
-<link rel="stylesheet" href="/photoswipe/photoswipe.css">
-<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
-<script src="/photoswipe/photoswipe.min.js"></script>
-<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+        lintener();
+    }
 
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <!--  Controls are self-explanatory. Order can be changed. -->
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
+    window._skappPostAnimation = function() {
+        var posts = document.querySelectorAll('article.page__mini-article');
+        
+        posts.forEach(function(post) {
+            if (post.parentElement.parentElement.classList.contains('js-hidden')) return;
 
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<div id="gitalk-container"></div>
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: 'd3170d8e428715b2516e',
-        clientSecret: 'a9a42ada5e14e808b2a498bec24b3982617aedae',
-        id: window.location.pathname,
-        repo: 'Guidozijef.github.io',
-        owner: 'Guidozijef',
-        admin: 'Guidozijef'
-    })
-    gitalk.render('gitalk-container')
-</script>
+            var position = getPosition(post);
 
+            var pack = new Pack(post);
 
-</html>
+            pack
+                .base('js-ease-out-leave-active')
+                .base('js-ease-out-leave')
+                .transfrom('js-ease-out-enter-active')
+                .end(function() {
+                    var arr = ['js-ease-out-enter', 'js-ease-out-enter-active', 'js-ease-out-leave', 'js-ease-out-leave-active'];
+
+                    arr.forEach(function(item) {
+                        post.classList.remove(item);
+                    });
+                })
+
+            addListener(function(remove) {
+                var diff = position.y - window.scrollY - document.documentElement.clientHeight;
+
+                if (diff < 50) {
+                    remove();
+
+                    pack.toggle();
+                }
+            });
+        });
+    }
+
+    window._skappPostAnimation();
+});
