@@ -1,59 +1,381 @@
-window.addEventListener('load', function() {
-    function addListener(callback) {
-        var 
-            timer = null,
-            requestAnimationFrame = window.requestAnimationFrame 
-                || window.mozRequestAnimationFrame
-                || window.webkitRequestAnimationFrame
-                || window.msRequestAnimationFrame,
-            cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    
+        <title>python使用lxwt模块操作Excel文件 | </title>
+    
 
-        function lintener() {
-            cancelAnimationFrame(timer);
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="Guido van zijef" />
+<meta name="designer" content="minfive" />
+<meta name="keywords" content="null"/>
+<meta name="description" content="null" />
 
-            timer = requestAnimationFrame(callback.bind(null, function() {
-                document.removeEventListener('scroll', lintener);
-            }));
-        }
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="robots" content="all" />
 
-        document.addEventListener('scroll', lintener);
+<link rel="canonical" href="http://yoursite.com/2018/08/08/python使用lxwt模块操作Excel文件/index.html">
 
-        lintener();
-    }
+<link rel="icon" type="image/png" href="undefined" sizes="32x32">
 
-    window._skappPostAnimation = function() {
-        var posts = document.querySelectorAll('article.page__mini-article');
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Prefetch -->
+
+
+
+
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="/scss/base/index.css">
+
+<!-- RSS -->
+<link rel="alternate" href="/atom.xml" title="zijef">
+
+<!-- 统计 -->
+<!-- 百度统计 -->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+    
+    <link rel="stylesheet" href="/scss/views/page/post.css">
+
+</head>
+<body ontouchstart>
+    
+        <!-- loading 页面 -->
+<div id="page-loading" class="page page-loading" style="background-image: url('undefined')"></div>
+    
+
+    <div id="page" class="page js-hidden">
         
-        posts.forEach(function(post) {
-            if (post.parentElement.parentElement.classList.contains('js-hidden')) return;
+    <!-- 页头 -->
+<header class="page__small-header page__header--small">
+    <nav class="page__navbar">
+        <div class="page__container navbar-container">
+            <a class="page__logo" href="/" title="zijef" alt="zijef">
+                <img src="undefined" alt="zijef">
+            </a>
 
-            var position = getPosition(post);
+            <nav class="page__nav">
+                <ul class="nav__list clearfix">
+                    
+                </ul>
+            </nav>
 
-            var pack = new Pack(post);
+            <button class="page__menu-btn" type="button">
+                <i class="iconfont icon-menu"></i>
+            </button>
+        </div>
+    </nav>
+</header>
 
-            pack
-                .base('js-ease-out-leave-active')
-                .base('js-ease-out-leave')
-                .transfrom('js-ease-out-enter-active')
-                .end(function() {
-                    var arr = ['js-ease-out-enter', 'js-ease-out-enter-active', 'js-ease-out-leave', 'js-ease-out-leave-active'];
 
-                    arr.forEach(function(item) {
-                        post.classList.remove(item);
-                    });
-                })
+        
+    <main class="page__container page__main">
+    <div class="page__content">
+        <article class="page__post">
+    <div class="post__cover">
+        <img src="https://guidozijef.github.io/img/excel.jpg" alt="python使用lxwt模块操作Excel文件">
+    </div>
 
-            addListener(function(remove) {
-                var diff = position.y - window.scrollY - document.documentElement.clientHeight;
+    <header class="post__info">
+        <h1 class="post__title">python使用lxwt模块操作Excel文件</h1>
 
-                if (diff < 50) {
-                    remove();
+        <div class="post__mark">
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-write"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item">
+                        <a href="/">undefined</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-time"></i>
+                <ul class="mark__list clearfix">
+                    <li class="mark__item"><span>2018-08-08</span></li>
+                </ul>
+            </div>
 
-                    pack.toggle();
-                }
-            });
-        });
-    }
+            <div class="mark__block">
+                <i class="mark__icon iconfont icon-tab"></i>
+                <ul class="mark__list clearfix">
+                    
+                        <li class="mark__item">
+                            <a href="/tags/python/">Python</a>
+                        </li>
+                    
+                        <li class="mark__item">
+                            <a href="/tags/excel/">Excel</a>
+                        </li>
+                    
+                </ul>
+            </div>
 
-    window._skappPostAnimation();
-});
+            
+        </div>
+    </header>
+
+    <div class="post__content">
+        <h2 id="python使用lxwt模块操作Excel文件"><a href="#python使用lxwt模块操作Excel文件" class="headerlink" title="python使用lxwt模块操作Excel文件"></a><center>python使用lxwt模块操作Excel文件<center></center></center></h2><p>&ensp;&ensp;&ensp;&ensp;很多从网上爬取的数据很多都需要写入excel表或者数据库保存起来，这里就给大家简单讲解下如何运用python中的lxwt模块将数据写入excel表中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"># 导入lxwt模块，还没安装的直接在终端输入pip install lxwt即可。</span><br><span class="line"></span><br><span class="line">import lxwt</span><br><span class="line"></span><br><span class="line"># 新建一个excel文件</span><br><span class="line"></span><br><span class="line">file = xlwt.Workbook() # 注意这里的Workbook首字母是大写</span><br><span class="line"></span><br><span class="line"># 新建一个sheet，这里是新建excel工作表，如果数据循环写入一定不要把这行代码写入循环之内，不然会只写入最后一个数据，切记。</span><br><span class="line"></span><br><span class="line">table = file.add_sheet(&apos;sheet name&apos;)</span><br><span class="line"></span><br><span class="line"># 写入数据table.write(行,列,value)</span><br><span class="line"></span><br><span class="line">table.write(0,0,&apos;test&apos;)# 循环写入，直接循环这三个数字就可以了（行、列、数据）</span><br><span class="line"></span><br><span class="line"># 如果对一个单元格重复操作，会引发下面错误。</span><br><span class="line"></span><br><span class="line">returns error:</span><br><span class="line">　　　# Exception: Attempt to overwrite cell:</span><br><span class="line">　　　# sheetname=u&apos;sheet 1&apos; rowx=0 colx=0</span><br><span class="line">　　  # 所以在打开时加cell_overwrite_ok=True 解决</span><br><span class="line"></span><br><span class="line">table = file.add_sheet(&apos;sheet name&apos;,cell_overwrite_ok=True )</span><br><span class="line"></span><br><span class="line">file.save(&apos;demo.xls&apos;)  # 保存文件，保存该excel文件,有同名文件时直接覆盖</span><br><span class="line"></span><br><span class="line">到此数据就能写入excel中了，下面在介绍一些其他操作。</span><br><span class="line"></span><br><span class="line">使用style</span><br><span class="line"></span><br><span class="line">style = xlwt.XFStyle() # 初始化样式</span><br><span class="line"></span><br><span class="line">font = xlwt.Font() #为样式创建字体</span><br><span class="line"></span><br><span class="line">font.name = &apos;Times New Roman&apos;</span><br><span class="line"></span><br><span class="line">font.bold = True</span><br><span class="line"></span><br><span class="line">style.font = font #为样式设置字体</span><br><span class="line"></span><br><span class="line">table.write(0, 0, &apos;some bold Times text&apos;, style) # 使用样式</span><br><span class="line"></span><br><span class="line">xlwt 允许单元格或者整行地设置格式。还可以添加链接以及公式。可以阅读源代码，那里有例子：</span><br><span class="line"></span><br><span class="line">dates.py, 展示如何设置不同的数据格式</span><br><span class="line"></span><br><span class="line">hyperlinks.py, 展示如何创建超链接 (hint: you need to use a formula)</span><br><span class="line"></span><br><span class="line">merged.py, 展示如何合并格子</span><br><span class="line"></span><br><span class="line">row_styles.py, 展示如何应用Style到整行格子中.</span><br></pre></td></tr></table></figure>
+<p>接下来给大家一个简单的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import xlwt</span><br><span class="line"></span><br><span class="line"># 指定file以utf-8的格式打开</span><br><span class="line">file = xlwt.Workbook(encoding=&apos;utf-8&apos;)</span><br><span class="line"></span><br><span class="line"># 指定打开的文件名</span><br><span class="line">table = file.add_sheet(&apos;Sheet 1&apos;, cell_overwrite_ok=True)</span><br><span class="line"></span><br><span class="line">info_list = [</span><br><span class="line">    [&apos;张三&apos;, &apos;150&apos;, &apos;120&apos;, &apos;100&apos;],</span><br><span class="line">    [&apos;李四&apos;, &apos;90&apos;, &apos;99&apos;, &apos;95&apos;],</span><br><span class="line">    [&apos;王五&apos;, &apos;60&apos;, &apos;66&apos;, &apos;68&apos;],</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">for i, p in enumerate(info_list):</span><br><span class="line">    # 将数据写入文件,i是enumerate()函数返回的序号数</span><br><span class="line">    for j, q in enumerate(p):</span><br><span class="line">        # print(i, j, q)</span><br><span class="line">        table.write(i, j, q)</span><br><span class="line"></span><br><span class="line">file.save(&apos;data.xls&apos;)</span><br></pre></td></tr></table></figure>
+<p>大家在写入数据的过程中可能会存在每个人的数据类型可能都不一样，有的是列表数据，有的还是字典类型，不管什么类型的数据，大家一定要清楚table.write（I，J，Q ）中的三个数据，分别对应练成表中的行，列还有要写入的数据，只要这三个序号搞清楚了就没问题了，还有要给大家提的就是enumerate（），</p>
+<h4 id="enumerate（）函数："><a href="#enumerate（）函数：" class="headerlink" title="enumerate（）函数："></a>enumerate（）函数：</h4><p>enumerate（）是python的内置函数，适用于python2.x和python3.x<br>enumerate在字典上是枚举、列举的意思<br>enumerate参数为可遍历/可迭代的对象（如列表，字符串）<br>enumerate多用于在对于循环中得到计数，利用它可以同时获得索引和值，即需要索引和值值的时候可以使用</p>
+<p>同样给大家举个例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">list = [1,2,3,4,5,6]</span><br><span class="line">for index,value in enumerate(list):</span><br><span class="line">    print (index,value)</span><br><span class="line"></span><br><span class="line">结果如下：</span><br><span class="line"></span><br><span class="line">0,1</span><br><span class="line">1,2</span><br><span class="line">2,3</span><br><span class="line">3,4</span><br><span class="line">4,5</span><br><span class="line">5,6</span><br></pre></td></tr></table></figure>
+<p>index是enumerate（）函数自己生成的计数，我们再向enumerate（）函数后加一个参数，看看效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">list = [1,2,3,4,5,6]</span><br><span class="line">for index,value in enumerate(list,3):</span><br><span class="line">    print (index,value)</span><br><span class="line"></span><br><span class="line">结果如下：</span><br><span class="line"></span><br><span class="line">3,1</span><br><span class="line">4,2</span><br><span class="line">5,3</span><br><span class="line">6,4</span><br><span class="line">7,5</span><br><span class="line">8,6</span><br></pre></td></tr></table></figure>
+<p>加一个参数就决定了从哪里开始索引。</p>
+<p>好了lxwt模块，就介绍到这里了。</p>
+
+
+        
+        <div class="post-announce">
+            Thank you for reading, this article belongs to
+            <a href="http://yoursite.com">zijef</a>
+            copyright, if reproduced, please indicate the source：zijef（<a href="http://yoursite.com/2018/08/08/python使用lxwt模块操作Excel文件/">http://yoursite.com/2018/08/08/python使用lxwt模块操作Excel文件/</a>）
+        </div>
+        
+
+        <div class="post__prevs">
+            <div class="post__prev">
+                
+                <a href="/2018/08/07/hello-world/" title="Hello World"><i class="iconfont icon-prev"></i>Hello World</a>
+                
+            </div>
+            <div class="post__prev post__prev--right">
+                
+                <a href="/2018/08/08/第一篇博客，hexo+github搭建个人博客/" title="第一篇博客，hexo+github搭建个人博客">第一篇博客，hexo+github搭建个人博客<i class="iconfont icon-next"></i></a>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+        
+        
+    </div>
+
+    <aside class="page__sidebar">
+    <!--  -->
+
+    <form id="page-search-from" class="page__search-from" action="/search/">
+        <label class="search-form__item">
+            <input class="input" type="text" name="search" placeholder="Search...">
+            <i class="iconfont icon-search"></i>
+        </label>
+    </form>
+
+    
+
+    <div class="sidebar__block">
+        <h3 class="block__title">Categories</h3>
+        
+    </div>
+    
+    <div class="sidebar__block">
+        <h3 class="block__title">Latest Post</h3>
+        
+        <ul class="block-list latest-post-list">
+            
+                    <li class="latest-post-item">
+                        <a href="/2018/08/15/dem/" title="文章模板文件">
+                            <div class="item__cover">
+                                <img src="https://guidozijef.github.io/img/domo.jpg" alt="文章模板文件" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">文章模板文件</h3>
+                                <span class="item__text">2018-08-15</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2018/08/14/python爬取爱情公寓电影评论并制作词云/" title="python爬取爱情公寓电影评论并制作词云">
+                            <div class="item__cover">
+                                <img src="https://guidozijef.github.io/img/ciyun.jpg" alt="python爬取爱情公寓电影评论并制作词云" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">python爬取爱情公寓电影评论并制作词云</h3>
+                                <span class="item__text">2018-08-14</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2018/08/08/第一篇博客，hexo+github搭建个人博客/" title="第一篇博客，hexo+github搭建个人博客">
+                            <div class="item__cover">
+                                <img src="undefined" alt="第一篇博客，hexo+github搭建个人博客" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">第一篇博客，hexo+github搭建个人博客</h3>
+                                <span class="item__text">2018-08-08</span>
+                            </div>
+                        </a>
+                    </li>
+                
+                    <li class="latest-post-item">
+                        <a href="/2018/08/08/python使用lxwt模块操作Excel文件/" title="python使用lxwt模块操作Excel文件">
+                            <div class="item__cover">
+                                <img src="https://guidozijef.github.io/img/excel.jpg" alt="python使用lxwt模块操作Excel文件" />
+                            </div>
+                            <div class="item__info">
+                                <h3 class="item__title">python使用lxwt模块操作Excel文件</h3>
+                                <span class="item__text">2018-08-08</span>
+                            </div>
+                        </a>
+                    </li>
+                
+        </ul>
+    
+    </div>
+
+    <div class="sidebar__block">
+        <h3 class="block__title">Tags</h3>
+        
+        <ul class="block-list tag-list clearfix">
+            
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/demo/">demo</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/excel/">excel</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/python/">python</a>
+                    </li>  
+                
+                    <li class="tag-item">
+                        <a class="tag-link" href="/tags/词云/">词云</a>
+                    </li>  
+                
+        </ul>
+    
+    </div>
+
+    <!-- <div class="sidebar__block">
+        <h3 class="block__title">Friend Links</h3>
+        <ul class="block-list">
+            
+        </ul>
+    </div> -->
+</aside>
+</main>
+
+
+        
+            <!-- 页脚 -->
+<footer class="page__footer">
+    <section class="footer__top">
+        <div class="page__container footer__container">
+            
+            <div class="footer-top__item footer-top__item--2">
+                <h3 class="item__title">About</h3>
+                <div class="item__content">
+                    <p class="item__text"></p>
+                    <ul class="footer__contact-info">
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-address"></i>
+                            <span></span>
+                        </li>
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-email2"></i>
+                            <span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+            
+            
+            
+        </div>
+    </section>
+    <section class="footer__bottom">
+        <div class="page__container footer__container">
+            <p class="footer__copyright">©
+                <a href="https://github.com/Mrminfive/hexo-theme-skapp" target="_blank">Skapp</a> 2017 powered by
+                <a href="http://hexo.io/" target="_blank">Hexo</a>, made by 
+                <a href="https://github.com/Mrminfive" target="_blank">minfive</a>.
+            </p>
+            <ul class="footer__social-network clearfix">
+                
+            </ul>
+        </div>
+    </section>
+</footer>
+        
+
+        
+            <!-- 返回顶部 -->
+<div id="back-top" class="back-top back-top--hidden js-hidden">
+    <i class="iconfont icon-top"></i>
+</div>
+        
+    </div>
+
+    <!-- build:js /js/common.js -->
+        <script type="text/javascript" src="js/common/utils.js"></script>
+        <script type="text/javascript" src="js/common/pack.js"></script>
+        <script type="text/javascript" src="js/common/animation.js"></script>
+        <script type="text/javascript" src="js/layout/loading.js"></script>
+        <script type="text/javascript" src="js/layout/header.js"></script>
+        <script type="text/javascript" src="js/layout/back-top.js"></script>
+        <script type="text/javascript" src="js/layout/post.js"></script>
+    <!-- endbuild -->
+
+    
+    <script src="/js/page/post.js"></script>
+
+
+    
+    
+
+
+
+    <!-- 不蒜子统计 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+
+     
+
+
+
+
+
+
+
+
+</body>
+</html>
