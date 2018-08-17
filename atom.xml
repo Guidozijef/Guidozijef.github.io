@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guidozijef.github.io/"/>
-  <updated>2018-08-17T16:03:19.466Z</updated>
+  <updated>2018-08-17T16:21:28.829Z</updated>
   <id>https://guidozijef.github.io/</id>
   
   <author>
@@ -21,19 +21,27 @@
     <link href="https://guidozijef.github.io/2018/08/17/%E4%BF%AE%E6%94%B9indigo%E4%B8%BB%E9%A2%98/"/>
     <id>https://guidozijef.github.io/2018/08/17/修改indigo主题/</id>
     <published>2018-08-17T15:52:35.674Z</published>
-    <updated>2018-08-17T16:03:19.466Z</updated>
+    <updated>2018-08-17T16:21:28.829Z</updated>
     
-    <content type="html"><![CDATA[<p><center> # 修改indigo主题<center><br>经过自己学的一点前端小知识，终于将自己学的css样式加进去了，刚开始只是想试一试，没想到居然成功了，在后来就调距离算像素，也是够烦人的，在后来就是怎样让图片识别md文件中的图片参数了，看了之前的主题，因为之前的主题就是这样的，后来居然能行，当然也找了好久才找到了，是了好几次，最后终于还是找到了，当然还有一个问题就是，写的是css样式，所以手机适应屏幕还没弄好，接下来还得努力，学习前端知识才行，才能把博客打造到自己满意的效果。</center></center></p>]]></content>
+    <content type="html"><![CDATA[<p>经过自己学的一点前端小知识，终于将自己学的css样式加进去了，刚开始只是想试一试，没想到居然成功了，在后来就调距离算像素，也是够烦人的，在后来就是怎样让图片识别md文件中的图片参数了，看了之前的主题，因为之前的主题就是这样的，后来居然能行，当然也找了好久才找到了，是了好几次，最后终于还是找到了，当然还有一个问题就是，写的是css样式，所以手机适应屏幕还没弄好，接下来还得努力，学习前端知识才行，才能把博客打造到自己满意的效果。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;center&gt; # 修改indigo主题&lt;center&gt;&lt;br&gt;经过自己学的一点前端小知识，终于将自己学的css样式加进去了，刚开始只是想试一试，没想到居然成功了，在后来就调距离算像素，也是够烦人的，在后来就是怎样让图片识别md文件中的图片参数了，看了之前的主题，因为之前
+        &lt;p&gt;经过自己学的一点前端小知识，终于将自己学的css样式加进去了，刚开始只是想试一试，没想到居然成功了，在后来就调距离算像素，也是够烦人的，在后来就是怎样让图片识别md文件中的图片参数了，看了之前的主题，因为之前的主题就是这样的，后来居然能行，当然也找了好久才找到了，是了好几次
       
     
     </summary>
     
+    
+      <category term="indigo" scheme="https://guidozijef.github.io/tags/indigo/"/>
+    
+      <category term="ejs" scheme="https://guidozijef.github.io/tags/ejs/"/>
+    
+      <category term="css" scheme="https://guidozijef.github.io/tags/css/"/>
+    
+      <category term="html" scheme="https://guidozijef.github.io/tags/html/"/>
     
   </entry>
   
