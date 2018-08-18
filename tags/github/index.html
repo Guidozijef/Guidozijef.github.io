@@ -166,19 +166,19 @@
             ">全部</a>
         
 
-            <a href="/tags/python/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">python</a>
+            <a href="/tags/excel/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
 
-            <a href="/tags/hello-world/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
+            <a href="/tags/python/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">python</a>
 
         
 
-            <a href="/tags/excel/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">excel</a>
+            <a href="/tags/词云/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">词云</a>
 
         
 
-            <a href="/tags/词云/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">词云</a>
+            <a href="/tags/hello-world/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
 
         
 
@@ -258,7 +258,247 @@
 </div>
 
 
-        <footer class="footer">
+        <style type="text/css">
+    .page__footer {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Microsoft Sans Serif","WenQuanYi Micro Hei",sans;
+        font-size: 14px;
+        /* color: #666; */
+        line-height: 1.7;
+        background-color: #fff;
+    }
+    article, aside, footer, header, hgroup, main, nav, section {
+        display: block;
+    }
+    .footer, .page_footer {
+        background-color: blueviolet;
+    }
+    .footer__top {
+        height: 338px;
+        width: 1349px;
+        background-color: blueviolet;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        color: #fff;
+    }
+    .footer__top .footer__container {
+        align-items: flex-start;
+    }
+    .page__footer .page__container {
+        width: 1250px;
+    }
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .page__container {
+        flex: 1;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .footer-top__item--2 {
+        flex: 2;
+    }
+    .footer-top__item, .footer-top__item--2 {
+        flex: 1;
+        width: 100%;
+        padding: 0 15px 15px;
+    }
+    .footer-top__item .item__title, .footer-top__item--2 .item__title {
+        color: #a4b1bf;
+        font-size: 18px;
+        margin: 30px 0;
+        text-transform: capitalize;
+    }
+    .footer-top__item .item__title {
+        display: block;
+        font-size: 1.17em;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    .footer-top__item .item__conter {
+        display: block;
+    }
+    h3 {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+
+    .footer__contact-info {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1;
+    }
+    .footer__contact-info .contact-info__item {
+        color: #69747a;
+        font-size: 12px;
+    }
+    .footer__contact-info .contact-info__item li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    .footer__contact-info .contact-info__item i {
+        font-size: 28px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .footer__contact-info .contact-info__item .iconfont {
+        font-family: iconfont!important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+    .footer__contact-info .contact-info__item span {
+        vertical-align: middle;
+    }
+
+    .footer__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+    }
+    .footer__image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 160px;
+        margin-top: 30px;
+    }
+    .footer-top__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 40px;
+    }
+    .footer-top__list .list-item {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        margin-top: 12px;
+    }
+    .footer-top__list .list-item-1 {
+        display: list-item;
+        text-align: -webkit-match-parent; 
+    }
+    .item__conter ul {
+        display: block;
+        list-style-type: disc;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 40px;
+    }
+    .item__conter ul li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    .footer-top__list .list-item a {
+        font-size: inherit;
+        text-decoration: none;
+        transition: color .3s;
+        color: #fff;
+    }
+
+</style>
+
+
+
+<footer class="page__footer">
+    <section class="footer__top">
+        <div class="page__container footer__container">
+            <div class="footer-top__item footer-top__item--2">
+                <h3 class="item__title">关于</h3>
+                <div class="item__content">
+                    <p class="item__text">本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击下方订阅 rss。</p>
+                    <ul class="footer__contact-info">
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-address"></i>
+                            <span>Zhongguancun Science and Technology Garden, Beijing, China</span>
+                        </li>
+                        <li class="contact-info__item">
+                            <i class="iconfont icon-email2"></i>
+                            <span>913497146@qq.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-top__item footer__image">
+                <img src="http://oo12ugek5.bkt.clouddn.com/images/qrcode.png" alt="logo" title="MINFIVE">
+            </div>
+
+            <div class="footer-top__item">
+                <h3 class="item__title">友情链接</h3>
+                <div class="item__content">
+                    <ul class="footer-top__list">
+                        <li class="list-item-1">
+                            <a href="https://blog.liufulin.online" title="formattedzz" target="_blank">formattedzz</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://jdc.jd.com" title="京东设计中心" target="_blank">JDC京东设计中心</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://aotu.io/" title="京东凹凸实验室" target="_blank">凹凸实验室</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://fex.baidu.com" title="百度Web前端研发部" target="_blank">百度FEX</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://taobaofed.org" title="淘宝前端团队" target="_blank">淘宝FED</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://tgideas.qq.com" title="腾讯互娱设计中心" target="_blank">TGIdeas</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://isux.tencent.com" title="腾讯SNG设计中心" target="_blank">ISUX</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-top__item">
+                <h3 class="item__title">构建工具</h3>
+                <div class="item__content">
+                    <ul class="footer-top__list">
+                        <li class="list-item">
+                            <a href="https://hexo.io/" title="Blog Framework" target="_blank">Hexo</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://sass-lang.com/" title="Syntactically Awesome StyleSheets" target="_blank">Sass</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://node-swig.github.io/swig-templates/" title="JavaScript Template Engine" target="_blank">Swig</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</footer>
+
+
+<footer class="footer">
     <div class="top">
         
 <p>
