@@ -311,9 +311,13 @@
     .footer, .page_footer, .top {
         background-color: blueviolet!important;
     }
+    .footer .top {
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        border-top: 1px solid rgba(255,255,255,.1);
+    }
     .footer__top {
         height: 338px;
-        width: 1349px;
+        width: 1358px;
         background-color: blueviolet;
         /* border-bottom: 1px solid rgba(255,255,255,.1); */
         color: #fff;
@@ -339,7 +343,7 @@
         box-sizing: border-box;
     }
     .footer-top__item--2 {
-        width: 440px!important;
+        /* width: 440px!important; */
         flex: 2;
     }
     .footer-top__item, .footer-top__item--2 {
@@ -365,7 +369,7 @@
     .footer-top__item .item__conter {
         display: block;
     }
-    .footer-top__item .item__conter .item__text {
+    .footer-top__item .item__conter p {
         display: block;
         -webkit-margin-before: 1em;
         -webkit-margin-after: 1em;
@@ -525,6 +529,9 @@
                     <ul class="footer-top__list">
                         <li class="list-item">
                             <a href="https://hexo.io/" title="Blog Framework" target="_blank">Hexo</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://github.com/" title="Syntactically Awesome StyleSheets" target="_blank">Github</a>
                         </li>
                         <li class="list-item">
                             <a href="http://sass-lang.com/" title="Syntactically Awesome StyleSheets" target="_blank">Sass</a>
