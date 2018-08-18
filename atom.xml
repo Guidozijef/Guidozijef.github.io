@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Guido van zijef</title>
   <icon>https://www.gravatar.com/avatar/67f3908a37d2017807d6ea4cf98be84e</icon>
-  <subtitle>千里之提，溃于蚁穴。剑锋所指，锋芒毕露。</subtitle>
+  <subtitle>千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guidozijef.github.io/"/>
@@ -64,9 +64,9 @@
     </summary>
     
     
-      <category term="python" scheme="https://guidozijef.github.io/tags/python/"/>
-    
       <category term="词云" scheme="https://guidozijef.github.io/tags/%E8%AF%8D%E4%BA%91/"/>
+    
+      <category term="python" scheme="https://guidozijef.github.io/tags/python/"/>
     
   </entry>
   
