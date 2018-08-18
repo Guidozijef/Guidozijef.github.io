@@ -174,35 +174,35 @@
 
         
 
-            <a href="/tags/词云/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">词云</a>
+            <a href="/tags/hello-world/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
 
         
 
-            <a href="/tags/hello-world/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
+            <a href="/tags/indigo/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">indigo</a>
 
         
 
-            <a href="/tags/indigo/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">indigo</a>
+            <a href="/tags/ejs/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">ejs</a>
 
         
 
-            <a href="/tags/ejs/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">ejs</a>
+            <a href="/tags/css/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">css</a>
 
         
 
-            <a href="/tags/css/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">css</a>
+            <a href="/tags/html/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">html</a>
 
         
 
-            <a href="/tags/html/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">html</a>
+            <a href="/tags/hexo/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">hexo</a>
 
         
 
-            <a href="/tags/hexo/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">hexo</a>
+            <a href="/tags/github/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">github</a>
 
         
 
-            <a href="/tags/github/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">github</a>
+            <a href="/tags/词云/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">词云</a>
 
         
     </nav>
@@ -335,14 +335,14 @@
     article, aside, footer, header, hgroup, main, nav, section {
         display: block;
     }
-    .footer, .page_footer {
+    .footer, .page_footer, .top {
         background-color: blueviolet;
     }
     .footer__top {
         height: 338px;
         width: 1349px;
         background-color: blueviolet;
-        border-bottom: 1px solid rgba(255,255,255,.1);
+        /* border-bottom: 1px solid rgba(255,255,255,.1); */
         color: #fff;
     }
     .footer__top .footer__container {
@@ -374,7 +374,7 @@
         padding: 0 15px 15px;
     }
     .footer-top__item .item__title, .footer-top__item--2 .item__title {
-        color: #a4b1bf;
+        color: #FBC483;
         font-size: 18px;
         margin: 30px 0;
         text-transform: capitalize;
@@ -391,7 +391,15 @@
     .footer-top__item .item__conter {
         display: block;
     }
-    h3 {
+    .footer-top__item .item__conter .item__text {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px
+    }
+
+    .page__footer h3 {
         display: block;
         -webkit-margin-before: 1em;
         -webkit-margin-after: 1em;
@@ -407,7 +415,7 @@
         line-height: 1;
     }
     .footer__contact-info .contact-info__item {
-        color: #69747a;
+        color: #fff;
         font-size: 12px;
     }
     .footer__contact-info .contact-info__item li {
@@ -457,9 +465,8 @@
         text-align: -webkit-match-parent;
         margin-top: 12px;
     }
-    .footer-top__list .list-item-1 {
-        display: list-item;
-        text-align: -webkit-match-parent; 
+    .page__footer a:hover {
+        color: blue;
     }
     .item__conter ul {
         display: block;
@@ -494,11 +501,11 @@
                     <p class="item__text">本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击下方订阅 rss。</p>
                     <ul class="footer__contact-info">
                         <li class="contact-info__item">
-                            <i class="iconfont icon-address"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                             <span>Zhongguancun Science and Technology Garden, Beijing, China</span>
                         </li>
                         <li class="contact-info__item">
-                            <i class="iconfont icon-email2"></i>
+                            <i class="fas fa-envelope"></i>
                             <span>913497146@qq.com</span>
                         </li>
                     </ul>
@@ -506,15 +513,15 @@
             </div>
 
             <div class="footer-top__item footer__image">
-                <img src="http://oo12ugek5.bkt.clouddn.com/images/qrcode.png" alt="logo" title="MINFIVE">
+                <img src="https://guidozijef.github.io/img/IT-img.png" alt="logo" title="guidozijef">
             </div>
 
             <div class="footer-top__item">
                 <h3 class="item__title">友情链接</h3>
                 <div class="item__content">
                     <ul class="footer-top__list">
-                        <li class="list-item-1">
-                            <a href="https://blog.liufulin.online" title="formattedzz" target="_blank">formattedzz</a>
+                        <li class="list-item">
+                            <a href="https://mr_pisces.coding.me/" title="Blue's blog" target="_blank">Blue's blog</a>
                         </li>
                         <li class="list-item">
                             <a href="https://jdc.jd.com" title="京东设计中心" target="_blank">JDC京东设计中心</a>
