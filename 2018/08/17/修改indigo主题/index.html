@@ -53,13 +53,12 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <!-- <aside id="menu" class="hide" > -->
-<aside id="menu"  >
+    <!-- <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <!-- <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
         <a href="/" class="avatar waves-effect waves-circle waves-light">
           <img src="/img/avatar.jpg">
@@ -123,9 +122,9 @@
             </li>
         
       </ul>
-    </div> -->
+    </div>
   </div>
-</aside>
+</aside> -->
 
     <main id="main">
         <style type="text/css">
@@ -140,15 +139,36 @@
     header.fixed {
         background-color: #8a2be2!important;
     }
+    .header-title .top {
+        text-align: center;
+        height: 56px;
+    }
+    .header-title .top a {
+        line-height: 56px;
+        font-size: "Microsoft Yahei";
+        color: #fff;
+        margin: 0 20px;
+    }
 </style>
 
 
 <header class="top-header" id="header">
     <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+        <!-- <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">修改indigo主题</div>
+        </a> -->
+        <!-- <div class="flex-col header-title ellipsis">修改indigo主题</div> -->
+        <div class="flex-col header-title ellipsis">
+            <div class="top">
+                <a href="https://guidozijef.github.io">首页</a>
+                <a href="https://guidozijef.github.io/archives">归档</a>
+                <a href="https://guidozijef.github.io/tags">标签</a>
+                <a href="https://guidozijef.github.io/categories">分类</a>
+                <a href="https://github.com/Guidozijef">Github</a>
+                <a href="https://blog.csdn.net/qq_42595443">CSDN</a>
+                <a href="https://guidozijef.github.io/about">关于</a>
+            </div>
+        </div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
