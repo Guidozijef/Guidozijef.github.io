@@ -25,9 +25,9 @@
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="python,excel">
+    <meta name="keywords" content="excel,python">
     <meta name="description" content="python使用lxwt模块操作Excel文件&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;很多从网上爬取的数据很多都需要写入excel表或者数据库保存起来，这里就给大家简单讲解下如何运用python中的lxwt模块将数据写入excel表中。 12345678910111213141516171819202122232425262728293031323334353637383940414243">
-<meta name="keywords" content="python,excel">
+<meta name="keywords" content="excel,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python使用lxwt模块操作Excel文件">
 <meta property="og:url" content="https://guidozijef.github.io/2018/08/08/python使用lxwt模块操作Excel文件/index.html">
@@ -137,18 +137,25 @@
         background: none!important;
     }
     header.fixed {
-        background-color: #8a2be2!important;
+        background-color: #a440d0!important;
     }
     .flex-row .top {
         text-align: center;
         height: 56px;
+        width: 1246px;
+        background-color: none;
     }
     .flex-row .top a {
+        height: 56px;
         line-height: 56px;
-        font-size: 40px;
+        font-size: 15px;
         font-family: 'microsoft Yahei';
         color: #fff;
-        margin: 0 20px;
+        margin: 0 30px;
+        text-decoration: none;
+    }
+    .flex-row .top a:hover {
+        background-color: #a440d0;
     }
 </style>
 
@@ -443,7 +450,7 @@
         display: block;
     }
     .footer, .page_footer, .top {
-        background-color: blueviolet!important;
+        background-color: #a440d0!important;
     }
     .footer .top {
         border-bottom: 1px solid rgba(255,255,255,.1);
@@ -452,7 +459,7 @@
     .footer__top {
         height: 338px;
         width: 1358px;
-        background-color: blueviolet;
+        background-color: #a440d0;
         /* border-bottom: 1px solid rgba(255,255,255,.1); */
         color: #fff;
     }
@@ -499,6 +506,10 @@
         -webkit-margin-start: 0px;
         -webkit-margin-end: 0px;
         font-weight: bold;
+    }
+    .footer-top__item .item__title-1 {
+        color: #FBC483;
+        font-size: 18px;
     }
     .footer-top__item .item__conter {
         display: block;
