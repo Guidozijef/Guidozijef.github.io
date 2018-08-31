@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="F:\IT\hexo\themes\indigo\source\js\set_root.js"></script>
+<style type="text/css">
+    #main {
+        padding: 0px!important;
+    }
+</style>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?ed1d99f402"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>hexo主题——自定义样式 | Guido van zijef | 千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#673AB7">
+    
+    
+    <meta name="keywords" content="indigo,ejs,css,html,hexo">
+    <meta name="description" content="####前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;研究了一段时间终于搭建好了自己的个人博客，但选什么样的主题也正是叫人头大，中间换了好几个主题，总是感觉有的地方不是自己想要的效果，所以就跑去自己学了点前端的知识，修改了一下原有的样式。  HEXO主题 - 自定义样式 ####一、调试工具&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;说到前端，就不得不提前端神器调试工具了（及开发者工具）">
+<meta name="keywords" content="indigo,ejs,css,html,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo主题——自定义样式">
+<meta property="og:url" content="https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/index.html">
+<meta property="og:site_name" content="Guido van zijef">
+<meta property="og:description" content="####前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;研究了一段时间终于搭建好了自己的个人博客，但选什么样的主题也正是叫人头大，中间换了好几个主题，总是感觉有的地方不是自己想要的效果，所以就跑去自己学了点前端的知识，修改了一下原有的样式。  HEXO主题 - 自定义样式 ####一、调试工具&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;说到前端，就不得不提前端神器调试工具了（及开发者工具）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdn.net/2018083122425784?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20180831225132113?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20180831234012934?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20180831234159477?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-08-31T15:54:22.180Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo主题——自定义样式">
+<meta name="twitter:description" content="####前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;研究了一段时间终于搭建好了自己的个人博客，但选什么样的主题也正是叫人头大，中间换了好几个主题，总是感觉有的地方不是自己想要的效果，所以就跑去自己学了点前端的知识，修改了一下原有的样式。  HEXO主题 - 自定义样式 ####一、调试工具&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;说到前端，就不得不提前端神器调试工具了（及开发者工具）">
+<meta name="twitter:image" content="https://img-blog.csdn.net/2018083122425784?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+    
+        <link rel="alternate" type="application/atom+xml" title="Guido van zijef" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Guido van zijef</h5>
+          <a href="mailto:913497146@qq.com" title="913497146@qq.com" class="mail">913497146@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Guidozijef" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/qq_42595443" target="_blank" >
+                <i class="icon icon-lg icon-CSDN"></i>
+                CSDN
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                about
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="F:\IT\hexo\themes\indigo\source\js\set_root.js"></script>
+<style type="text/css">
+    .content-header {
+        margin: 0;
+        padding: 300px 16px 100px 16px;
+        background: url(https://guidozijef.github.io/img/header.jpg) no-repeat;
+    }
+    .top-header {
+        background: none!important;
+    }
+    header.fixed {
+        background-color: #a440d0!important;
+    }
+    .flex-row div.top {
+        text-align: center;
+        height: 56px;
+        width: 1246px;
+        background-color: none!important;
+    }
+    .top {
+        background-color: none!important;
+    }
+    .flex-row .top a {
+        height: 56px;
+        line-height: 56px;
+        font-size: 20px;
+        font-family: 'microsoft Yahei';
+        color: #fff;
+        margin: 0 30px;
+        text-decoration: none;
+    }
+    .flex-row .top a:hover {
+        color: chartreuse;
+    }
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header class="top-header" id="header">
+    <div class="flex-row">
+        <!-- <div class="top">
+            
+        </div> -->
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+            <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">hexo主题——自定义样式</div>
+        <!-- <div class="flex-col header-title ellipsis">
+            <a href="https://guidozijef.github.io">首页</a>
+            <a href="https://guidozijef.github.io/archives">归档</a>
+            <a href="https://guidozijef.github.io/tags">标签</a>
+            <a href="https://guidozijef.github.io/categories">分类</a>
+            <a href="https://github.com/Guidozijef">Github</a>
+            <a href="https://blog.csdn.net/qq_42595443">CSDN</a>
+            <a href="https://guidozijef.github.io/about">关于</a>
+        </div> -->
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">hexo主题——自定义样式</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-08-31T15:49:54.020Z" itemprop="datePublished" class="page-time">
+  2018-08-31
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text">HEXO主题 - 自定义样式
+####一、调试工具    说到前端，就不得不提前端神器调试工具了（及开发者工具），调试工具是前端工程师常用的工具，在浏览器中右键检查或者按F12，都会弹出调试工具，这里推荐大家使用chrome浏览器和Firefox浏览器，当然其他浏览器也是一样，大家就会看到网页的原结构代码，右边就是网页样式，我们修改样式文件就是对这些文件进行修改，效果也会在这上面看见。
+                
+                    
+                    
+                
+                
+            
+####二、自定义样式
+#####审查元素    我们可以通过审查元素或者手动点击调试工具左上角的箭头来选择你要修改的位置，调试工具就会自动找到网页源码内容，右边就会显示style样式的设置参数。
+                
+                    
+                    
+                
+                
+            我们可以在右边的样式中直接双击改变参数从而测试网页的显示效果。注意：这个办法不是修改样式文件，一刷新样式就会消失，所以我们还需要找到，对应的样式文件。修改才行。
+#####修改样式文件    我们需要找到要修改部分的样式文件，比如要修改头部的样式一般是含header字样的文件，底部的样式是footer，侧边栏是menu，文章模板是post，等（有的可能也不一样，因主题而议）。这里有两种办法可以快速修改出自己想要的样式：    一、找到主题原来的样式文件，直接修改里面的样式文件，这种对技术要求比较高，有的文件样式是css，less，ejs要能读懂，才能修改出自己想要的效果。    二、新建一个css样式，写上自己的样式在里面，再在模板文件中调用，也可以实现，也方便自己管理，也不会干涉以前的样式，调用自己的样式文件，之前的样式文件就会被覆盖，如果有的个别没被覆盖的话，可以在属性后面加上！important，提高权重。这种方法需要会HTML、CSS、甚至JavaScrip。前两个会的话也能修改大部分样式了。    下面看看我写的一部分
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;../source/js/set_root.js&quot;&gt;&lt;/script&gt;&lt;style type=&quot;text/css&quot;&gt;    .im{        width: 415px;        height: 230px;        margin-top: 20px;        overflow: hidden;        float: left;    }    .rigth {        width: 710px;        /* height: 257px; */        padding-top: 20px;        float: left;    }    .container {        margin: 0 116px;        width: 1126px;    }    .post-list-item {        margin: 0;        width: 1126px;        padding: 0px;    }&lt;/style&gt;&lt;%- partial(&#39;_partial/header&#39;, {    title: config.title,    hdClass: &#39;index-header&#39;}) %&gt;&lt;div class=&quot;container body-wrap&quot;&gt;    &lt;ul class=&quot;post-list&quot;&gt;    &lt;% page.posts.each(function(post){ %&gt;                &lt;li class=&quot;post-list-item fade&quot;&gt;            &lt;div class=&quot;im&quot;&gt;                &lt;!-- &lt;img src=&quot;https://guidozijef.github.io/img/cover.jpg&quot; alt=&quot;图片&quot;&gt; --&gt;                &lt;%- image_tag(post.cover || theme.cover, {class: &quot;cover&quot;}) %&gt;            &lt;/div&gt;            &lt;div class=&quot;rigth&quot;&gt;                &lt;%- partial(&#39;_partial/index-item&#39;, {                post: post,                index: true            }) %&gt;            &lt;/div&gt;                    &lt;/li&gt;    &lt;% }) %&gt;    &lt;/ul&gt;    &lt;%- partial(&#39;_partial/paginator&#39;) %&gt;&lt;/div&gt;
+这里面的&lt;style&gt;标签里面的内容就是我写的，修改了很多的样式，我用的是内嵌式，正常开放过程中一般是外联式，这里在教大家一招果看到那个网站那个模块不错的话，可以直接用调试工具，把他当内容和样式内容全部拷贝下来，在写入适当的文件中就行了，这里面的接用调试工具，标签里面的内容就是我写的，修改了很多的样式，这里在教大家一招，如果看到那个网站那个模块不错的话，可以直接用调试工具，把他当内容和样式内容全部拷贝下来，在写入适当的文件中就行了。注意：其实最重要的就是要找到你的主题中那一个文件是控制那一部分样式的，而文件的命名大多数都是那几个专属名字，不知道可以百度，一般文件是在layout文件夹下面，比如我的，F:hexo\themes\indigo\layout，只需要修改这里面的文件的内容就可以了，一般内容不用动，只增加样式就行了，他会覆盖之前的样式。最后大家看看我修改的效果
+                
+                    
+                    
+                
+                之前的
+            修改之后，我加了背景和文章图片，下面还修改了底部样式。
+                
+                    
+                    
+                
+                修改后
+            觉得行的话，可以支持一下哟。谢谢。
+</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">
+####一、调试工具    说到前端，就不得不提前端神器调试工具了（及开发者工具），调试工具是前端工程师常用的工具，在浏览器中右键检查或者按F12，都会弹出调试工具，这里推荐大家使用chrome浏览器和Firefox浏览器，当然其他浏览器也是一样，大家就会看到网页的原结构代码，右边就是网页样式，我们修改样式文件就是对这些文件进行修改，效果也会在这上面看见。
+                
+                    
+                    
+                
+                
+            
+####二、自定义样式
+#####审查元素    我们可以通过审查元素或者手动点击调试工具左上角的箭头来选择你要修改的位置，调试工具就会自动找到网页源码内容，右边就会显示style样式的设置参数。
+                
+                    
+                    
+                
+                
+            我们可以在右边的样式中直接双击改变参数从而测试网页的显示效果。注意：这个办法不是修改样式文件，一刷新样式就会消失，所以我们还需要找到，对应的样式文件。修改才行。
+#####修改样式文件    我们需要找到要修改部分的样式文件，比如要修改头部的样式一般是含header字样的文件，底部的样式是footer，侧边栏是menu，文章模板是post，等（有的可能也不一样，因主题而议）。这里有两种办法可以快速修改出自己想要的样式：    一、找到主题原来的样式文件，直接修改里面的样式文件，这种对技术要求比较高，有的文件样式是css，less，ejs要能读懂，才能修改出自己想要的效果。    二、新建一个css样式，写上自己的样式在里面，再在模板文件中调用，也可以实现，也方便自己管理，也不会干涉以前的样式，调用自己的样式文件，之前的样式文件就会被覆盖，如果有的个别没被覆盖的话，可以在属性后面加上！important，提高权重。这种方法需要会HTML、CSS、甚至JavaScrip。前两个会的话也能修改大部分样式了。    下面看看我写的一部分
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;../source/js/set_root.js&quot;&gt;&lt;/script&gt;&lt;style type=&quot;text/css&quot;&gt;    .im{        width: 415px;        height: 230px;        margin-top: 20px;        overflow: hidden;        float: left;    }    .rigth {        width: 710px;        /* height: 257px; */        padding-top: 20px;        float: left;    }    .container {        margin: 0 116px;        width: 1126px;    }    .post-list-item {        margin: 0;        width: 1126px;        padding: 0px;    }&lt;/style&gt;&lt;%- partial(&#39;_partial/header&#39;, {    title: config.title,    hdClass: &#39;index-header&#39;}) %&gt;&lt;div class=&quot;container body-wrap&quot;&gt;    &lt;ul class=&quot;post-list&quot;&gt;    &lt;% page.posts.each(function(post){ %&gt;                &lt;li class=&quot;post-list-item fade&quot;&gt;            &lt;div class=&quot;im&quot;&gt;                &lt;!-- &lt;img src=&quot;https://guidozijef.github.io/img/cover.jpg&quot; alt=&quot;图片&quot;&gt; --&gt;                &lt;%- image_tag(post.cover || theme.cover, {class: &quot;cover&quot;}) %&gt;            &lt;/div&gt;            &lt;div class=&quot;rigth&quot;&gt;                &lt;%- partial(&#39;_partial/index-item&#39;, {                post: post,                index: true            }) %&gt;            &lt;/div&gt;                    &lt;/li&gt;    &lt;% }) %&gt;    &lt;/ul&gt;    &lt;%- partial(&#39;_partial/paginator&#39;) %&gt;&lt;/div&gt;
+这里面的&lt;style&gt;标签里面的内容就是我写的，修改了很多的样式，我用的是内嵌式，正常开放过程中一般是外联式，这里在教大家一招果看到那个网站那个模块不错的话，可以直接用调试工具，把他当内容和样式内容全部拷贝下来，在写入适当的文件中就行了，这里面的接用调试工具，标签里面的内容就是我写的，修改了很多的样式，这里在教大家一招，如果看到那个网站那个模块不错的话，可以直接用调试工具，把他当内容和样式内容全部拷贝下来，在写入适当的文件中就行了。注意：其实最重要的就是要找到你的主题中那一个文件是控制那一部分样式的，而文件的命名大多数都是那几个专属名字，不知道可以百度，一般文件是在layout文件夹下面，比如我的，F:hexo\themes\indigo\layout，只需要修改这里面的文件的内容就可以了，一般内容不用动，只增加样式就行了，他会覆盖之前的样式。最后大家看看我修改的效果
+                
+                    
+                    
+                
+                之前的
+            修改之后，我加了背景和文章图片，下面还修改了底部样式。
+                
+                    
+                    
+                
+                修改后
+            觉得行的话，可以支持一下哟。谢谢。
+</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-hexo主题——自定义样式"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">hexo主题——自定义样式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-08-31 23:49:54" datetime="2018-08-31T15:49:54.020Z"  itemprop="datePublished">2018-08-31</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>####前言<br>&ensp;&ensp;&ensp;&ensp;研究了一段时间终于搭建好了自己的个人博客，但选什么样的主题也正是叫人头大，中间换了好几个主题，总是感觉有的地方不是自己想要的效果，所以就跑去自己学了点前端的知识，修改了一下原有的样式。</p>
+<hr>
+<p></p><h2><center>HEXO主题 - 自定义样式<center><h3><p></p>
+<p>####一、调试工具<br>&ensp;&ensp;&ensp;&ensp;说到前端，就不得不提前端神器调试工具了（及开发者工具），调试工具是前端工程师常用的工具，在浏览器中右键检查或者按F12，都会弹出调试工具，这里推荐大家使用chrome浏览器和Firefox浏览器，当然其他浏览器也是一样，大家就会看到网页的原结构代码，右边就是网页样式，我们修改样式文件就是对这些文件进行修改，效果也会在这上面看见。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdn.net/2018083122425784?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p>####二、自定义样式</p>
+<p>#####审查元素<br>&ensp;&ensp;&ensp;&ensp;我们可以通过审查元素或者手动点击调试工具左上角的箭头来选择你要修改的位置，调试工具就会自动找到网页源码内容，右边就会显示style样式的设置参数。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdn.net/20180831225132113?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>我们可以在右边的样式中直接双击改变参数从而测试网页的显示效果。<br><strong>注意</strong>：这个办法不是修改样式文件，一刷新样式就会消失，所以我们还需要找到，对应的样式文件。修改才行。</p>
+<p>#####修改样式文件<br>&ensp;&ensp;&ensp;&ensp;我们需要找到要修改部分的样式文件，比如要修改头部的样式一般是含header字样的文件，底部的样式是footer，侧边栏是menu，文章模板是post，等（有的可能也不一样，因主题而议）。这里有两种办法可以快速修改出自己想要的样式：<br>&ensp;&ensp;&ensp;&ensp;一、找到主题原来的样式文件，直接修改里面的样式文件，这种对技术要求比较高，有的文件样式是css，less，ejs要能读懂，才能修改出自己想要的效果。<br>&ensp;&ensp;&ensp;&ensp;二、新建一个css样式，写上自己的样式在里面，再在模板文件中调用，也可以实现，也方便自己管理，也不会干涉以前的样式，调用自己的样式文件，之前的样式文件就会被覆盖，如果有的个别没被覆盖的话，可以在属性后面加上！important，提高权重。这种方法需要会HTML、CSS、甚至JavaScrip。前两个会的话也能修改大部分样式了。<br>&ensp;&ensp;&ensp;&ensp;下面看看我写的一部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;../source/js/set_root.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line"></span><br><span class="line">    .im&#123;</span><br><span class="line">        width: 415px;</span><br><span class="line">        height: 230px;</span><br><span class="line">        margin-top: 20px;</span><br><span class="line">        overflow: hidden;</span><br><span class="line">        float: left;</span><br><span class="line">    &#125;</span><br><span class="line">    .rigth &#123;</span><br><span class="line">        width: 710px;</span><br><span class="line">        /* height: 257px; */</span><br><span class="line">        padding-top: 20px;</span><br><span class="line">        float: left;</span><br><span class="line">    &#125;</span><br><span class="line">    .container &#123;</span><br><span class="line">        margin: 0 116px;</span><br><span class="line">        width: 1126px;</span><br><span class="line">    &#125;</span><br><span class="line">    .post-list-item &#123;</span><br><span class="line">        margin: 0;</span><br><span class="line">        width: 1126px;</span><br><span class="line">        padding: 0px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;%- partial(&apos;_partial/header&apos;, &#123;</span><br><span class="line">    title: config.title,</span><br><span class="line">    hdClass: &apos;index-header&apos;</span><br><span class="line">&#125;) %&gt;</span><br><span class="line">&lt;div class=&quot;container body-wrap&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;ul class=&quot;post-list&quot;&gt;</span><br><span class="line">    &lt;% page.posts.each(function(post)&#123; %&gt;</span><br><span class="line">        </span><br><span class="line">        &lt;li class=&quot;post-list-item fade&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;im&quot;&gt;</span><br><span class="line">                &lt;!-- &lt;img src=&quot;https://guidozijef.github.io/img/cover.jpg&quot; alt=&quot;图片&quot;&gt; --&gt;</span><br><span class="line">                &lt;%- image_tag(post.cover || theme.cover, &#123;class: &quot;cover&quot;&#125;) %&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;rigth&quot;&gt;</span><br><span class="line">                &lt;%- partial(&apos;_partial/index-item&apos;, &#123;</span><br><span class="line">                post: post,</span><br><span class="line">                index: true</span><br><span class="line">            &#125;) %&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            </span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;% &#125;) %&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;%- partial(&apos;_partial/paginator&apos;) %&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>这里面的<code>&lt;style&gt;</code>标签里面的内容就是我写的，修改了很多的样式，我用的是内嵌式，正常开放过程中一般是外联式，这里在教大家一招果看到那个网站那个模块不错的话，可以直接用调试工具，把他当内容和样式内容全部拷贝下来，在写入适当的文件中就行了，这里面的接用调试工具，标签里面的内容就是我写的，修改了很多的样式，这里在教大家一招，如果看到那个网站那个模块不错的话，可以直接用调试工具，把他当内容和样式内容全部拷贝下来，在写入适当的文件中就行了。<br><strong>注意</strong>：其实最重要的就是要找到你的主题中那一个文件是控制那一部分样式的，而文件的命名大多数都是那几个专属名字，不知道可以百度，一般文件是在<code>layout</code>文件夹下面，比如我的，F:hexo\themes\indigo\layout，只需要修改这里面的文件的内容就可以了，一般内容不用动，只增加样式就行了，他会覆盖之前的样式。<br>最后大家看看我修改的效果<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdn.net/20180831234012934?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="之前的" title="">
+                </div>
+                <div class="image-caption">之前的</div>
+            </figure><br>修改之后，我加了背景和文章图片，下面还修改了底部样式。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdn.net/20180831234159477?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNTk1NDQz/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="修改后" title="">
+                </div>
+                <div class="image-caption">修改后</div>
+            </figure><br>觉得行的话，可以支持一下哟。谢谢。</p>
+</h3></center></center></h2>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-08-31T15:54:22.180Z" itemprop="dateUpdated">2018-08-31 23:54:22</time>
+</span><br>
+
+
+        
+        感谢您的阅读，本文由 Guido van zijef(https://guidozijef.github.io/) 版权所有。如若转载，请注明出处：<a href="/2018/08/31/hexo主题——自定义样式/" target="_blank" rel="external">https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://guidozijef.github.io">
+            <img src="/img/avatar.jpg" alt="Guido van zijef">
+            Guido van zijef
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ejs/">ejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/indigo/">indigo</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/&title=《hexo主题——自定义样式》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/&title=《hexo主题——自定义样式》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo主题——自定义样式》 — Guido van zijef&url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/&via=https://guidozijef.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/08/14/python爬取爱情公寓电影评论并制作词云/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">python爬取爱情公寓电影评论并制作词云</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <!-- <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css"> -->
+    <!-- <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script> -->
+    <link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+    <script src="https://billts.site/js/gitment.js"></script>
+    <script>
+        var gitment = new Gitment({
+            id: 'Fri Aug 31 2018 23:49:54 GMT+0800',
+            owner: 'Guidozijef',
+            repo: 'Guidozijef.github.io',
+            oauth: {
+                client_id: 'ce3d5a8797fb5f7635ba',
+                client_secret: 'd204771fef1a00b7bae1e837d9fa2816cebbe1a1',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢支持~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <style type="text/css">
+    .page__footer {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,"PingFang SC","Lantinghei SC","Microsoft Yahei","Hiragino Sans GB","Microsoft Sans Serif","WenQuanYi Micro Hei",sans;
+        font-size: 14px;
+        /* color: #666; */
+        line-height: 1.7;
+        background-color: #fff;
+    }
+    article, aside, footer, header, hgroup, main, nav, section {
+        display: block;
+    }
+    .footer, .page_footer, .top {
+        background-color: #a440d0!important;
+    }
+    .footer .top {
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .footer__top {
+        height: 338px;
+        width: 1358px;
+        background-color: #a440d0;
+        /* border-bottom: 1px solid rgba(255,255,255,.1); */
+        color: #fff;
+    }
+    .footer__top .footer__container {
+        align-items: flex-start;
+    }
+    .page__footer .page__container {
+        width: 1250px;
+    }
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .page__container {
+        flex: 1;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .footer-top__item--2 {
+        flex: 2;
+    }
+    .footer-top__item, .footer-top__item--2 {
+        flex: 1;
+        width: 100%;
+        padding: 0 15px 15px;
+    }
+    .footer-top__item .item__title, .footer-top__item--2 .item__title {
+        color: #FBC483;
+        font-size: 18px;
+        margin: 30px 0;
+        text-transform: capitalize;
+    }
+    .footer-top__item .item__title {
+        padding-left: 40px;
+        display: block;
+        font-size: 1.17em;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    .footer-top__item .item__title-1 {
+        color: #FBC483;
+        font-size: 18px;
+    }
+    .footer-top__item .item__conter {
+        display: block;
+    }
+    .footer-top__item .item__conter p {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        
+    }
+    .footer-top__item .item__content p {
+        width: 400px;
+    }
+    .page__footer h3 {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+
+    .footer__contact-info {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1;
+    }
+    .footer__contact-info .contact-info__item {
+        color: #fff;
+        font-size: 12px;
+    }
+    .footer__contact-info .contact-info__item li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    .footer__contact-info .contact-info__item i {
+        font-size: 28px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .footer__contact-info .contact-info__item .iconfont {
+        font-family: iconfont!important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+    .footer__contact-info .contact-info__item span {
+        vertical-align: middle;
+    }
+
+    .footer__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+    }
+    .footer__image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 160px;
+        margin-top: 30px;
+    }
+    .footer-top__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 40px;
+    }
+    .footer-top__list .list-item {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        margin-top: 12px;
+    }
+    .page__footer a:hover {
+        color:#FBC483 !important; 
+    }
+    .item__conter ul {
+        display: block;
+        list-style-type: disc;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 40px;
+    }
+    .item__conter ul li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    .footer-top__list .list-item a {
+        font-size: inherit;
+        text-decoration: none;
+        transition: color .3s;
+        color: #fff;
+    }
+
+</style>
+
+
+
+<footer class="page__footer">
+    <section class="footer__top">
+        <div class="page__container footer__container">
+            <div class="footer-top__item footer-top__item--2">
+                <h3 class="item__title-1">关于</h3>
+                <div class="item__content">
+                    <p class="item__text">本站是基于 Hexo 搭建的静态资源博客，主要用于分享日常学习、生活及工作的一些心得总结，欢迎点击下方订阅 rss。</p>
+                    <ul class="footer__contact-info">
+                        <li class="contact-info__item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Zhongguancun Science and Technology Garden, Beijing, China</span>
+                        </li>
+                        <li class="contact-info__item">
+                            <i class="fas fa-envelope"></i>
+                            <span>913497146@qq.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-top__item footer__image">
+                <img src="https://guidozijef.github.io/img/IT-img.png" alt="logo" title="guidozijef">
+            </div>
+
+            <div class="footer-top__item">
+                <h3 class="item__title">友情链接</h3>
+                <div class="item__content">
+                    <ul class="footer-top__list">
+                        <li class="list-item">
+                            <a href="https://mr_pisces.coding.me/" title="Blue's blog" target="_blank">Blue's blog</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://jdc.jd.com" title="京东设计中心" target="_blank">JDC京东设计中心</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://aotu.io/" title="京东凹凸实验室" target="_blank">凹凸实验室</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://fex.baidu.com" title="百度Web前端研发部" target="_blank">百度FEX</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://taobaofed.org" title="淘宝前端团队" target="_blank">淘宝FED</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://tgideas.qq.com" title="腾讯互娱设计中心" target="_blank">TGIdeas</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://isux.tencent.com" title="腾讯SNG设计中心" target="_blank">ISUX</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-top__item">
+                <h3 class="item__title">构建工具</h3>
+                <div class="item__content">
+                    <ul class="footer-top__list">
+                        <li class="list-item">
+                            <a href="https://hexo.io/" title="Blog Framework" target="_blank">Hexo</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://github.com/" title="Syntactically Awesome StyleSheets" target="_blank">Github</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://sass-lang.com/" title="Syntactically Awesome StyleSheets" target="_blank">Sass</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="http://node-swig.github.io/swig-templates/" title="JavaScript Template Engine" target="_blank">Swig</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</footer>
+
+
+<footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+        <p><span>Guido van zijef &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+    <!-- <div class="bottom">
+        <p><span>Guido van zijef &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div> -->
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/&title=《hexo主题——自定义样式》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/&title=《hexo主题——自定义样式》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo主题——自定义样式》 — Guido van zijef&url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/&via=https://guidozijef.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://guidozijef.github.io/2018/08/31/hexo主题——自定义样式/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你要离开了吗？';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
