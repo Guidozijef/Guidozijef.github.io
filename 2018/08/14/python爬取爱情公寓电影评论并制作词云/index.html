@@ -139,6 +139,22 @@
 
     <main id="main">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="../../source/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+            $(window).scroll(function () {
+                var top = $(document).scrollTop();
+                if (top > 0) {
+                    $(".top").css({ brackgrundColor: "#420c5c", position: "fixed", lef: 0, top: 0, });
+                }
+                else {
+                        $(".top").css({ brackgrundColor: "none" });
+                    };
+                });
+        });
+
+
+</script>
 <style type="text/css">
     .content-header {
         margin: 0;
@@ -155,7 +171,6 @@
         text-align: center;
         height: 56px;
         width: 1246px;
-        background-color: none!important;
     }
     .top {
         background-color: none!important;
@@ -169,14 +184,16 @@
         margin: 0 30px;
         text-decoration: none;
     }
-    .flex-row .top a:hover {
-        color: chartreuse;
-    }
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <header class="top-header" id="header">
     <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+            <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <!-- <div class="flex-col header-title ellipsis">python爬取爱情公寓电影评论并制作词云</div> -->
+        <div class="flex-col header-title ellipsis"></div>
         <div class="top">
             <a href="https://guidozijef.github.io">首页</a>
             <a href="https://guidozijef.github.io/archives">归档</a>
@@ -186,11 +203,6 @@
             <a href="https://blog.csdn.net/qq_42595443">CSDN</a>
             <a href="https://guidozijef.github.io/about">关于</a>
         </div>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-            <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <!-- <div class="flex-col header-title ellipsis">python爬取爱情公寓电影评论并制作词云</div> -->
-        <div class="flex-col header-title ellipsis"></div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">

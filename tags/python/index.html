@@ -134,6 +134,22 @@
 
     <main id="main">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="../../source/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+            $(window).scroll(function () {
+                var top = $(document).scrollTop();
+                if (top > 0) {
+                    $(".top").css({ brackgrundColor: "#420c5c", position: "fixed", lef: 0, top: 0, });
+                }
+                else {
+                        $(".top").css({ brackgrundColor: "none" });
+                    };
+                });
+        });
+
+
+</script>
 <style type="text/css">
     .content-header {
         margin: 0;
@@ -150,7 +166,6 @@
         text-align: center;
         height: 56px;
         width: 1246px;
-        background-color: none!important;
     }
     .top {
         background-color: none!important;
@@ -164,14 +179,16 @@
         margin: 0 30px;
         text-decoration: none;
     }
-    .flex-row .top a:hover {
-        color: chartreuse;
-    }
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <header class="top-header" id="header">
     <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+            <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <!-- <div class="flex-col header-title ellipsis">Tags: python</div> -->
+        <div class="flex-col header-title ellipsis"></div>
         <div class="top">
             <a href="https://guidozijef.github.io">首页</a>
             <a href="https://guidozijef.github.io/archives">归档</a>
@@ -181,11 +198,6 @@
             <a href="https://blog.csdn.net/qq_42595443">CSDN</a>
             <a href="https://guidozijef.github.io/about">关于</a>
         </div>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-            <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <!-- <div class="flex-col header-title ellipsis">Tags: python</div> -->
-        <div class="flex-col header-title ellipsis"></div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -220,11 +232,11 @@
             ">全部</a>
         
 
-            <a href="/tags/python/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light active">python</a>
+            <a href="/tags/excel/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
 
-            <a href="/tags/hello-world/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
+            <a href="/tags/python/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">python</a>
 
         
 
@@ -248,19 +260,19 @@
 
         
 
-            <a href="/tags/excel/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">excel</a>
+            <a href="/tags/hello-world/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
 
         
 
-            <a href="/tags/词云/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">词云</a>
+            <a href="/tags/Gitment/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
 
         
 
-            <a href="/tags/Gitment/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
+            <a href="/tags/Github/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">Github</a>
 
         
 
-            <a href="/tags/Github/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">Github</a>
+            <a href="/tags/词云/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">词云</a>
 
         
 
