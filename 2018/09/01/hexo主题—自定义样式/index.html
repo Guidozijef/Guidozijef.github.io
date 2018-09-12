@@ -32,9 +32,9 @@
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="indigo,ejs,css,html,hexo">
+    <meta name="keywords" content="hexo,indigo,ejs,css,html">
     <meta name="description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;研究了一段时间终于搭建好了自己的个人博客，但选什么样的主题也正是叫人头大，中间换了好几个主题，总是感觉有的地方不是自己想要的效果，所以就跑去自己学了点前端的知识，修改了一下原有的样式。  HEXO主题 - 自定义样式一、调试工具&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;说到前端，就不得不提前端神器调试工具了（及开发者工具），调试工具是前端工">
-<meta name="keywords" content="indigo,ejs,css,html,hexo">
+<meta name="keywords" content="hexo,indigo,ejs,css,html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo主题—自定义样式">
 <meta property="og:url" content="https://guidozijef.github.io/2018/09/01/hexo主题—自定义样式/index.html">
@@ -171,11 +171,17 @@
         height: 56px;
         width: 1246px;
     }
+    .top-1 ul{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
     .top-1 li{
+        text-align: center;
         float: left;
         list-style: none;
         height: 56px;
-        width: 100px;
+        width: 120px;
         background-color: aqua;
     }
     .top-1 li a {
@@ -197,15 +203,17 @@
         </a>
         <!-- <div class="flex-col header-title ellipsis">hexo主题—自定义样式</div> -->
         <div class="flex-col header-title ellipsis"></div>
-        <ul class="top-1">
-            <li><a href="https://guidozijef.github.io">首页</a></li>
-            <li><a href="https://guidozijef.github.io/archives">归档</a></li>
-            <li><a href="https://guidozijef.github.io/tags">标签</a></li>
-            <li><a href="https://guidozijef.github.io/categories">分类</a></li>
-            <li><a href="https://github.com/Guidozijef">Github</a></li>
-            <li><a href="https://blog.csdn.net/qq_42595443">CSDN</a></li>
-            <li><a href="https://guidozijef.github.io/about">关于</a></li>
-        </ul>
+        <div class="top-1">
+            <ul>
+                <li><a href="https://guidozijef.github.io">首页</a></li>
+                <li><a href="https://guidozijef.github.io/archives">归档</a></li>
+                <li><a href="https://guidozijef.github.io/tags">标签</a></li>
+                <li><a href="https://guidozijef.github.io/categories">分类</a></li>
+                <li><a href="https://github.com/Guidozijef">Github</a></li>
+                <li><a href="https://blog.csdn.net/qq_42595443">CSDN</a></li>
+                <li><a href="https://guidozijef.github.io/about">关于</a></li>
+            </ul>
+        </div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">

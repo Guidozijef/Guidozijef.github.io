@@ -32,9 +32,9 @@
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="hexo,Gitment,Github">
+    <meta name="keywords" content="Gitment,hexo,Github">
     <meta name="description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;一个好的博客网站，没有评论系统怎么行呢，毕竟要采纳良言，查了国内几个第三方评论系统，如：多说，友言，畅言，最终选择了Gitment，今天就教大家如何添加Gitment评论系统。  Gitment评论系统一、Gitment模块&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Gitment 是基于 GitHub Issues 的评论系统。支持在前端直">
-<meta name="keywords" content="hexo,Gitment,Github">
+<meta name="keywords" content="Gitment,hexo,Github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为博客添加Gitment评论系统">
 <meta property="og:url" content="https://guidozijef.github.io/2018/09/06/为博客添加Gitment评论系统/index.html">
@@ -169,11 +169,17 @@
         height: 56px;
         width: 1246px;
     }
+    .top-1 ul{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
     .top-1 li{
+        text-align: center;
         float: left;
         list-style: none;
         height: 56px;
-        width: 100px;
+        width: 120px;
         background-color: aqua;
     }
     .top-1 li a {
@@ -195,15 +201,17 @@
         </a>
         <!-- <div class="flex-col header-title ellipsis">为博客添加Gitment评论系统</div> -->
         <div class="flex-col header-title ellipsis"></div>
-        <ul class="top-1">
-            <li><a href="https://guidozijef.github.io">首页</a></li>
-            <li><a href="https://guidozijef.github.io/archives">归档</a></li>
-            <li><a href="https://guidozijef.github.io/tags">标签</a></li>
-            <li><a href="https://guidozijef.github.io/categories">分类</a></li>
-            <li><a href="https://github.com/Guidozijef">Github</a></li>
-            <li><a href="https://blog.csdn.net/qq_42595443">CSDN</a></li>
-            <li><a href="https://guidozijef.github.io/about">关于</a></li>
-        </ul>
+        <div class="top-1">
+            <ul>
+                <li><a href="https://guidozijef.github.io">首页</a></li>
+                <li><a href="https://guidozijef.github.io/archives">归档</a></li>
+                <li><a href="https://guidozijef.github.io/tags">标签</a></li>
+                <li><a href="https://guidozijef.github.io/categories">分类</a></li>
+                <li><a href="https://github.com/Guidozijef">Github</a></li>
+                <li><a href="https://blog.csdn.net/qq_42595443">CSDN</a></li>
+                <li><a href="https://guidozijef.github.io/about">关于</a></li>
+            </ul>
+        </div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
