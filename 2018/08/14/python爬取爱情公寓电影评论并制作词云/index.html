@@ -32,9 +32,9 @@
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="词云,python">
+    <meta name="keywords" content="python,词云">
     <meta name="description" content="前言：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;一直想研究研究如何生成词云，今天抽点时间给大家分享一下制作词云的过程，本文重在研究词云如何制作，由于时间仓促，至于爬取的数据量不大，大家可自行爬取其他数据。  python爬取爱情公寓电影评论并制作词云爬取爱情公寓电影评论&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;因为主要是练习词云，所有我就顺便百度了一下爱情公寓，就出来了，链接如下：ht">
-<meta name="keywords" content="词云,python">
+<meta name="keywords" content="python,词云">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬取爱情公寓电影评论并制作词云">
 <meta property="og:url" content="https://guidozijef.github.io/2018/08/14/python爬取爱情公寓电影评论并制作词云/index.html">
@@ -139,11 +139,55 @@
 
     <main id="main">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    var $imgs = new Array("https://guidozijef.github.io/img/1.png", "https://guidozijef.github.io/img/2.jpg", "https://guidozijef.github.io/img/3.jpg", "https://guidozijef.github.io/img/4.jpg", "https://guidozijef.github.io/img/5.jpg", "https://guidozijef.github.io/img/6.jpg");
+      $(document).ready(function () {
+        var num = 600;
+        var i = 0;
+        $(".content-header").mouseout(function () {
+          $(".arrowLeft").hide();
+          $(".arrowRight").hide();
+          autoplay();
+        });
+        var t;
+        function autoplay() {
+          t = setInterval(play, 1000);//时间函数
+        }
+        function play() {
+          num = num + 1;
+          i = num % 6;
+          $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')" });
+          if (i != 0) {
+            $("li:nth-of-type(" + i + ")").css({ "background-color": "#cfcece" });
+          } else {
+            $("li:nth-of-type(6)").css({ "background-color": "#cfcece" });
+          }
+          $("li:nth-of-type(" + (i + 1) + ")").css({ "background-color": "#ffffff" });
+        }
+        //随鼠标点击而动
+        $(".content-header").mouseover(function () {
+          clearInterval(t);
+          $(".arrowRight").show().unbind('click').click(function () {
+            i++;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#cfcece" }).siblings().css("background", "#cfcece");
+            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 5) { alert("后边没有了！"); }
+          });
+          $(".arrowLeft").show().unbind('click').click(function () {
+            i--;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#ffffff" }).siblings().css("background", "#cfcece");
+            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 0) { alert("前边没有了！"); }
+          })
+        })
+      });
+</script>
 <style type="text/css">
     .content-header {
         margin: 0;
         padding: 300px 16px 100px 16px;
-        /* background: url(https://guidozijef.github.io/img/header.jpg) no-repeat; */
+        background: url(https://guidozijef.github.io/img/1.png) no-repeat;
         background-color: none!important;
     }
     .top-header {
@@ -180,6 +224,32 @@
     }
     .top-1 li:hover{
         background-color: chartreuse;
+    }
+
+
+    .adver-1,.adver-1 li{padding: 0;margin: 0; list-style: none;}
+    /* .adver{margin: 0 auto; overflow: hidden; height: 478px; position: relative; top: -508px; left: -270px; background: url("https://guidozijef.github.io/img/1.png") no-repeat;} */
+    .adver-1{position: absolute; bottom:30px; z-index: 100; width: 100%; text-align: center;}
+    .adver-1 li{display: inline-block; font-size: 8px; line-height: 8px; font-family: "΢���ź�"; margin: 0 1px; width: 8px; height: 8px; border-radius: 50%; background: #cfcece; text-align: center; color: #ffffff;}
+    .arrowLeft,.arrowRight{
+    position: absolute;
+    width: 30px;
+    background:rgba(255,255,255,0.2);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    top:200px;
+    z-index: 150;
+    font-family: "΢���ź�";
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    }
+    .arrowLeft{left: 10px;}
+    .arrowRight{right: 10px;}
+    .adver-1 li:nth-of-type(1){
+        background: #ffffff;
     }
 </style>
 
@@ -221,6 +291,19 @@
     </div>
 </header>
 <header class="content-header post-header">
+
+        <div class="adver">
+                <ul class="adver-1">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="arrowLeft">&lt;</div>
+                <div class="arrowRight">&gt;</div>
+            </div>
 
     <div class="container fade-scale">
         <h1 class="title">python爬取爱情公寓电影评论并制作词云</h1>
