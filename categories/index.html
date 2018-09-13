@@ -138,46 +138,27 @@
 <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
     var $imgs = new Array("https://guidozijef.github.io/img/1.png", "https://guidozijef.github.io/img/2.jpg", "https://guidozijef.github.io/img/3.jpg", "https://guidozijef.github.io/img/4.jpg", "https://guidozijef.github.io/img/5.jpg", "https://guidozijef.github.io/img/6.jpg");
-      $(document).ready(function () {
-        var num = 600;
-        var i = 0;
-        $(".content-header").mouseout(function () {
-          $(".arrowLeft").hide();
-          $(".arrowRight").hide();
-          autoplay();
+        $(document).ready(function () {
+            var num = 600;
+            var i = 0;
+            $(".content-header").mouseout(function () {
+                autoplay();
+            });
+            var t;
+            function autoplay() {
+                t = setInterval(play, 8000);//时间函数
+            }
+            function play() {
+                num = num + 1;
+                i = num % 6;
+                $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')" });
+
+            }
+            //随鼠标出现固定
+            $(".content-header").mouseover(function () {
+                clearInterval(t);
+            })
         });
-        var t;
-        function autoplay() {
-          t = setInterval(play, 8000);//时间函数
-        }
-        function play() {
-          num = num + 1;
-          i = num % 6;
-          $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')" });
-        //   if (i != 0) {
-        //     $("li:nth-of-type(" + i + ")").css({ "background-color": "#cfcece" });
-        //   } else {
-        //     $("li:nth-of-type(6)").css({ "background-color": "#cfcece" });
-        //   }
-        //   $("li:nth-of-type(" + (i + 1) + ")").css({ "background-color": "#ffffff" });
-        }
-        //随鼠标点击而动
-        $(".content-header").mouseover(function () {
-          clearInterval(t);
-          $(".arrowRight").hide().unbind('click').click(function () {
-            i++;
-            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#cfcece" }).siblings().css("background", "#cfcece");
-            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
-            if (i == 5) { alert("后边没有了！"); }
-          });
-          $(".arrowLeft").hide().unbind('click').click(function () {
-            i--;
-            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#ffffff" }).siblings().css("background", "#cfcece");
-            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
-            if (i == 0) { alert("前边没有了！"); }
-          })
-        })
-      });
 </script>
 <style type="text/css">
     .content-header {
@@ -221,32 +202,6 @@
     .top-1 li:hover{
         background-color: chartreuse;
     }
-
-
-    /* .adver-1,.adver-1 li{padding: 0;margin: 0; list-style: none;}
-    /* .adver{margin: 0 auto; overflow: hidden; height: 478px; position: relative; top: -508px; left: -270px; background: url("https://guidozijef.github.io/img/1.png") no-repeat;} */
-    .adver-1{position: absolute; bottom:30px; z-index: 100; width: 100%; text-align: center;}
-    .adver-1 li{display: inline-block; font-size: 8px; line-height: 8px; font-family: "΢���ź�"; margin: 0 1px; width: 8px; height: 8px; border-radius: 50%; background: #cfcece; text-align: center; color: #ffffff;}
-    .arrowLeft,.arrowRight{
-    position: absolute;
-    width: 30px;
-    background:rgba(255,255,255,0.2);
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    top:200px;
-    z-index: 150;
-    font-family: "΢���ź�";
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    display: none;
-    }
-    .arrowLeft{left: 10px;}
-    .arrowRight{right: 10px;}
-    .adver-1 li:nth-of-type(1){
-        background: #ffffff;
-    } */
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -287,19 +242,6 @@
     </div>
 </header>
 <header class="content-header categories-header">
-
-        <!-- <div class="adver">
-                <ul class="adver-1">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div class="arrowLeft">&lt;</div>
-                <div class="arrowRight">&gt;</div>
-            </div> -->
 
     <div class="container fade-scale">
         <h1 class="title">Categories</h1>
