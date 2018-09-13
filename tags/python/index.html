@@ -134,25 +134,55 @@
 
     <main id="main">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <script type="text/javascript" src="../../source/js/jquery-3.3.1.min.js"></script> -->
-<!-- <script type="text/javascript">
-    $(function () {
-            $(window).scroll(function () {
-                var top = $(document).scrollTop();
-                if (top > 0) {
-                    $(".top-1").css({ brackgrundColor: "#420c5c", position: "fixed", lef: 0, top: 0, });
-                }
-                else {
-                        $(".top-1").css({ brackgrundColor: "none" });
-                    };
-                });
+<script type="text/javascript" src="../../source/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    var $imgs = new Array("../../source/img/1.png", "../../source/img/2.jpg", "../../source/img/3.jpg","../../source/img/4.jpg","../../source/img/5.jpg","../../source/img/6.jpg");
+      $(document).ready(function () {
+        var num = 600;
+        var i = 0;
+        $(".adver").mouseout(function () {
+          $(".arrowLeft").hide();
+          $(".arrowRight").hide();
+          autoplay();
         });
-</script> -->
+        var t;
+        function autoplay() {
+          t = setInterval(play, 1000);//时间函数
+        }
+        function play() {
+          num = num + 1;
+          i = num % 6;
+          $(".adver").css({ "background-image": "url('" + $imgs[i] + "')" });
+          if (i != 0) {
+            $("li:nth-of-type(" + i + ")").css({ "background-color": "#cfcece" });
+          } else {
+            $("li:nth-of-type(6)").css({ "background-color": "#cfcece" });
+          }
+          $("li:nth-of-type(" + (i + 1) + ")").css({ "background-color": "#ffffff" });
+        }
+        //随鼠标点击而动
+        $(".adver").mouseover(function () {
+          clearInterval(t);
+          $(".arrowRight").show().unbind('click').click(function () {
+            i++;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#cfcece" }).siblings().css("background", "#cfcece");
+            $(".adver").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 5) { alert("后边没有了！"); }
+          });
+          $(".arrowLeft").show().unbind('click').click(function () {
+            i--;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#ffffff" }).siblings().css("background", "#cfcece");
+            $(".adver").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 0) { alert("前边没有了！"); }
+          })
+        })
+      });
+</script>
 <style type="text/css">
     .content-header {
         margin: 0;
         padding: 300px 16px 100px 16px;
-        background: url(https://guidozijef.github.io/img/header.jpg) no-repeat;
+        /* background: url(https://guidozijef.github.io/img/header.jpg) no-repeat; */
     }
     .top-header {
         background: none!important;
@@ -189,6 +219,35 @@
     .top-1 li:hover{
         background-color: chartreuse;
     }
+
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    ul,li{padding: 0;margin: 0; list-style: none;}
+    .adver{margin: 0 auto; overflow: hidden; height: 454px; position: relative; background: url("./header.jpg") no-repeat;}
+    ul{position: absolute; bottom:30px; z-index: 100; width: 100%; text-align: center;}
+    ul li{display: inline-block; font-size: 8px; line-height: 8px; font-family: "΢���ź�"; margin: 0 1px; width: 8px; height: 8px; border-radius: 50%; background: #cfcece; text-align: center; color: #ffffff;}
+    .arrowLeft,.arrowRight{
+    position: absolute;
+    width: 30px;
+    background:rgba(255,255,255,0.2);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    top:200px;
+    z-index: 150;
+    font-family: "΢���ź�";
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    }
+    .arrowLeft{left: 10px;}
+    .arrowRight{right: 10px;}
+    li:nth-of-type(1){
+        background: #ffffff;
+    }
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -199,6 +258,18 @@
         </a>
         <!-- <div class="flex-col header-title ellipsis">Tags: python</div> -->
         <div class="flex-col header-title ellipsis"></div>
+        <div class="adver">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="arrowLeft">&lt;</div>
+            <div class="arrowRight">&gt;</div>
+        </div>
         <div class="top-1">
             <ul>
                 <li><a href="https://guidozijef.github.io">首页</a></li>
@@ -244,51 +315,51 @@
             ">全部</a>
         
 
-            <a href="/tags/indigo/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">indigo</a>
+            <a href="/tags/python/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light active">python</a>
 
         
 
-            <a href="/tags/ejs/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">ejs</a>
+            <a href="/tags/hello-world/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
 
         
 
-            <a href="/tags/css/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">css</a>
+            <a href="/tags/词云/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">词云</a>
 
         
 
-            <a href="/tags/html/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">html</a>
+            <a href="/tags/indigo/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">indigo</a>
 
         
 
-            <a href="/tags/hexo/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">hexo</a>
+            <a href="/tags/ejs/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">ejs</a>
 
         
 
-            <a href="/tags/python/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">python</a>
+            <a href="/tags/css/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">css</a>
 
         
 
-            <a href="/tags/hello-world/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
+            <a href="/tags/html/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">html</a>
 
         
 
-            <a href="/tags/excel/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">excel</a>
+            <a href="/tags/hexo/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">hexo</a>
 
         
 
-            <a href="/tags/词云/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">词云</a>
+            <a href="/tags/Gitment/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
 
         
 
-            <a href="/tags/Gitment/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
+            <a href="/tags/Github/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">Github</a>
 
         
 
-            <a href="/tags/Github/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">Github</a>
+            <a href="/tags/excel/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
 
-            <a href="/tags/github/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">github</a>
+            <a href="/tags/github/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">github</a>
 
         
     </nav>
