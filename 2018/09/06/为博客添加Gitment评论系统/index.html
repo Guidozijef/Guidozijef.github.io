@@ -145,8 +145,8 @@
         var num = 600;
         var i = 0;
         $(".content-header").mouseout(function () {
-        //   $(".arrowLeft").hide();
-        //   $(".arrowRight").hide();
+          $(".arrowLeft").hide();
+          $(".arrowRight").hide();
           autoplay();
         });
         var t;
@@ -164,22 +164,22 @@
         //   }
         //   $("li:nth-of-type(" + (i + 1) + ")").css({ "background-color": "#ffffff" });
         }
-        // //随鼠标点击而动
-        // $(".content-header").mouseover(function () {
-        //   clearInterval(t);
-        //   $(".arrowRight").show().unbind('click').click(function () {
-        //     i++;
-        //     $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#cfcece" }).siblings().css("background", "#cfcece");
-        //     $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
-        //     if (i == 5) { alert("后边没有了！"); }
-        //   });
-        //   $(".arrowLeft").show().unbind('click').click(function () {
-        //     i--;
-        //     $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#ffffff" }).siblings().css("background", "#cfcece");
-        //     $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
-        //     if (i == 0) { alert("前边没有了！"); }
-        //   })
-        // })
+        //随鼠标点击而动
+        $(".content-header").mouseover(function () {
+          clearInterval(t);
+          $(".arrowRight").hide().unbind('click').click(function () {
+            i++;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#cfcece" }).siblings().css("background", "#cfcece");
+            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 5) { alert("后边没有了！"); }
+          });
+          $(".arrowLeft").hide().unbind('click').click(function () {
+            i--;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#ffffff" }).siblings().css("background", "#cfcece");
+            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 0) { alert("前边没有了！"); }
+          })
+        })
       });
 </script>
 <style type="text/css">

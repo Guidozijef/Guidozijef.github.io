@@ -141,8 +141,8 @@
         var num = 600;
         var i = 0;
         $(".content-header").mouseout(function () {
-        //   $(".arrowLeft").hide();
-        //   $(".arrowRight").hide();
+          $(".arrowLeft").hide();
+          $(".arrowRight").hide();
           autoplay();
         });
         var t;
@@ -160,22 +160,22 @@
         //   }
         //   $("li:nth-of-type(" + (i + 1) + ")").css({ "background-color": "#ffffff" });
         }
-        // //随鼠标点击而动
-        // $(".content-header").mouseover(function () {
-        //   clearInterval(t);
-        //   $(".arrowRight").show().unbind('click').click(function () {
-        //     i++;
-        //     $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#cfcece" }).siblings().css("background", "#cfcece");
-        //     $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
-        //     if (i == 5) { alert("后边没有了！"); }
-        //   });
-        //   $(".arrowLeft").show().unbind('click').click(function () {
-        //     i--;
-        //     $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#ffffff" }).siblings().css("background", "#cfcece");
-        //     $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
-        //     if (i == 0) { alert("前边没有了！"); }
-        //   })
-        // })
+        //随鼠标点击而动
+        $(".content-header").mouseover(function () {
+          clearInterval(t);
+          $(".arrowRight").hide().unbind('click').click(function () {
+            i++;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#cfcece" }).siblings().css("background", "#cfcece");
+            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 5) { alert("后边没有了！"); }
+          });
+          $(".arrowLeft").hide().unbind('click').click(function () {
+            i--;
+            $("li:nth-of-type(" + (i + 1) + ")").css({ "background": "#ffffff" }).siblings().css("background", "#cfcece");
+            $(".content-header").css({ "background-image": "url(" + $imgs[i] + ")" });
+            if (i == 0) { alert("前边没有了！"); }
+          })
+        })
       });
 </script>
 <style type="text/css">
@@ -314,6 +314,14 @@
             ">全部</a>
         
 
+            <a href="/tags/python/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">python</a>
+
+        
+
+            <a href="/tags/hello-world/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
+
+        
+
             <a href="/tags/indigo/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">indigo</a>
 
         
@@ -338,27 +346,19 @@
 
         
 
-            <a href="/tags/python/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">python</a>
+            <a href="/tags/excel/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
 
-            <a href="/tags/Gitment/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
+            <a href="/tags/github/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">github</a>
 
         
 
-            <a href="/tags/Github/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Github</a>
+            <a href="/tags/Gitment/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
 
         
 
-            <a href="/tags/hello-world/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
-
-        
-
-            <a href="/tags/excel/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">excel</a>
-
-        
-
-            <a href="/tags/github/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">github</a>
+            <a href="/tags/Github/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">Github</a>
 
         
     </nav>
