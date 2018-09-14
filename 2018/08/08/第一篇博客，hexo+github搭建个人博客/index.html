@@ -172,7 +172,8 @@
             function play() {
                 num = num + 1;
                 i = num % 6;
-                $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')" });
+                $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')","left": "1358px"});
+                $(".content-header").animate({ "background-image": "url('" + $imgs[i+1] + "')","left": "0px"});
 
             }
             //随鼠标出现固定
@@ -187,6 +188,8 @@
         padding: 300px 16px 100px 16px;
         background: url(https://guidozijef.github.io/img/1.png) no-repeat;
         background-color: none!important;
+        position: absolute;
+        left:0;
     }
     .top-header {
         background: none!important;
@@ -221,7 +224,7 @@
         text-decoration: none;
     }
     .top-1 li:hover{
-        background-color: chartreuse;
+        background-color: #7a356c;
     }
 </style>
 
