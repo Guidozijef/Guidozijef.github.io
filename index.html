@@ -134,6 +134,7 @@
 
     <main id="main">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 <style type="text/css">
 
     .miusic{
@@ -163,10 +164,7 @@
         width: 1126px;
         padding: 0px;
     }
-    .div01{
-        height: 478px;
-        background: url(https://guidozijef.github.io/img/header.jpg)
-    }
+
 
 </style>
 
@@ -187,8 +185,7 @@
             function play() {
                 num = num + 1;
                 i = num % 6;
-                $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')","left": "1358px"});
-                $(".content-header").animate({ "background-image": "url('" + $imgs[i+1] + "')","left": "0px"});
+                $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')"});
 
             }
             //随鼠标出现固定
@@ -296,10 +293,6 @@
 
 </header>
 
-
-<div class="div01">
-
-</div>
 
 <div class="miusic">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=520 src="https://music.163.com/outchain/player?type=0&id=2401573627&auto=0&height=430"></iframe>
