@@ -159,14 +159,14 @@
             //     clearInterval(t);
             // })
             $(".li01").mouseover(function () {
-                $(".catalog01").css({ "display": "block", });
+                $(".catalog01").slideDown();
             });
             $(".catalog01").mouseout(function () {
-                $(".catalog01").css({ "display": "none", });
+                $(".catalog01").slideUp();
             });
-            $(".catalog01").mouseover(function () {
-                $(".li01").css({ "background-color": "#420c5c", });
-            });
+            // $(".catalog01").mouseover(function () {
+            //     $(".li01").css({ "background-color": "#420c5c", });
+            // });
         });
 </script>
 
@@ -229,11 +229,11 @@
     .catalog01 li{
         list-style: none;
         height: 30px;
+        text-align: center;
     }
     .catalog01 li a{
         font-size: 16px;
         line-height: 30px;
-        text-align: center;
         line-height: 30px;
         text-decoration: none;
     }
