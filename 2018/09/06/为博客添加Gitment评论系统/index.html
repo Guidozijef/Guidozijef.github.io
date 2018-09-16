@@ -168,9 +168,20 @@
             $(".catalog01").mouseleave(function () {
                 $(".catalog01").slideUp();
             });
-            // $(".catalog01").mouseover(function () {
-            //     $(".li01").css({ "background-color": "#420c5c", });
-            // });
+
+            $(".top-1 li:eq(2)").mouseover(function () {
+                $(".catalog02").slideDown();
+            });
+            $(".top-1 li:eq(2)").mouseleave(function () {
+                $(".catalog02").slideUp();
+            });
+            
+            $(".top-1 li:eq(3)").mouseover(function () {
+                $(".catalog03").slideDown();
+            });
+            $(".top-1 li:eq(3)").mouseleave(function () {
+                $(".catalog03").slideUp();
+            });
         });
 </script>
 
@@ -230,18 +241,25 @@
         left: -777px;
         display: none;
     }
-    .catalog01 li{
+    .catalog02,.catalog03{
+        height: 60px;
+        position: relative;
+        top:56px;
+        left: -537px;
+        display: none;
+    }
+    .catalog01 li,.catalog02 li,.catalog03 li{
         list-style: none;
         height: 30px;
         text-align: center;
     }
-    .catalog01 li a{
+    .catalog01 li a,.catalog02 li a,.catalog03 li a{
         font-size: 16px;
         line-height: 30px;
         line-height: 30px;
         text-decoration: none;
     }
-    .catalog01 li:hover{
+    .catalog01 li:hover,.catalog02 li:hover,.catalog03 li:hover{
         background-color: #7a356c;
     }
 </style>
@@ -273,15 +291,14 @@
             <li><a href="#">前端</a></li>
             <li><a href="#">网络爬虫</a></li>
         </ul>
-        <!-- <ul class="catalog02">
+        <ul class="catalog02">
             <li><a href=""></a>人工智能网</li>
             <li><a href=""></a>前端</li>
-            <li><a href=""></a>网络爬虫</li>
         </ul>
         <ul class="catalog03">
             <li><a href="https://guidozijef.github.io/archives"></a>归档</li>
             <li><a href="https://guidozijef.github.io/tags"></a>标签</li>
-        </ul> -->
+        </ul>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
