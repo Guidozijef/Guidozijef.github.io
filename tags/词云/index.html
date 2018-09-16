@@ -223,7 +223,7 @@
     .top-1 li:hover{
         background-color: #7a356c;
     }
-    /* .catalog01,.catalog02,.catalog03{
+    .catalog01,.catalog02,.catalog03{
         margin: 0;
         padding: 0;
         background-color: #420c5c;
@@ -233,7 +233,7 @@
     .catalog01{
         height: 90px;
         position: relative;
-        top:56px;
+        /* top:56px; */
         left: -777px;
         display: none;
     }
@@ -251,6 +251,10 @@
         left: -537px;
         display: none;
     }
+    .catalog01 li:nth-child(0){
+        height: 56px;
+        list-style: none;
+    }
     .catalog01 li,.catalog02 li,.catalog03 li{
         list-style: none;
         height: 30px;
@@ -264,7 +268,7 @@
     }
     .catalog01 li:hover,.catalog02 li:hover,.catalog03 li:hover{
         background-color: #7a356c;
-    } */
+    }
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -275,7 +279,7 @@
         </a>
         <!-- <div class="flex-col header-title ellipsis">Tags: 词云</div> -->
         <div class="flex-col header-title ellipsis"></div>
-        <div class="top-1">
+        <!-- <div class="top-1">
             <ul>
                 <li><a href="https://guidozijef.github.io">首页</a></li>
                 <li><a href="https://guidozijef.github.io/archives">归档</a></li>
@@ -285,8 +289,8 @@
                 <li><a href="https://github.com/Guidozijef">Github</a></li>
                 <li><a href="https://guidozijef.github.io/about">关于</a></li>
             </ul>
-        </div>
-        <!-- <div class="top-1">
+        </div> -->
+        <div class="top-1">
             <ul>
                 <li><a href="https://guidozijef.github.io">首页</a></li>
                 <li class="li01"><a href="">程序人生</a></li>
@@ -301,6 +305,7 @@
             </ul>
         </div>
         <ul class="catalog01">
+            <li></li>
             <li><a href="#">python基础</a></li>
             <li><a href="#">前端</a></li>
             <li><a href="#">网络爬虫</a></li>
@@ -312,7 +317,7 @@
         <ul class="catalog03">
             <li><a href="https://guidozijef.github.io/archives">归档</a></li>
             <li><a href="https://guidozijef.github.io/tags">标签</a></li>
-        </ul> -->
+        </ul>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -347,31 +352,35 @@
             ">全部</a>
         
 
-            <a href="/tags/python/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">python</a>
+            <a href="/tags/python/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">python</a>
 
         
 
-            <a href="/tags/hello-world/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
+            <a href="/tags/hello-world/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">hello world</a>
 
         
 
-            <a href="/tags/indigo/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">indigo</a>
+            <a href="/tags/indigo/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">indigo</a>
 
         
 
-            <a href="/tags/ejs/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">ejs</a>
+            <a href="/tags/ejs/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">ejs</a>
 
         
 
-            <a href="/tags/css/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">css</a>
+            <a href="/tags/css/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">css</a>
 
         
 
-            <a href="/tags/html/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">html</a>
+            <a href="/tags/html/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">html</a>
 
         
 
-            <a href="/tags/hexo/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">hexo</a>
+            <a href="/tags/hexo/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">hexo</a>
+
+        
+
+            <a href="/tags/excel/" style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
 
@@ -388,10 +397,6 @@
         
 
             <a href="/tags/github/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">github</a>
-
-        
-
-            <a href="/tags/excel/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
     </nav>
