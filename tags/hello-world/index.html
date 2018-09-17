@@ -162,14 +162,20 @@
                 $(this).children("ul").stop().slideDown();    
             });
             $(".li01").mouseout(function(){    
-                $(this).children("ul").stop().slideUp();    
+                $(this).children("ul").stop().slideUp();  /*stop()是用来取消冒泡事件的*/  
+            });
+            $(".li01 a").mouseout(function(){    
+                $(this).css({"brackgrund-color": "#420c5c"});  
             });
 
             $(".li02").mouseover(function(){    
                 $(this).children("ul").stop().slideDown();    
             });
             $(".li02").mouseout(function(){    
-                $(this).children("ul").stop().slideUp();    
+                $(this).children("ul").stop().slideUp();  
+            });
+            $(".li02 a").mouseout(function(){    
+                $(this).css({"brackgrund-color": "#420c5c"});  
             });
 
             $(".li03").mouseover(function(){    
@@ -178,12 +184,18 @@
             $(".li03").mouseout(function(){    
                 $(this).children("ul").stop().slideUp();    
             });
+            $(".li03 a").mouseout(function(){    
+                $(this).css({"brackgrund-color": "#420c5c"});  
+            });
 
             $(".li04").mouseover(function(){    
                 $(this).children("ul").stop().slideDown();    
             });
             $(".li04").mouseout(function(){    
                 $(this).children("ul").stop().slideUp();    
+            });
+            $(".li04 a").mouseout(function(){    
+                $(this).css({"brackgrund-color": "#420c5c"});  
             });
 
         });
@@ -385,19 +397,19 @@
 
         
 
-            <a href="/tags/excel/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">excel</a>
+            <a href="/tags/Gitment/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
 
         
 
-            <a href="/tags/Gitment/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
+            <a href="/tags/Github/" style="-webkit-order:9;order:9" class="tags-list-item waves-effect waves-button waves-light">Github</a>
 
         
 
-            <a href="/tags/Github/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">Github</a>
+            <a href="/tags/github/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">github</a>
 
         
 
-            <a href="/tags/github/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">github</a>
+            <a href="/tags/excel/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
     </nav>
