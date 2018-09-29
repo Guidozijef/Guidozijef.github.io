@@ -137,24 +137,43 @@
 <script type="text/javascript" src="http://zijef.pw/js/jquery-3.3.1.min.js"></script>
 <!-- <script type="text/javascript" src="http://zijef.pw/js/set_root.js"></script> -->
 <script type="text/javascript">
-    var $imgs = new Array("https://guidozijef.github.io/img/1.png", "https://guidozijef.github.io/img/2.jpg", "https://guidozijef.github.io/img/3.jpg", "https://guidozijef.github.io/img/4.jpg", "https://guidozijef.github.io/img/5.jpg", "https://guidozijef.github.io/img/6.jpg");
+    // var $imgs = new Array("https://guidozijef.github.io/img/1.png", "https://guidozijef.github.io/img/2.jpg", "https://guidozijef.github.io/img/3.jpg", "https://guidozijef.github.io/img/4.jpg", "https://guidozijef.github.io/img/5.jpg", "https://guidozijef.github.io/img/6.jpg");
         $(document).ready(function () {
             var num = 600;
             var i = 0;
+            var j = 0;
             // $(".content-header").mouseout(function () {
             //     autoplay();
             // });
+            $(".adver img").not(':first').css({left: 1358});
             autoplay();
             var t;
             function autoplay() {
                 t = setInterval(play, 8000);//时间函数
             }
-            function play() {
-                num = num + 1;
-                i = num % 6;
-                $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')"});
-
+            function play(){
+                i++;
+                if(i>j){
+                    $(".adver img").eq(i).css({left: 1358});
+                    $(".adver img").eq(j).animate({left: -1358});
+                    $(".adver img").eq(i).animate({left: 0});
+                    j = i;
+                };
+                if(i>5){
+                    i = 0;
+                    j = 5;
+                    $(".adver img").eq(i).css({left: 1358});
+                    $(".adver img").eq(j).animate({left: -1358});
+                    $(".adver img").eq(i).animate({left: 0});
+                    j = i;
+                    return;
+                };
             }
+            // function play() {
+            //     num = num + 1;
+            //     i = num % 6;
+            //     $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')"});
+            // }
             //随鼠标出现固定
             // $(".content-header").mouseover(function () {
             //     clearInterval(t);
@@ -272,6 +291,22 @@
     .catalog01 li:hover,.catalog02 li:hover,.catalog03 li:hover,.catalog04 li:hover{
         background-color: #7a356c;
     }
+
+    .adver img{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .adver {
+      width: 1358px;
+      height: 478px;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -351,6 +386,15 @@
 <div style="height: 450px;"></div><!--为了背景浮动后而站位-->
 <header class="content-header tags-header">
 
+    <div class="adver">
+        <img src="https://guidozijef.github.io/img/1.png">
+        <img src="https://guidozijef.github.io/img/2.jpg">
+        <img src="https://guidozijef.github.io/img/3.jpg">
+        <img src="https://guidozijef.github.io/img/4.jpg">
+        <img src="https://guidozijef.github.io/img/5.jpg">
+        <img src="https://guidozijef.github.io/img/6.jpg">
+    </div>
+
     <div class="container fade-scale">
         <h1 class="title">Tags: resume</h1>
         <h5 class="subtitle">
@@ -373,7 +417,7 @@
 
         
 
-            <a href="/tags/词云/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">词云</a>
+            <a href="/tags/excel/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
 
@@ -405,19 +449,19 @@
 
         
 
-            <a href="/tags/Gitment/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
+            <a href="/tags/github/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">github</a>
 
         
 
-            <a href="/tags/Github/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">Github</a>
+            <a href="/tags/Gitment/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
 
         
 
-            <a href="/tags/github/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">github</a>
+            <a href="/tags/Github/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">Github</a>
 
         
 
-            <a href="/tags/excel/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">excel</a>
+            <a href="/tags/词云/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">词云</a>
 
         
     </nav>

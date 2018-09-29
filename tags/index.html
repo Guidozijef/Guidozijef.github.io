@@ -138,24 +138,43 @@
 <script type="text/javascript" src="http://zijef.pw/js/jquery-3.3.1.min.js"></script>
 <!-- <script type="text/javascript" src="http://zijef.pw/js/set_root.js"></script> -->
 <script type="text/javascript">
-    var $imgs = new Array("https://guidozijef.github.io/img/1.png", "https://guidozijef.github.io/img/2.jpg", "https://guidozijef.github.io/img/3.jpg", "https://guidozijef.github.io/img/4.jpg", "https://guidozijef.github.io/img/5.jpg", "https://guidozijef.github.io/img/6.jpg");
+    // var $imgs = new Array("https://guidozijef.github.io/img/1.png", "https://guidozijef.github.io/img/2.jpg", "https://guidozijef.github.io/img/3.jpg", "https://guidozijef.github.io/img/4.jpg", "https://guidozijef.github.io/img/5.jpg", "https://guidozijef.github.io/img/6.jpg");
         $(document).ready(function () {
             var num = 600;
             var i = 0;
+            var j = 0;
             // $(".content-header").mouseout(function () {
             //     autoplay();
             // });
+            $(".adver img").not(':first').css({left: 1358});
             autoplay();
             var t;
             function autoplay() {
                 t = setInterval(play, 8000);//时间函数
             }
-            function play() {
-                num = num + 1;
-                i = num % 6;
-                $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')"});
-
+            function play(){
+                i++;
+                if(i>j){
+                    $(".adver img").eq(i).css({left: 1358});
+                    $(".adver img").eq(j).animate({left: -1358});
+                    $(".adver img").eq(i).animate({left: 0});
+                    j = i;
+                };
+                if(i>5){
+                    i = 0;
+                    j = 5;
+                    $(".adver img").eq(i).css({left: 1358});
+                    $(".adver img").eq(j).animate({left: -1358});
+                    $(".adver img").eq(i).animate({left: 0});
+                    j = i;
+                    return;
+                };
             }
+            // function play() {
+            //     num = num + 1;
+            //     i = num % 6;
+            //     $(".content-header").css({ "background-image": "url('" + $imgs[i] + "')"});
+            // }
             //随鼠标出现固定
             // $(".content-header").mouseover(function () {
             //     clearInterval(t);
@@ -273,6 +292,22 @@
     .catalog01 li:hover,.catalog02 li:hover,.catalog03 li:hover,.catalog04 li:hover{
         background-color: #7a356c;
     }
+
+    .adver img{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .adver {
+      width: 1358px;
+      height: 478px;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
 </style>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -352,6 +387,15 @@
 <div style="height: 450px;"></div><!--为了背景浮动后而站位-->
 <header class="content-header tags-header">
 
+    <div class="adver">
+        <img src="https://guidozijef.github.io/img/1.png">
+        <img src="https://guidozijef.github.io/img/2.jpg">
+        <img src="https://guidozijef.github.io/img/3.jpg">
+        <img src="https://guidozijef.github.io/img/4.jpg">
+        <img src="https://guidozijef.github.io/img/5.jpg">
+        <img src="https://guidozijef.github.io/img/6.jpg">
+    </div>
+
     <div class="container fade-scale">
         <h1 class="title">Tags</h1>
         <h5 class="subtitle">
@@ -374,7 +418,7 @@
 
         
 
-            <a href="/tags/词云/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">词云</a>
+            <a href="/tags/excel/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">excel</a>
 
         
 
@@ -406,19 +450,19 @@
 
         
 
-            <a href="/tags/Gitment/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
+            <a href="/tags/github/" style="-webkit-order:10;order:10" class="tags-list-item waves-effect waves-button waves-light">github</a>
 
         
 
-            <a href="/tags/Github/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">Github</a>
+            <a href="/tags/Gitment/" style="-webkit-order:11;order:11" class="tags-list-item waves-effect waves-button waves-light">Gitment</a>
 
         
 
-            <a href="/tags/github/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">github</a>
+            <a href="/tags/Github/" style="-webkit-order:12;order:12" class="tags-list-item waves-effect waves-button waves-light">Github</a>
 
         
 
-            <a href="/tags/excel/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">excel</a>
+            <a href="/tags/词云/" style="-webkit-order:13;order:13" class="tags-list-item waves-effect waves-button waves-light">词云</a>
 
         
     </nav>
@@ -475,7 +519,7 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2018-08-14 00:44:57" datetime="2018-08-13T16:44:57.481Z"  itemprop="datePublished">2018-08-14</time>
+      <time class="post-time" title="2018-08-08 00:47:26" datetime="2018-08-07T16:47:26.000Z"  itemprop="datePublished">2018-08-08</time>
 
       
 
@@ -486,7 +530,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/08/14/python爬取爱情公寓电影评论并制作词云/">python爬取爱情公寓电影评论并制作词云</a>
+      <a class="post-title-link" href="/2018/08/08/python使用lxwt模块操作Excel文件/">python使用lxwt模块操作Excel文件</a>
     </h3>
   
 
@@ -495,7 +539,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/词云/">词云</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/excel/">excel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
     </div>
     
@@ -539,7 +583,7 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2018-08-08 00:47:26" datetime="2018-08-07T16:47:26.000Z"  itemprop="datePublished">2018-08-08</time>
+      <time class="post-time" title="2018-08-14 00:44:57" datetime="2018-08-13T16:44:57.481Z"  itemprop="datePublished">2018-08-14</time>
 
       
 
@@ -550,7 +594,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/08/08/python使用lxwt模块操作Excel文件/">python使用lxwt模块操作Excel文件</a>
+      <a class="post-title-link" href="/2018/08/14/python爬取爱情公寓电影评论并制作词云/">python爬取爱情公寓电影评论并制作词云</a>
     </h3>
   
 
@@ -559,7 +603,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/excel/">excel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/词云/">词云</a></li></ul>
 
     </div>
     
@@ -609,7 +653,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-词云">词云</h3>
+            <h3 class="archive-separator" id="tag-excel">excel</h3>
 
             <div class="waterfall">
             
@@ -617,7 +661,7 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2018-08-14 00:44:57" datetime="2018-08-13T16:44:57.481Z"  itemprop="datePublished">2018-08-14</time>
+      <time class="post-time" title="2018-08-08 00:47:26" datetime="2018-08-07T16:47:26.000Z"  itemprop="datePublished">2018-08-08</time>
 
       
 
@@ -628,7 +672,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/08/14/python爬取爱情公寓电影评论并制作词云/">python爬取爱情公寓电影评论并制作词云</a>
+      <a class="post-title-link" href="/2018/08/08/python使用lxwt模块操作Excel文件/">python使用lxwt模块操作Excel文件</a>
     </h3>
   
 
@@ -637,7 +681,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/词云/">词云</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/excel/">excel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 
     </div>
     
@@ -844,38 +888,6 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2018-09-06 19:12:40" datetime="2018-09-06T11:12:40.482Z"  itemprop="datePublished">2018-09-06</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/09/06/为博客添加Gitment评论系统/">为博客添加Gitment评论系统</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gitment/">Gitment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
       <time class="post-time" title="2018-08-08 21:51:48" datetime="2018-08-08T13:51:48.298Z"  itemprop="datePublished">2018-08-08</time>
 
       
@@ -897,6 +909,38 @@
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2018-09-06 19:12:40" datetime="2018-09-06T11:12:40.482Z"  itemprop="datePublished">2018-09-06</time>
+
+      
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/06/为博客添加Gitment评论系统/">为博客添加Gitment评论系统</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gitment/">Gitment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
     </div>
     
@@ -985,6 +1029,45 @@
             </div>
             
 
+            <h3 class="archive-separator" id="tag-github">github</h3>
+
+            <div class="waterfall">
+            
+
+                <div class="waterfall-item">
+  <article class="article-card archive-article">
+    <div class="post-meta">
+      <time class="post-time" title="2018-08-08 21:51:48" datetime="2018-08-08T13:51:48.298Z"  itemprop="datePublished">2018-08-08</time>
+
+      
+
+
+    </div>
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/08/08/第一篇博客，hexo+github搭建个人博客/">第一篇博客，hexo+github搭建个人博客</a>
+    </h3>
+  
+
+
+
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </div>
+    
+  </article>
+</div>
+
+            
+            </div>
+            
+
             <h3 class="archive-separator" id="tag-Gitment">Gitment</h3>
 
             <div class="waterfall">
@@ -1063,7 +1146,7 @@
             </div>
             
 
-            <h3 class="archive-separator" id="tag-github">github</h3>
+            <h3 class="archive-separator" id="tag-词云">词云</h3>
 
             <div class="waterfall">
             
@@ -1071,7 +1154,7 @@
                 <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
-      <time class="post-time" title="2018-08-08 21:51:48" datetime="2018-08-08T13:51:48.298Z"  itemprop="datePublished">2018-08-08</time>
+      <time class="post-time" title="2018-08-14 00:44:57" datetime="2018-08-13T16:44:57.481Z"  itemprop="datePublished">2018-08-14</time>
 
       
 
@@ -1082,7 +1165,7 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/08/08/第一篇博客，hexo+github搭建个人博客/">第一篇博客，hexo+github搭建个人博客</a>
+      <a class="post-title-link" href="/2018/08/14/python爬取爱情公寓电影评论并制作词云/">python爬取爱情公寓电影评论并制作词云</a>
     </h3>
   
 
@@ -1091,46 +1174,7 @@
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </div>
-    
-  </article>
-</div>
-
-            
-            </div>
-            
-
-            <h3 class="archive-separator" id="tag-excel">excel</h3>
-
-            <div class="waterfall">
-            
-
-                <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2018-08-08 00:47:26" datetime="2018-08-07T16:47:26.000Z"  itemprop="datePublished">2018-08-08</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/08/08/python使用lxwt模块操作Excel文件/">python使用lxwt模块操作Excel文件</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/excel/">excel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/词云/">词云</a></li></ul>
 
     </div>
     
