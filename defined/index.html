@@ -14,7 +14,7 @@
             // $(".content-header").mouseout(function () {
             //     autoplay();
             // });
-            $(".adver img").not(':first').css({left: 1358});
+            $(".adver img").not(':first').css({left: 1357});
             autoplay();
             var t;
             function autoplay() {
@@ -43,7 +43,7 @@
             //     clearInterval(t);
             // })
             $(".li01").mouseover(function(){    
-                $(this).children("ul").stop().slideDown();    
+                $(this).children("ul").stop().slideDown();       
             });
             $(".li01").mouseout(function(){    
                 $(this).children("ul").stop().slideUp();  /*stop()是用来取消冒泡事件的*/  
@@ -69,6 +69,21 @@
             $(".li04").mouseout(function(){    
                 $(this).children("ul").stop().slideUp();    
             });
+            $(window).scroll(function(){  
+                var $Top = $(document).scrollTop();
+                if($Top > 0){
+                    $(".top-1").css({
+                        'backgroundColor': '#420c5c',
+                        'position': 'fixed',
+                    });
+                };
+                if($Top == 0){
+                    $(".top-1").css({
+                        'backgroundColor': '',
+                        'position': 'fixed',
+                    });
+                };
+            });
 
         });
     </script>
@@ -76,8 +91,10 @@
     <style type="text/css">
         body{
             margin: 0;
+            overflow-x: hidden;
         }
         .top-1 {
+            position: relative;
             margin: 0;
             padding-left: 220px;
             text-align: center;
@@ -140,13 +157,37 @@
             color: #fff;
             text-decoration: none;
         }
-        .catalog01 li:hover,.catalog02 li:hover,.catalog03 li:hover,.catalog04 li:hover{
-            background-color: #7a356c;
+        .adver img{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .adver {
+            width: 100%;
+            height: 478px;
+            overflow: hidden;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .blank{
+            height: 422px;
+        }
+        .div01{
+            height: 422px;
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="adver">
+                <img src="https://guidozijef.github.io/img/1.png">
+                <img src="https://guidozijef.github.io/img/2.jpg">
+                <img src="https://guidozijef.github.io/img/3.jpg">
+                <img src="https://guidozijef.github.io/img/4.jpg">
+                <img src="https://guidozijef.github.io/img/5.jpg">
+                <img src="https://guidozijef.github.io/img/6.jpg">
+            </div>
         <div>
             <ul class="top-1">
                 <li><a href="https://guidozijef.github.io">首页</a></li>
@@ -184,14 +225,11 @@
                 </li>
             </ul>
         </div>
-        <div class="adver">
-            <img src="https://guidozijef.github.io/img/1.png">
-            <img src="https://guidozijef.github.io/img/2.jpg">
-            <img src="https://guidozijef.github.io/img/3.jpg">
-            <img src="https://guidozijef.github.io/img/4.jpg">
-            <img src="https://guidozijef.github.io/img/5.jpg">
-            <img src="https://guidozijef.github.io/img/6.jpg">
-        </div>
     </header>
+    <main>
+        <div class="blank"></div>
+        <div class="div01"></div>
+    </main>
+    
 </body>
 </html>
