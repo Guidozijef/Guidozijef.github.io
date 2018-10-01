@@ -57,7 +57,11 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-345406844cc3b2bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/14214683-f23e2f267fa78d1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-e0d58d035fe5b41c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-01T09:31:23.676Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-295ac21d493a6309.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-46d62af3ed63895d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-ca2400bc2b19cc22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-61496cf95897f6bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-01T09:44:07.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一篇博客，hexo+github搭建个人博客">
 <meta name="twitter:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;经过一个晚上的艰苦卓绝，我的个人博客也终于搭建成功，第一篇博客还是把我搭建博客的过程给大家讲一下，避免大家踩坑。  hexo+github搭建个人博客一、安装前准备安装node.js&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;以Windows环境安装node.js为例，首先登录node.js官网，选择适合自己的版本进行下载，然后进行安装。">
@@ -573,10 +577,35 @@
                 </div>
                 <div class="image-caption"></div>
             </figure></p>
-<h4 id="同步Github-允许公共访问"><a href="#同步Github-允许公共访问" class="headerlink" title="同步Github,允许公共访问"></a>同步Github,允许公共访问</h4><p>&ensp;&ensp;&ensp;&ensp;在本地我们已经搭建了博客，但是还只能自己本地访问。若要别人也能看到，那就需要我们将其同步部署到GitHub上了。还记得我们之前准备的Github仓库吗，这里就要用到了。<br>&ensp;&ensp;&ensp;&ensp;首先找到我们的博客仓库，并拷贝仓库地址：<br>[图片上传失败…(image-ee5fa6-1538385348050)]<br><strong>注意</strong>：这里的仓库名字一定要是git的，而不是https，不然后面会失败。如果不是git的请点击箭头所指的文字。</p>
-<p>然后修改本地博客目录的配置：<br>修改本次博客根目录下的_config.yml文件，修改deploy下的配置如下：<br>[图片上传失败…(image-f5ce48-1538385348050)]<br>最后执行控制台命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<h4 id="同步Github-允许公共访问"><a href="#同步Github-允许公共访问" class="headerlink" title="同步Github,允许公共访问"></a>同步Github,允许公共访问</h4><p>&ensp;&ensp;&ensp;&ensp;在本地我们已经搭建了博客，但是还只能自己本地访问。若要别人也能看到，那就需要我们将其同步部署到GitHub上了。还记得我们之前准备的Github仓库吗，这里就要用到了。<br>&ensp;&ensp;&ensp;&ensp;首先找到我们的博客仓库，并拷贝仓库地址：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/14214683-295ac21d493a6309.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
+<p><strong>注意</strong>：这里的仓库名字一定要是git的，而不是https，不然后面会失败。如果不是git的请点击箭头所指的文字。</p>
+<p>然后修改本地博客目录的配置：<br>修改本次博客根目录下的_config.yml文件，修改deploy下的配置如下：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/14214683-46d62af3ed63895d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>最后执行控制台命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
 <p>现在，我们再次访问链接：<a href="https://userName.github.io" target="_blank" rel="noopener">https://userName.github.io</a>，就会发现这里的界面和本地的一样了。如此一来我们搭建的个人博客网站就基本完成了。 </p>
-<h2 id="三、发布博客"><a href="#三、发布博客" class="headerlink" title="三、发布博客"></a>三、发布博客</h2><p>&ensp;&ensp;&ensp;&ensp;新建一篇博客，在git bash中执行命令：hexo new post “博客名”<br>[图片上传失败…(image-5e3615-1538385348050)]<br>创建的文件<br>[图片上传失败…(image-bbf48a-1538385348050)]<br>再输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
+<h2 id="三、发布博客"><a href="#三、发布博客" class="headerlink" title="三、发布博客"></a>三、发布博客</h2><p>&ensp;&ensp;&ensp;&ensp;新建一篇博客，在git bash中执行命令：hexo new post “博客名”<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/14214683-ca2400bc2b19cc22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>创建的文件<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/14214683-61496cf95897f6bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>再输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>部署成功后访问你的地址：http://用户名.github.io。那么将看到生成的文章了。</p>
 <p>&ensp;&ensp;&ensp;&ensp;好了，我们的个人博客网站就已经建立成功了，关于如何写博客，大家可以直接在<strong>-posts</strong>文件夹中新建<strong>.md</strong>文件，然后再在命令行输入hexo g，hexo d，部署到github上面即可。再给大家推荐一个hexo主题网站，可以在上面选择下载各位心意的主题了<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a>。下载后更改文件<strong>_config.yml</strong>下的<strong>theme</strong>，改成直接下载的主题名，关于hexo主题的优化，就不给大家过多的讲解了，因为大家主题各有不同，感兴趣的可自可行研究。</p>
@@ -589,7 +618,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-10-01T09:31:23.676Z" itemprop="dateUpdated">2018-10-01 17:31:23</time>
+    最后更新时间：<time datetime="2018-10-01T09:44:07.043Z" itemprop="dateUpdated">2018-10-01 17:44:07</time>
 </span><br>
 
 
