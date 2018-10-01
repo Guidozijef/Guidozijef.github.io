@@ -4,9 +4,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>笑傲江湖</title>
+    <script type="text/javascript" src="http://zijef.pw/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function () {
+            var num = 600;
+            var i = 0;
+            var j = 0;
+            // $(".content-header").mouseout(function () {
+            //     autoplay();
+            // });
+            $(".adver img").not(':first').css({left: 1358});
+            autoplay();
+            var t;
+            function autoplay() {
+                t = setInterval(play, 8000);//时间函数
+            }
+            function play(){
+                i++;
+                if(i>j){
+                    $(".adver img").eq(i).css({left: 1358});
+                    $(".adver img").eq(j).animate({left: -1358});
+                    $(".adver img").eq(i).animate({left: 0});
+                    j = i;
+                };
+                if(i>5){
+                    i = 0;
+                    j = 5;
+                    $(".adver img").eq(i).css({left: 1358});
+                    $(".adver img").eq(j).animate({left: -1358});
+                    $(".adver img").eq(i).animate({left: 0});
+                    j = i;
+                    return;
+                };
+            }
+            //随鼠标出现固定
+            // $(".content-header").mouseover(function () {
+            //     clearInterval(t);
+            // })
+            $(".li01").mouseover(function(){    
+                $(this).children("ul").stop().slideDown();    
+            });
+            $(".li01").mouseout(function(){    
+                $(this).children("ul").stop().slideUp();  /*stop()是用来取消冒泡事件的*/  
+            });
+  
+            $(".li02").mouseover(function(){    
+                $(this).children("ul").stop().slideDown();    
+            });
+            $(".li02").mouseout(function(){    
+                $(this).children("ul").stop().slideUp();  
+            });
+
+            $(".li03").mouseover(function(){    
+                $(this).children("ul").stop().slideDown();    
+            });
+            $(".li03").mouseout(function(){    
+                $(this).children("ul").stop().slideUp();    
+            });
+
+            $(".li04").mouseover(function(){    
+                $(this).children("ul").stop().slideDown();    
+            });
+            $(".li04").mouseout(function(){    
+                $(this).children("ul").stop().slideUp();    
+            });
+
+        });
+    </script>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .top-1 {
+            margin: 0;
+            padding-left: 220px;
+            text-align: center;
+            height: 56px;
+            width: 1246px;
+        }
+        .top-1 ul{
+            margin: 0;
+            padding: 0;
+        }
+        .top-1 li{
+            text-align: center;
+            float: left;
+            list-style: none;
+            height: 56px;
+            width: 145px;
+        }
+        .top-1 li a {
+            text-align: center;
+            width: 145px;
+            line-height: 56px;
+            font-size: 20px;
+            font-family: 'microsoft Yahei';
+            color: #fff;
+            text-decoration: none;
+        }
+        .top-1 li:hover{
+            background-color: #7a356c;
+        }
+        .catalog01,.catalog02,.catalog03,.catalog04{
+            margin: 0;
+            padding: 0;
+            background-color: #420c5c;
+            list-style: none;
+            width: 145px;
+        }
+        .catalog01{
+            height: 90px;
+            position: relative;
+            display: none;
+        }
+        .catalog02,.catalog03{
+            height: 60px;
+            position: relative;
+            display: none;
+        }
+        .catalog04{
+            height: 120px;
+            position: relative;
+            display: none;
+        }
+        .catalog01 li,.catalog02 li,.catalog03 li,.catalog04 li{
+            list-style: none;
+            height: 30px;
+            text-align: center;
+        }
+        .catalog01 li a,.catalog02 li a,.catalog03 li a,.catalog04 li a{
+            font-size: 16px;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .catalog01 li:hover,.catalog02 li:hover,.catalog03 li:hover,.catalog04 li:hover{
+            background-color: #7a356c;
+        }
+    </style>
 </head>
 <body>
-    <%- partial('_partial/head') %>
+    <header>
+        <div>
+            <ul class="top-1">
+                <li><a href="https://guidozijef.github.io">首页</a></li>
+                <li class="li01">
+                    <a href="">程序人生</a>
+                    <ul class="catalog01">
+                        <li><a href="#">python基础</a></li>
+                        <li><a href="#">前端</a></li>
+                        <li><a href="#">网络爬虫</a></li>
+                    </ul>
+                </li>
+                <li class="li02">
+                    <a href="https://guidozijef.github.io/tags">行业资讯</a>
+                    <ul class="catalog02">
+                        <li><a href="https://ai.ofweek.com/">人工智能网</a></li>
+                        <li><a href="http://chinabyte.com/">比特网</a></li>
+                    </ul>
+                </li>
+                <li class="li03">
+                    <a href="https://guidozijef.github.io/categories">博客分类</a>
+                    <ul class="catalog03">
+                        <li><a href="https://guidozijef.github.io/archives">归档</a></li>
+                        <li><a href="https://guidozijef.github.io/tags">标签</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://guidozijef.github.io/defined/index.html">笑傲江湖</a></li>
+                <li class="li04">
+                    <a href="#">作者相关</a>
+                    <ul class="catalog04">
+                        <li><a href="https://blog.csdn.net/qq_42595443">CSDN</a></li>
+                        <li><a href="https://github.com/Guidozijef">Github</a></li>
+                        <li><a href="https://www.jianshu.com/u/035ff691c601">简书</a></li>
+                        <li><a href="https://guidozijef.github.io/about">关于</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="adver">
+            <img src="https://guidozijef.github.io/img/1.png">
+            <img src="https://guidozijef.github.io/img/2.jpg">
+            <img src="https://guidozijef.github.io/img/3.jpg">
+            <img src="https://guidozijef.github.io/img/4.jpg">
+            <img src="https://guidozijef.github.io/img/5.jpg">
+            <img src="https://guidozijef.github.io/img/6.jpg">
+        </div>
+    </header>
 </body>
 </html>
