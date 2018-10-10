@@ -1,16 +1,14 @@
-body {
-	background-color: #f6f6f6;
-}
-ul {
+.music_player .list {
 	background-color: #fff;
 	margin: 0px;
 	padding: 0px;
 	width: 240px;
 	height: 400px;
 	overflow: hidden;
-	/* border: 1px solid #000; */
+	position: relative;
+	top: -8px;
 }
-ul li {
+.music_player .list li {
 	width: 100%;
 	list-style: none;
 	height: 25px;
@@ -18,7 +16,7 @@ ul li {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-ul li a {
+.list li a {
 	color: #333;
 	line-height: 25px;
 	width: 120px;
@@ -30,7 +28,7 @@ ul li a {
 	font-size: 12px;
 	text-decoration: none;
 }
-ul li div {
+.list li div {
 	width: 56px;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -41,7 +39,7 @@ ul li div {
 	font-size: 12px;
 	font-family: "Microsoft Yahei";
 }
-#info {
+.music_player #info {
 	width: 150px;
 	height: 30px;
 	padding: 0px;
@@ -51,7 +49,7 @@ ul li div {
 	top: -51px;
 	left: -5px;
 }
-#btn {
+.music_player #btn {
 	height: 31px;
 	width: 40px;
 	padding: 0px;
@@ -64,18 +62,14 @@ ul li div {
 	top: -49px;
 	left: -9px;
 }
-#img {
+.music_player #img {
 	width: 70px;
 }
 .music_player {
 	position: absolute;
 	overflow: hidden;
 }
-.list {
-	position: relative;
-	top: -8px;
-}
-.list .present {
+.music_player .list .present {
 	display: block;
 	padding: 0px;
 	width: 5px;
@@ -83,15 +77,15 @@ ul li div {
 	background-color: #420c5c;
 	float: left;
 }
-.icon {
+.music_player .icon {
 	position: relative;
 	top: 66px;
 	left: 78px;
 }
-.icon img {
+.music_player .icon img {
 	width: 20px;
 }
-.icon .strip {
+.music_player .icon .strip {
 	width: 50px;
 	height: 4px;
 	background-color: #fff;
@@ -100,7 +94,7 @@ ul li div {
 	top: -8px;
 	border-radius: 2px;
 }
-.icon .bar {
+.music_player .icon .bar {
 	width: 25px;
 	height: 4px;
 	background-color: #420c5c;
@@ -110,7 +104,7 @@ ul li div {
 	left: -108px;
 	border-radius: 2px;
 }
-.icon .circle {
+.music_player .icon .circle {
 	width: 50px;
 	height: 10px;
 	/* background-color: #420c5c; */
@@ -119,7 +113,7 @@ ul li div {
 	top: -5px;
 	left: -55px;
 }
-.icon .circle span {
+.music_player .icon .circle span {
 	padding: 0px;
 	width: 10px;
 	height: 10px;
@@ -129,12 +123,12 @@ ul li div {
 	left: 25px;
 	border-radius: 5px;
 }
-.header {
+.music_player .header {
 	position: relative;
 	top: 15px;
 	left: 32px;
 }
-.header span {
+.music_player .header span {
 	position: relative;
 	top: -6px;
 	font-size: 23px;
