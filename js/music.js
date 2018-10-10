@@ -26,7 +26,7 @@ $(function () {
                         li.appendChild(a);
                         li.appendChild(div);
                         // $("list")[0].style.display = "block";
-                        $('.miusic_player .list').append(li);
+                        $('.music_player .list').append(li);
                         a.onclick = function () {
                             // console.log("a.src:" + this.src);
                             $.ajax({
