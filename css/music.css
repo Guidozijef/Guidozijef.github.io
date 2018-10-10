@@ -87,9 +87,6 @@
 }
 .music_player .icon img {
 	width: 20px;
-	position: relative;
-	top: 78px;
-	left: 4px;
 }
 .music_player .icon .strip {
 	width: 50px;
