@@ -8,11 +8,10 @@ $(function () {
                 dataType: "jsonp",
                 success: function (data1) {
                     var songids = data1.song;
-                    console.log(songids.length);
+                    // console.log(songids.length);
                     for (var i = 0; i < songids.length; i++) {
                         var songid = songids[i].songid;
                         var artistname = songids[i].artistname;
-                        var ul = document.createElement("ul");
                         var li = document.createElement("li");
                         var span = document.createElement("span");
                         var a = document.createElement("a");
@@ -22,11 +21,11 @@ $(function () {
                         a.src = songid;
                         var songname = songids[i].songname;
                         a.textContent = songname;
-                        var ul = document.getElementsByTagName("ul")[0];
+                        var ul = document.getElementsByClassName("list")[0];
                         li.appendChild(span);
                         li.appendChild(a);
                         li.appendChild(div);
-                        $("ul")[0].style.display = "block";
+                        $("list")[0].style.display = "block";
                         ul.appendChild(li);
                         a.onclick = function () {
                             // console.log("a.src:" + this.src);
@@ -36,6 +35,7 @@ $(function () {
                                 async: true,
                                 dataType: "jsonp",
                                 success: function (data2) {
+                                    console.log()
                                     var audio = document.getElementById("audio");
                                     var img = document.getElementById("img");
                                     audio.src = data2.bitrate.file_link;
