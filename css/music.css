@@ -63,11 +63,14 @@
 	left: -260px;
 }
 .music_player #img {
-	width: 70px;
+	position: relative;
+	top: 83px;
+	left: -254px;
 }
 .music_player {
 	position: absolute;
 	overflow: hidden;
+	margin: 0px 5px;
 }
 .music_player .list .present {
 	display: block;
@@ -85,8 +88,8 @@
 .music_player .icon img {
 	width: 20px;
 	position: relative;
-	top: -254px;
-	left: 83px;
+	top: 78px;
+	left: 4px;
 }
 .music_player .icon .strip {
 	width: 50px;
