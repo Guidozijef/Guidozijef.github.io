@@ -21,12 +21,12 @@ $(function () {
                         a.src = songid;
                         var songname = songids[i].songname;
                         a.textContent = songname;
-                        var ul = document.getElementsByClassName("list")[0];
+                        // var ul = document.getElementsByClassName("list")[0];
                         li.appendChild(span);
                         li.appendChild(a);
                         li.appendChild(div);
-                        $("list")[0].style.display = "block";
-                        ul.appendChild(li);
+                        // $("list")[0].style.display = "block";
+                        $('.miusic_player .list').append(li);
                         a.onclick = function () {
                             // console.log("a.src:" + this.src);
                             $.ajax({
