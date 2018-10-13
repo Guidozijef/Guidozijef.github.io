@@ -24,7 +24,7 @@
 	text-overflow: ellipsis;
 	float: left;
 	padding-left: 10px;
-	font-family: "Microsoft Yahei";
+	font-family: "Mricosoft Yahei";
 	font-size: 12px;
 	text-decoration: none;
 }
@@ -37,7 +37,7 @@
 	float: right;
 	padding-right: 10px;
 	font-size: 12px;
-	font-family: "Microsoft Yahei";
+	font-family: "Mricosoft Yahei";
 }
 .music_player #info {
 	width: 150px;
@@ -135,5 +135,5 @@
 	top: 5px;
 	font-size: 23px;
 	color: #420c5c;
-	font-family: "Microsoft Yahei";
+	font-family: "Mricosoft Yahei";
 }
