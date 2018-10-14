@@ -1,0 +1,87 @@
+.navbar-inverse {
+	background-color: #420c5c;
+	border-color: #420c5c;
+	margin: 0px;
+}
+.navbar-brand {
+	padding-top: 0px;
+}
+.navbar-brand img {
+	width: 100px;
+}
+.navbar-nav li a {
+	color: #fff !important;
+}
+.header_defined {
+	margin: 0px;
+	width: 100%;
+}
+.background {
+	background: url("../images/miku.jpg") 50% center / cover no-repeat fixed rgb(255, 255, 255);
+	width: 100%;
+	height: auto;
+}
+.left {
+	height: 100%;
+	width: 5%;
+	background-color: #420c5c;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+}
+.left ul {
+	padding: 0px;
+	margin: 0px;
+}
+.left ul li {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.left ul li a {
+	display: inline-block;
+	line-height: 50px;
+	text-decoration: none;
+	text-align: center;
+	font-family: "Mricosoft Yahei";
+	font-size: 15px;
+	color: #fff;
+}
+.right {
+	padding: 0px;
+	height: auto;
+}
+.right .post_list {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+	height: auto;
+	opacity: 0.8;
+}
+.right .post_list li {
+	padding: 2%;
+	margin-left: 10%;
+	margin-bottom: 30px;
+	width: 80%;
+	height: auto;
+	list-style: none;
+	background-color: #f1f3fa;
+	border-left: 5px solid #420c5c;
+}
+.post_list li pre {
+	font-size: 15px;
+}
+.blank {
+	background-color: #fff;
+	height: 30px;
+	opacity: 0.8;
+}
+li:hover {
+	background-color: #7a356c;
+}
+.footer {
+	border-top: 1px solid #420c5c;
+	background-color: #fff;
+}
