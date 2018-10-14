@@ -24,7 +24,7 @@
 	}
 	.header_blank {
 		width: 100%;
-		height: 150px;
+		height: 90px !important;
 	}
 	.adver,
 	.adver img {
@@ -85,7 +85,7 @@
 	.flex-row a:nth-child(1) {
 		width: 71px;
 	}
-	.flex-row a:nth-child(2) {
+	.flex-row #menuShare {
 		margin-left: 272px;
 	}
 	.search-wrap {
