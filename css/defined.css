@@ -58,20 +58,15 @@
 	.page__container {
 		width: 100%;
 		margin: 0px;
+		padding: 0px;
 	}
 	.footer__container div:nth-child(3),
 	.footer__container div:nth-child(4) {
 		display: none;
 	}
+	.footer-top__item,
 	.footer-top__item--2 {
-		width: 80%;
-	}
-	.footer__image {
-		width: 20%;
-	}
-	.footer__image img {
-		width: 126%;
-		float: right;
+		width: 70%;
 	}
 	.footer__contact-info {
 		width: 300px;
