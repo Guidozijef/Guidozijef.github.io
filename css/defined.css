@@ -91,9 +91,9 @@
 	.search-wrap {
 		display: none;
 	}
-	.page_footer,
-	.page_footer .footer_top,
-	.page_footer .footer_top .page__container {
+	.page__footer,
+	.page__footer .footer__top,
+	.page__footer .footer__top .page__container {
 		width: 100%;
 	}
 }
