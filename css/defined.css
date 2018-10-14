@@ -59,6 +59,7 @@
 		width: 100%;
 		margin: 0px;
 	}
+	.footer__container div:nth-child(1),
 	.footer__container div:nth-child(3),
 	.footer__container div:nth-child(4) {
 		display: none;
@@ -90,5 +91,10 @@
 	}
 	.search-wrap {
 		display: none;
+	}
+	.page_footer,
+	.page_footer .footer_top,
+	.page_footer .footer_top .page__container {
+		width: 100%;
 	}
 }
