@@ -1,8 +1,11 @@
 @media screen and (max-width: 760px) {
 	.content-header {
+		background: none;
+		background-color: none;
+		width: 100%;
 		margin: 0;
 		min-height: auto;
-		padding: 72px 16px 20px;
+		padding: 52px 20px;
 	}
 	.content-header .title {
 		font-size: 24px;
@@ -20,10 +23,12 @@
 		line-height: 1.5;
 	}
 	.header_blank {
-		height: 108px;
+		width: 100%;
+		height: 150px;
 	}
+	.adver,
 	.adver img {
-		width: 28%;
+		width: 100%;
 		height: auto;
 	}
 	.top-1 {
@@ -36,6 +41,9 @@
 	}
 	.im {
 		display: none;
+	}
+	.rigth {
+		width: 100%;
 	}
 	.container {
 		width: 100%;
@@ -75,7 +83,10 @@
 		display: none;
 	}
 	.flex-row a:nth-child(1) {
-		width: 120px;
+		width: 50px;
+	}
+	.header-icon {
+		margin-left: 272px;
 	}
 	.search-wrap {
 		display: none;
