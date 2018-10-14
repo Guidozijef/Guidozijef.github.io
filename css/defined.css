@@ -69,7 +69,7 @@
 		width: 70% !important;
 	}
 	.footer-top__item .item__content p {
-		width: 100%;
+		width: 100% !important;
 	}
 	.footer__contact-info {
 		width: 300px;
