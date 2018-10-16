@@ -26,31 +26,27 @@
     
     
     
-    <title>python爬取简历模板 | Guido van zijef | 千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</title>
+    <title>打造自己的音乐播放器（二） | Guido van zijef | 千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="python,spider,resume">
-    <meta name="description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了站长之家。  python爬取简历模板一、分析网页结构&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，">
-<meta name="keywords" content="python,spider,resume">
+    <meta name="keywords" content="前端,audio,javascript,css,html">
+    <meta name="description" content="打造自己的音乐播放器（二）   前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;上一篇讲到了&amp;lt;audio&amp;gt;标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。   一、播放器界面的实现&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢">
+<meta name="keywords" content="前端,audio,javascript,css,html">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬取简历模板">
-<meta property="og:url" content="https://guidozijef.github.io/2018/09/27/python爬取简历模板/index.html">
+<meta property="og:title" content="打造自己的音乐播放器（二）">
+<meta property="og:url" content="https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/index.html">
 <meta property="og:site_name" content="Guido van zijef">
-<meta property="og:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了站长之家。  python爬取简历模板一、分析网页结构&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，">
+<meta property="og:description" content="打造自己的音乐播放器（二）   前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;上一篇讲到了&amp;lt;audio&amp;gt;标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。   一、播放器界面的实现&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/14214683-00463a04d23452c5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-c162e94900b965ac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-47490b58155b2523.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-769c9e4b2747b784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-2e035efe08eaafda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-27T07:40:58.460Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-e52da417bd614419.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-16T14:38:28.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬取简历模板">
-<meta name="twitter:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了站长之家。  python爬取简历模板一、分析网页结构&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/14214683-00463a04d23452c5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="打造自己的音乐播放器（二）">
+<meta name="twitter:description" content="打造自己的音乐播放器（二）   前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;上一篇讲到了&amp;lt;audio&amp;gt;标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。   一、播放器界面的实现&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/14214683-e52da417bd614419.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
         <link rel="alternate" type="application/atom+xml" title="Guido van zijef" href="/atom.xml">
     
@@ -327,7 +323,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
             <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <!-- <div class="flex-col header-title ellipsis">python爬取简历模板</div> -->
+        <!-- <div class="flex-col header-title ellipsis">打造自己的音乐播放器（二）</div> -->
         <!-- <div class="flex-col header-title ellipsis"></div> -->
         <!-- <div class="top-1">
             <ul>
@@ -412,11 +408,11 @@
     </div>
 
     <div class="container fade-scale">
-        <h1 class="title">python爬取简历模板</h1>
+        <h1 class="title">打造自己的音乐播放器（二）</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-09-27T07:12:40.625Z" itemprop="datePublished" class="page-time">
-  2018-09-27
+                <time datetime="2018-10-16T14:37:07.770Z" itemprop="datePublished" class="page-time">
+  2018-10-16
 </time>
 
 
@@ -435,18 +431,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#python爬取简历模板"><span class="post-toc-number"></span> <span class="post-toc-text">python爬取简历模板</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、分析网页结构"><span class="post-toc-number"></span> <span class="post-toc-text">一、分析网页结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二、编写python代码"><span class="post-toc-number"></span> <span class="post-toc-text">二、编写python代码</span></a>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text">打造自己的音乐播放器（二）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">前言</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、播放器界面的实现"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">一、播放器界面的实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HTML"><span class="post-toc-number">1.0.1.1.</span> <span class="post-toc-text">HTML</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二、js功能实现"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">二、js功能实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Javascript"><span class="post-toc-number">1.0.2.1.</span> <span class="post-toc-text">Javascript</span></a></li></ol></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-python爬取简历模板"
+<article id="post-打造自己的音乐播放器（二）"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">python爬取简历模板</h1>
+        <h1 class="post-card-title">打造自己的音乐播放器（二）</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-09-27 15:12:40" datetime="2018-09-27T07:12:40.625Z"  itemprop="datePublished">2018-09-27</time>
+            <time class="post-time" title="2018-10-16 22:37:07" datetime="2018-10-16T14:37:07.770Z"  itemprop="datePublished">2018-10-16</time>
 
             
 
@@ -459,43 +455,45 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>&ensp;&ensp;&ensp;&ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了<a href="http://sc.chinaz.com/jianli/free_1.html" target="_blank" rel="noopener">站长之家</a>。</p>
+            <center><h2>打造自己的音乐播放器（二）</h2></center>
+
+
+<h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>&ensp;&ensp;&ensp;&ensp;上一篇讲到了<code>&lt;audio&gt;</code>标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。</p>
 <hr>
-<h2 id="python爬取简历模板"><a href="#python爬取简历模板" class="headerlink" title="python爬取简历模板"></a><center>python爬取简历模板<center></center></center></h2><h4 id="一、分析网页结构"><a href="#一、分析网页结构" class="headerlink" title="一、分析网页结构"></a>一、分析网页结构</h4><p>&ensp;&ensp;&ensp;&ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，<br><figure class="image-bubble">
+
+<h4 id="一、播放器界面的实现"><a href="#一、播放器界面的实现" class="headerlink" title="一、播放器界面的实现"></a>一、播放器界面的实现</h4><p>&ensp;&ensp;&ensp;&ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢的风格，根据自己的喜好来，写自己风格的播放器，这里我把自己的代码和效果放上来。</p>
+<h5 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;referrer&quot; content=&quot;never&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;js/jquery-ui.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;js/music.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/music.css&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;music_player&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;header&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/music.png&quot;&gt;&lt;/a&gt;</span><br><span class="line">            &lt;span&gt;听风画雨眠&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        // 播放器面板</span><br><span class="line">        &lt;div class=&quot;icon&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/after.png&quot;&gt;&lt;/a&gt;&amp;ensp;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/player.png&quot;&gt;&lt;/a&gt;&amp;ensp;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/betton.png&quot;&gt;&lt;/a&gt;&amp;ensp;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/sound.png&quot;&gt;&lt;/a&gt;</span><br><span class="line">            &lt;div class=&quot;strip&quot;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;circle&quot;&gt;</span><br><span class="line">                &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;bar&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;img id=&quot;img&quot; style=&quot;width:70px;&quot;</span><br><span class="line">         src=&quot;http://qukufile2.qianqian.com/data2/pic/0ce88c8cd9127e20ff576a6ad66fe870/576822355/576822355.jpg@s_1,w_90,h_90&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; value=&quot;&quot; id=&quot;info&quot; placeholder=&quot;请输入歌曲、歌手&quot; /&gt;</span><br><span class="line">        &lt;button id=&quot;btn&quot;&gt;搜索&lt;/button&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;audio id=&quot;audio&quot; preload=&quot;auto&quot; style=&quot;width:274px;&quot; src=&quot;http://music.163.com/song/media/outer/url?id=449818741.mp3&quot;&gt;浏览器太垃圾不支持h5音乐标签&lt;/audio&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        // 播放列表</span><br><span class="line">        &lt;ul class=&quot;list&quot; style=&quot;width:260px; heigth:30px;&quot;&gt;</span><br><span class="line">            &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;a class=&quot;li&quot; href=&quot;javascript:;&quot;&gt;光年之外&lt;/a&gt;&lt;div&gt;邓紫棋&lt;/div&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;a class=&quot;li&quot; href=&quot;javascript:;&quot;&gt;半壶纱&lt;/a&gt;&lt;div&gt;刘珂矣&lt;/div&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>css部分我就不发出来了，代码太长了，需要整套源码的可以去群里面下载（Q群：812307816）</p>
+</blockquote>
+<p>我们直接到最关键的部分，js部分</p>
+<h4 id="二、js功能实现"><a href="#二、js功能实现" class="headerlink" title="二、js功能实现"></a>二、js功能实现</h4><h5 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h5><p>&ensp;&ensp;&ensp;&ensp;js部分是里面最重要的部分，做了上面的html、css后只是一个音乐播放器的壳子，js才是整个播放器的核心内容，我们先来屡屡思路</p>
+<blockquote>
+<p>1、如何做到搜索取别的播放器数据的效果。<br><br>2、得到数据后我们如何把歌曲信息显示到播放列表上面。<br><br>3、如何点击列表上面不同的歌曲自动获取该播放地址和图片。<br><br>4、如何实现本地的点击功能（控制、暂停、静音、上一曲、下一曲）。</p>
+</blockquote>
+<p>要实现索取别的播放器的音乐，我们需要用到AJAX发送跨域请求，首先需要找到一个音乐API，很多音乐播放器都是不可行的。而且我用的是jquery的ajax，只支持get请求方式的跨域。最后我也找到了一个，各种尝试最后请求成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#btn&apos;).click(function() &#123;</span><br><span class="line">		var value = $(&apos;#info&apos;).val();</span><br><span class="line">		$.ajax(&#123;</span><br><span class="line">			type: &apos;get&apos;,</span><br><span class="line">			url: &apos;http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&amp;query=&apos; + value,</span><br><span class="line">			async: true,</span><br><span class="line">			dataType: &apos;jsonp&apos;,</span><br><span class="line">			success: function(data1) &#123;</span><br><span class="line">				var songids = data1.song;</span><br><span class="line">				console.log(songids.length);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这部分代码就是实现发送搜索歌曲的请求，并返回搜索信息。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; songids.length; i++) &#123;</span><br><span class="line">	var songid = songids[i].songid;</span><br><span class="line">	var artistname = songids[i].artistname;</span><br><span class="line">	var li = document.createElement(&apos;li&apos;);</span><br><span class="line">	var span = document.createElement(&apos;span&apos;);</span><br><span class="line">	var a = document.createElement(&apos;a&apos;);</span><br><span class="line">	var div = document.createElement(&apos;div&apos;);</span><br><span class="line">	div.innerText = artistname;</span><br><span class="line">	a.href = &apos;javascript:;&apos;;</span><br><span class="line">	a.src = songid;</span><br><span class="line">	var songname = songids[i].songname;</span><br><span class="line">	a.textContent = songname;</span><br><span class="line">	li.appendChild(span);</span><br><span class="line">	li.appendChild(a);</span><br><span class="line">	li.appendChild(div);</span><br><span class="line">	$(&apos;.music_player .list&apos;).append(li);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>利用js将得到的歌曲信息显示到歌曲列表中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">	type: &apos;get&apos;,</span><br><span class="line">	url:&apos;http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&amp;songid=&apos; +this.src,</span><br><span class="line">	async: true,</span><br><span class="line">	dataType: &apos;jsonp&apos;,</span><br><span class="line">	success: function(data2) &#123;</span><br><span class="line">		var audio = document.getElementById(&apos;audio&apos;);</span><br><span class="line">		var img = document.getElementById(&apos;img&apos;);</span><br><span class="line">		audio.src = data2.bitrate.file_link;</span><br><span class="line">		img.src = data2.songinfo.pic_small;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>这部分代码是对单个歌曲发送请求，得到本歌曲的相关信息。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">// 点击图片控制播放和暂停</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(1).click(function() &#123;</span><br><span class="line">		if (audio.paused) &#123;</span><br><span class="line">			audio.play();</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/pause.png&apos; &#125;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			audio.pause();</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/player.png&apos; &#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	// 点击音量变成静音并且改变图标</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(3).click(function() &#123;</span><br><span class="line">		if (audio.muted) &#123;</span><br><span class="line">			audio.muted = false;</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/sound.png&apos; &#125;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			audio.muted = true;</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/sound-off.png&apos; &#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	// 点击上一歌曲</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(0).click(function() &#123;</span><br><span class="line">		$(&apos;.list .present&apos;).parent().prev(&apos;li&apos;).children(&apos;span&apos;).addClass(&apos;present&apos;);</span><br><span class="line">		$(&apos;.list .present&apos;).parent().prev(&apos;li&apos;).children(&apos;a&apos;).click();</span><br><span class="line">	&#125;);</span><br><span class="line">	// 点击下一歌曲</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(2).click(function() &#123;</span><br><span class="line">		$(&apos;.list .present&apos;).parent().next(&apos;li:first&apos;).children(&apos;span&apos;).addClass(&apos;present&apos;);</span><br><span class="line">		$(&apos;.list .present&apos;).parent().next(&apos;li:first&apos;).children(&apos;a&apos;).click();</span><br><span class="line">	&#125;);</span><br><span class="line">	// 控制音量</span><br><span class="line">	$(&apos;.icon .circle span&apos;).draggable(&#123;</span><br><span class="line">		axis: &apos;X&apos;,</span><br><span class="line">		containment: &apos;parent&apos;,</span><br><span class="line">		drag: function(ev, ui) &#123;</span><br><span class="line">			// console.log(ui.position.left)</span><br><span class="line">			var noeleft = ui.position.left;</span><br><span class="line">			$(&apos;.icon .bar&apos;).css(&#123; width: noeleft + 2 &#125;);</span><br><span class="line">			audio.volume = noeleft / 40; // 利用left转化为音量。</span><br><span class="line">			if (noeleft == 0) &#123;</span><br><span class="line">				$(&apos;.icon a img&apos;).eq(3).attr(&#123; src: &apos;img/sound-off.png&apos; &#125;);</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				$(&apos;.icon a img&apos;).eq(3).attr(&#123; src: &apos;img/sound.png&apos; &#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	// 自动播放下一首</span><br><span class="line">	if (audio) &#123;</span><br><span class="line">		audio.loop = false;</span><br><span class="line">		audio.addEventListener(</span><br><span class="line">			&apos;ended&apos;,</span><br><span class="line">			function() &#123;</span><br><span class="line">				$(&apos;.icon a img&apos;).eq(2).click();</span><br><span class="line">				//在这个方法里写相应的逻辑就可以了</span><br><span class="line">			&#125;,</span><br><span class="line">			false</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这部分就是控制歌曲的播放、暂停、上一曲、下一曲等功能了。</p>
+</blockquote>
+<p>最后我自己做的效果如下<a href="http://zijef.pw/" target="_blank" rel="noopener">demo</a>（demo要用电脑端查看才会有）：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://upload-images.jianshu.io/upload_images/14214683-00463a04d23452c5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure><br>我们右键检查，选中一份简历，明显可以看到进入这份简历的链接，然后点击这个链接进入到这份简历的页面里。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-c162e94900b965ac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                    <img src="https://upload-images.jianshu.io/upload_images/14214683-e52da417bd614419.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure></p>
-<p>往下翻可以看到下面有很多下载的地址，什么福建，山东，江苏，广东，厦门等，随便点击一个都可以下载的，还是右键检查一下，选中一个下载的地址，也可以看到下载的链接就在这里面。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-47490b58155b2523.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<p>好了，我们接下来的工作就好办了，只要把这两个链接用正则取到，在请求不就好了吗，就这么简单。</p>
-<h4 id="二、编写python代码"><a href="#二、编写python代码" class="headerlink" title="二、编写python代码"></a>二、编写python代码</h4><p>&ensp;&ensp;&ensp;&ensp;我们先请求站长之家的链接获取到网页源代码，在用正则提取出第一个链接就好了。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-769c9e4b2747b784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<p>在请求这个链接，提取出下载链接，在请求下载链接就可以下载到本地了。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-2e035efe08eaafda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure><br>好了，小伙伴是不是觉得很简单，感觉python爬虫就是这样，只要找到了链接，在用正则提取就行了，思路要清晰。</p>
+<p>我这里没做进度条和歌词效果，感兴趣的可以自己加进去，进度条的做法应该跟音量控制大同小异，需要用到jquery-ui。对了，给大家推荐一个图标下载的地方，是你马云爸爸家的<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">http://www.iconfont.cn/</a>，我上面用到的图标也是在上面下载的。</p>
+<p>好了，播放器打造完成了，今天除了皮，又啥也没干。</p>
 
         </div>
 
@@ -504,12 +502,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-27T07:40:58.460Z" itemprop="dateUpdated">2018-09-27 15:40:58</time>
+    最后更新时间：<time datetime="2018-10-16T14:38:28.670Z" itemprop="dateUpdated">2018-10-16 22:38:28</time>
 </span><br>
 
 
         
-        感谢您的阅读，本文由 Guido van zijef 版权所有。如若转载，请注明出处：<a href="/2018/09/27/python爬取简历模板/" target="_blank" rel="external">https://guidozijef.github.io/2018/09/27/python爬取简历模板/</a>
+        感谢您的阅读，本文由 Guido van zijef 版权所有。如若转载，请注明出处：<a href="/2018/10/16/打造自己的音乐播放器（二）/" target="_blank" rel="external">https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/</a>
         
     </div>
     
@@ -530,7 +528,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/resume/">resume</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spider/">spider</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/audio/">audio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
 
             
@@ -540,7 +538,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -550,22 +548,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python爬取简历模板》 — Guido van zijef&url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&via=https://guidozijef.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《打造自己的音乐播放器（二）》 — Guido van zijef&url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&via=https://guidozijef.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -585,21 +583,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/10/16/打造自己的音乐播放器（一）/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">打造自己的音乐播放器（一）</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/09/06/为博客添加Gitment评论系统/" id="post-next" class="post-nav-link">
+      <a href="/2018/10/16/打造自己的音乐播放器（一）/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">为博客添加Gitment评论系统</h4>
+        <h4 class="title">打造自己的音乐播放器（一）</h4>
       </a>
     </div>
   
@@ -624,7 +615,7 @@
     <script src="https://billts.site/js/gitment.js"></script>
     <script>
         var gitment = new Gitment({
-            id: 'Thu Sep 27 2018 15:12:40 GMT+0800',
+            id: 'Tue Oct 16 2018 22:37:07 GMT+0800',
             owner: 'Guidozijef',
             repo: 'Guidozijef.github.io',
             oauth: {
@@ -984,7 +975,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -994,22 +985,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python爬取简历模板》 — Guido van zijef&url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&via=https://guidozijef.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《打造自己的音乐播放器（二）》 — Guido van zijef&url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&via=https://guidozijef.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1020,7 +1011,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" alt="微信分享二维码">
 </div>
 
 

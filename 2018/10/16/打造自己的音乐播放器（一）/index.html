@@ -26,31 +26,28 @@
     
     
     
-    <title>python爬取简历模板 | Guido van zijef | 千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</title>
+    <title>打造自己的音乐播放器（一） | Guido van zijef | 千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="python,spider,resume">
-    <meta name="description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了站长之家。  python爬取简历模板一、分析网页结构&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，">
-<meta name="keywords" content="python,spider,resume">
+    <meta name="keywords" content="前端,audio">
+    <meta name="description" content="打造自己的音乐播放器（一）  前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学习了前端就一直在想，能不能利用别人的数据打造一个我自己的音乐播放器，最开始这个想法是想做一个简单的翻译软件，后来用网易云音乐外链，没有搜索功能实在是很不爽，就冒出了这个想法， 查了一下，网上也有做自己的播放器，但是没发现有搜索功能的，只是本地，后来就坚持自己做一个带搜索的音乐播放器。   一、 初识&amp;lt;au">
+<meta name="keywords" content="前端,audio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬取简历模板">
-<meta property="og:url" content="https://guidozijef.github.io/2018/09/27/python爬取简历模板/index.html">
+<meta property="og:title" content="打造自己的音乐播放器（一）">
+<meta property="og:url" content="https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/index.html">
 <meta property="og:site_name" content="Guido van zijef">
-<meta property="og:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了站长之家。  python爬取简历模板一、分析网页结构&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，">
+<meta property="og:description" content="打造自己的音乐播放器（一）  前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学习了前端就一直在想，能不能利用别人的数据打造一个我自己的音乐播放器，最开始这个想法是想做一个简单的翻译软件，后来用网易云音乐外链，没有搜索功能实在是很不爽，就冒出了这个想法， 查了一下，网上也有做自己的播放器，但是没发现有搜索功能的，只是本地，后来就坚持自己做一个带搜索的音乐播放器。   一、 初识&amp;lt;au">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/14214683-00463a04d23452c5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-c162e94900b965ac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-47490b58155b2523.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-769c9e4b2747b784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-2e035efe08eaafda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-27T07:40:58.460Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/14214683-d843ef751e355393.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/14214683-6304633d49a3fae2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-16T14:38:26.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬取简历模板">
-<meta name="twitter:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了站长之家。  python爬取简历模板一、分析网页结构&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/14214683-00463a04d23452c5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="打造自己的音乐播放器（一）">
+<meta name="twitter:description" content="打造自己的音乐播放器（一）  前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自从学习了前端就一直在想，能不能利用别人的数据打造一个我自己的音乐播放器，最开始这个想法是想做一个简单的翻译软件，后来用网易云音乐外链，没有搜索功能实在是很不爽，就冒出了这个想法， 查了一下，网上也有做自己的播放器，但是没发现有搜索功能的，只是本地，后来就坚持自己做一个带搜索的音乐播放器。   一、 初识&amp;lt;au">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/14214683-d843ef751e355393.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
         <link rel="alternate" type="application/atom+xml" title="Guido van zijef" href="/atom.xml">
     
@@ -327,7 +324,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
             <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <!-- <div class="flex-col header-title ellipsis">python爬取简历模板</div> -->
+        <!-- <div class="flex-col header-title ellipsis">打造自己的音乐播放器（一）</div> -->
         <!-- <div class="flex-col header-title ellipsis"></div> -->
         <!-- <div class="top-1">
             <ul>
@@ -412,11 +409,11 @@
     </div>
 
     <div class="container fade-scale">
-        <h1 class="title">python爬取简历模板</h1>
+        <h1 class="title">打造自己的音乐播放器（一）</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-09-27T07:12:40.625Z" itemprop="datePublished" class="page-time">
-  2018-09-27
+                <time datetime="2018-10-16T14:36:47.873Z" itemprop="datePublished" class="page-time">
+  2018-10-16
 </time>
 
 
@@ -435,18 +432,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#python爬取简历模板"><span class="post-toc-number"></span> <span class="post-toc-text">python爬取简历模板</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、分析网页结构"><span class="post-toc-number"></span> <span class="post-toc-text">一、分析网页结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二、编写python代码"><span class="post-toc-number"></span> <span class="post-toc-text">二、编写python代码</span></a>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text">打造自己的音乐播放器（一）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">前言</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、-初识-lt-audio-gt-标签"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">一、 初识&lt;audio&gt;标签</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二、属性解析"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">二、属性解析</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-python爬取简历模板"
+<article id="post-打造自己的音乐播放器（一）"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">python爬取简历模板</h1>
+        <h1 class="post-card-title">打造自己的音乐播放器（一）</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-09-27 15:12:40" datetime="2018-09-27T07:12:40.625Z"  itemprop="datePublished">2018-09-27</time>
+            <time class="post-time" title="2018-10-16 22:36:47" datetime="2018-10-16T14:36:47.873Z"  itemprop="datePublished">2018-10-16</time>
 
             
 
@@ -459,43 +456,80 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>&ensp;&ensp;&ensp;&ensp;自从学了python爬虫后就想去找一份爬虫的工作，但是简历如何写作是个问题，就想到了何不用爬虫去爬取别人的简历模板一看，找了一些网站最后看最准了<a href="http://sc.chinaz.com/jianli/free_1.html" target="_blank" rel="noopener">站长之家</a>。</p>
+            <center><h2>打造自己的音乐播放器（一）</h2></center>
+
+<h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>&ensp;&ensp;&ensp;&ensp;自从学习了前端就一直在想，能不能利用别人的数据打造一个我自己的音乐播放器，最开始这个想法是想做一个简单的翻译软件，后来用网易云音乐外链，没有搜索功能实在是很不爽，就冒出了这个想法， 查了一下，网上也有做自己的播放器，但是没发现有搜索功能的，只是本地，后来就坚持自己做一个带搜索的音乐播放器。</p>
 <hr>
-<h2 id="python爬取简历模板"><a href="#python爬取简历模板" class="headerlink" title="python爬取简历模板"></a><center>python爬取简历模板<center></center></center></h2><h4 id="一、分析网页结构"><a href="#一、分析网页结构" class="headerlink" title="一、分析网页结构"></a>一、分析网页结构</h4><p>&ensp;&ensp;&ensp;&ensp;进入到站长之家，我们可以看到免费的offer一共有426页之多，把这些全部爬下来也足够使用了吧，<br><figure class="image-bubble">
+
+<h4 id="一、-初识-lt-audio-gt-标签"><a href="#一、-初识-lt-audio-gt-标签" class="headerlink" title="一、 初识&lt;audio&gt;标签"></a>一、 初识<code>&lt;audio&gt;</code>标签</h4><p>&ensp;&ensp;&ensp;&ensp;在打造自己的音乐播放器之前我们先认识一下<code>&lt;audio&gt;</code>标签,毕竟后面的操作都是与这个标签挂钩，<code>&lt;audio&gt;</code>和<code>&lt;video&gt;</code>标签是H5新增标签，这里我们用<code>&lt;audio&gt;</code>标签。<br>&ensp;&ensp;&ensp;&ensp;我们先看一下<code>&lt;audio&gt;</code>标签有哪些属性和事件，我在网上找了几张图，一目了然。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://upload-images.jianshu.io/upload_images/14214683-00463a04d23452c5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                    <img src="http://upload-images.jianshu.io/upload_images/14214683-d843ef751e355393.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="](http://upload-images.jianshu.io/upload_images/14214683-ad580724dda135fc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![" title="">
                 </div>
-                <div class="image-caption"></div>
-            </figure><br>我们右键检查，选中一份简历，明显可以看到进入这份简历的链接，然后点击这个链接进入到这份简历的页面里。<br><figure class="image-bubble">
+                <div class="image-caption">](http://upload-images.jianshu.io/upload_images/14214683-ad580724dda135fc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![</div>
+            </figure><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-c162e94900b965ac.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                    <img src="http://upload-images.jianshu.io/upload_images/14214683-6304633d49a3fae2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="](http://upload-images.jianshu.io/upload_images/14214683-c7f07be8ac2dd3f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![" title="">
                 </div>
-                <div class="image-caption"></div>
+                <div class="image-caption">](http://upload-images.jianshu.io/upload_images/14214683-c7f07be8ac2dd3f1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)![</div>
             </figure></p>
-<p>往下翻可以看到下面有很多下载的地址，什么福建，山东，江苏，广东，厦门等，随便点击一个都可以下载的，还是右键检查一下，选中一个下载的地址，也可以看到下载的链接就在这里面。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-47490b58155b2523.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<p>好了，我们接下来的工作就好办了，只要把这两个链接用正则取到，在请求不就好了吗，就这么简单。</p>
-<h4 id="二、编写python代码"><a href="#二、编写python代码" class="headerlink" title="二、编写python代码"></a>二、编写python代码</h4><p>&ensp;&ensp;&ensp;&ensp;我们先请求站长之家的链接获取到网页源代码，在用正则提取出第一个链接就好了。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-769c9e4b2747b784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure></p>
-<p>在请求这个链接，提取出下载链接，在请求下载链接就可以下载到本地了。<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-2e035efe08eaafda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
-                </div>
-                <div class="image-caption"></div>
-            </figure><br>好了，小伙伴是不是觉得很简单，感觉python爬虫就是这样，只要找到了链接，在用正则提取就行了，思路要清晰。</p>
+<h4 id="二、属性解析"><a href="#二、属性解析" class="headerlink" title="二、属性解析"></a>二、属性解析</h4><p>&ensp;&ensp;&ensp;&ensp;这里我挑一些常用的给大家简单说下如何使用这些属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;音乐链接.mp3&quot; controls&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这就是<code>&lt;audio&gt;</code>的基本使用，如果在页面上写这一行代码就会看到播放器，但是这里显示的播放器，会根据不同的浏览器显示也是各不相同， 显示的效果也不是我们所要的，所以这里我们把<code>controls</code>属性去掉，播放器就是隐藏起来，然后自己写界面。</p>
+<blockquote>
+<p><strong>注</strong>：主流的音频文件格式有：mp3、wav、ogg。不同的浏览器对三种格式支持程度不一样。其中mp3格式支持度最好。</p>
+</blockquote>
+<p><strong>autoplay属性</strong>：加载完成后，自动播放。也非常简单、使用。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;音乐链接.mp3&quot; autoplay&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>loop属性</strong>：顾名思义，循环播放。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;音乐链接.mp3&quot; loop&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>preload属性</strong>：用来控制音频在什么时候进行加载。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;音乐链接.mp3&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>对应的值有3种：<br>none：默认不加载，等有需要的时候再加载。<br>metadata：元数据，默认不加载，但是可以提取该音频的元数据信息。<br>auto：自动加载，网页加载完就加载整个音频。</p>
+</blockquote>
+<p><strong>muted属性</strong>：静音效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio src=&quot;音乐链接.mp3&quot; muted&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>注意</strong>：加了<strong>muted属性</strong>后，音频在播放的时候是没有声音，除非用户手动调整控制面板的音量，一般情况下不加这个。</p>
+</blockquote>
+<p>下面我们介绍下如何用javascrit如何操作这些属性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;audio id=&quot;music&quot; src=&quot;音乐链接.mp3&quot;&gt;&lt;/audio&gt;</span><br><span class="line">    var music = document.getElementById(&apos;music&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>控制播放：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">music.play();//调用play( )方法可以执行播放。</span><br></pre></td></tr></table></figure></p>
+<p>控制暂停：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">music.pause();//调用pause( )方法可以执行暂停播放。</span><br></pre></td></tr></table></figure></p>
+<p>获取和设置已播放的时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">music.currentTime</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>通过currentTime属性，你可以拿到当前音频播放了多久，返回的数字以( s )秒为单位。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">music.currentTime = 10;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>你也可以给它赋值，这样音频会定位到10秒的播放位置。</p>
+</blockquote>
+<p>是否自动播放：</p>
+<pre><code>music.autoplay = true;//自动播放
+</code></pre><blockquote>
+<p>可以直接在<audio>标签上加上autoplay属性，也可以通过JavaScript来设置autoplay属性。它是一个布尔值，true代表自动播放，false代表非自动播放。</audio></p>
+</blockquote>
+<p>是否循环播放：</p>
+<pre><code>music.loop = true;//循环播放
+</code></pre><blockquote>
+<p>可以直接在<audio>标签上加上loop属性，也可以通过JavaScript来设置loop属性。它也是一个布尔值，true代表循环播放，false代表单曲播放。</audio></p>
+</blockquote>
+<p>是否显示控制面板：</p>
+<pre><code>music.controls = true;//显示控制面板
+</code></pre><blockquote>
+<p>可以直接在<audio>标签上加上controls属性，也可以通过JavaScript来设置controls属性。它也是一个布尔值，true代表显示控制面板，false代表隐藏控制面板。我们这里就直接隐藏了，显示的也不是我们想要的东西。</audio></p>
+</blockquote>
+<p>是否静音：</p>
+<pre><code>music.muted = true;//静音
+</code></pre><blockquote>
+<p>可以直接在<audio>标签上加上muted属性，也可以通过JavaScript来设置muted属性。它也是一个布尔值，true代表静音，false代表有声音。</audio></p>
+</blockquote>
+<p>是否暂停：</p>
+<pre><code>music.paused  //是否暂停 
+</code></pre><blockquote>
+<p>判断音频当前是否暂停，返回true代表暂停，返回false代表正在播放；默认是true；该值只能读取，不能修改。<br>调用play( )方法后，music.paused的值会变成false；调用pause( )方法后，music.paused的值会变成true。后面我们会用Jquery来控制这两个属性，实现播放和暂停。</p>
+</blockquote>
+<p>调节音量：</p>
+<pre><code>m.volume = 0.1;
+</code></pre><blockquote>
+<p>音量的取值范围在：0（无声）~1（最大声）之间。后面我们会利用其他数值来转换到volume值上面，来对音量进行控制。</p>
+</blockquote>
+<p>后面我会讲到如何写html、css、javascript代码和功能实现，预知详情，请看下一篇，打造自己的音乐播放器（二）。</p>
 
         </div>
 
@@ -504,12 +538,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-27T07:40:58.460Z" itemprop="dateUpdated">2018-09-27 15:40:58</time>
+    最后更新时间：<time datetime="2018-10-16T14:38:26.056Z" itemprop="dateUpdated">2018-10-16 22:38:26</time>
 </span><br>
 
 
         
-        感谢您的阅读，本文由 Guido van zijef 版权所有。如若转载，请注明出处：<a href="/2018/09/27/python爬取简历模板/" target="_blank" rel="external">https://guidozijef.github.io/2018/09/27/python爬取简历模板/</a>
+        感谢您的阅读，本文由 Guido van zijef 版权所有。如若转载，请注明出处：<a href="/2018/10/16/打造自己的音乐播放器（一）/" target="_blank" rel="external">https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/</a>
         
     </div>
     
@@ -530,7 +564,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/resume/">resume</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spider/">spider</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/audio/">audio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
 
             
@@ -540,7 +574,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/&title=《打造自己的音乐播放器（一）》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -550,22 +584,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/&title=《打造自己的音乐播放器（一）》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python爬取简历模板》 — Guido van zijef&url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&via=https://guidozijef.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《打造自己的音乐播放器（一）》 — Guido van zijef&url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/&via=https://guidozijef.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -588,18 +622,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/10/16/打造自己的音乐播放器（一）/" id="post-prev" class="post-nav-link">
+      <a href="/2018/10/16/打造自己的音乐播放器（二）/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">打造自己的音乐播放器（一）</h4>
+        <h4 class="title">打造自己的音乐播放器（二）</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/09/06/为博客添加Gitment评论系统/" id="post-next" class="post-nav-link">
+      <a href="/2018/09/27/python爬取简历模板/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">为博客添加Gitment评论系统</h4>
+        <h4 class="title">python爬取简历模板</h4>
       </a>
     </div>
   
@@ -624,7 +658,7 @@
     <script src="https://billts.site/js/gitment.js"></script>
     <script>
         var gitment = new Gitment({
-            id: 'Thu Sep 27 2018 15:12:40 GMT+0800',
+            id: 'Tue Oct 16 2018 22:36:47 GMT+0800',
             owner: 'Guidozijef',
             repo: 'Guidozijef.github.io',
             oauth: {
@@ -984,7 +1018,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/&title=《打造自己的音乐播放器（一）》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -994,22 +1028,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&title=《python爬取简历模板》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/&title=《打造自己的音乐播放器（一）》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python爬取简历模板》 — Guido van zijef&url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/&via=https://guidozijef.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《打造自己的音乐播放器（一）》 — Guido van zijef&url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/&via=https://guidozijef.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1020,7 +1054,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://guidozijef.github.io/2018/09/27/python爬取简历模板/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（一）/" alt="微信分享二维码">
 </div>
 
 
