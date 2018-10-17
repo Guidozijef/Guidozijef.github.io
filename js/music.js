@@ -1,6 +1,6 @@
 $(function() {
-	$('.music_player .list').html('');
 	$('#btn').click(function() {
+		$('.music_player .list').html(''); // 每次搜索清除杀你搜索的内容。
 		var value = $('#info').val();
 		$.ajax({
 			type: 'get',
