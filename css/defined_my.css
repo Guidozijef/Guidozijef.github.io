@@ -17,7 +17,7 @@
 	width: 100%;
 }
 .background {
-	background: url("../images/miku.jpg") 50% center / cover no-repeat fixed rgb(255, 255, 255);
+	background: url("/img/miku.jpg") 50% center / cover no-repeat fixed rgb(255, 255, 255);
 	width: 100%;
 	height: auto;
 }
