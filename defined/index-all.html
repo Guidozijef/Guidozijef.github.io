@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>知识汇总</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/defined_my.css">
+</head>
+<body>
+    <div class="background">
+        <div class="left">
+            <ul>
+                <li><a href="javascript:;">python</a></li>
+                <li style="background-color: #7a356c;"><a href="javascript:;">前端</a></li>
+                <li><a href="javascript:;">爬虫</a></li>
+                <li><a href="javascript:;">人工智能</a></li>
+                <li><a href="javascript:;">框架</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-md-offset-3 right">
+                    <div class="navbar navbar-inverse navbar-static-top">
+                            <div class="container header_defined">
+                                <div class="navbar-header">
+                                    <button class="navbar-toggle" data-toggle="collapse" data-target="#fruit_menu">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                    <a href="http://zijef.pw/" class="navbar-brand"><img src="images/title.png" alt="logo"></a>
+                                </div>
+                        
+                                <div class="collapse navbar-collapse" id="fruit_menu">
+                    
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="http://zijef.pw/">首页</a></li>
+                                        <li><a href="http://zijef.pw/">程序人生</a></li>
+                                        <li><a href="http://zijef.pw/archives/">博客分类</a></li>
+                                        <li><a href="http://zijef.pw/about/">作者相关</a></li>
+                                    </ul>
+                    
+                                    <form class="navbar-form navbar-right">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" name="" class="form-control">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>	
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </form>
+                    
+                                </div>
+                    
+                            </div>
+                    </div>
+                    <div class="blank"></div>
+                    <ul class="post_list">
+                        <li>
+                            <h4>如何用jquery捕捉inpu框中输入的值</h4>
+                            <pre>
+如何用jquery获取<input id="test" name="test" type="text"/>中输入的值？，有以下几种方法。
+$(" #test ").val()
+$(" input[ name='test' ] ").val()
+$(" input[ type='text' ] ").val()
+$(" input[ type='text' ]").attr("value")
+                            </pre>
+                        </li>
+                        <li>
+                            <h4>input框中设置预览提示</h4>
+                            <pre>
+input框中加placeholder="请输入要翻译的文字"属性，可以设置预览提示
+                            </pre>
+                        </li>
+                        <li>
+                            <h4>去除li标签的圆点</h4>
+                            <pre>
+为li标签加上list-style：none属性
+                            </pre>
+                        </li>
+                        <li>
+                            <h4>去除a标签的下滑线</h4>
+                            <pre>
+为a标签加上text-decoration: none;属性
+                            </pre>
+                        </li>
+                        <li>
+                            <h4>多余字以...显示设置</h4>
+                            <pre>
+先在父级用了overflow: hidden;属性后，有的文字多余了，
+在用text-overflow: ellipsis; 就会以...显示。
+                            </pre>
+                        </li>
+                        <li>
+                            <pre>
+设置background-size：cover;属性，表示背景图片如果大于桌面背景多余的部分则不显示。
+                            </pre>
+                        </li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                    </ul>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    
+        <div class="container-fluid footer">
+            <!-- <p class="text-center links">
+                <a href="#">关于我们</a><span>|</span><a href="#">联系我们</a><span>|</span><a href="#">招聘人才</a><span>|</span><a href="#">友情链接</a>
+            </p> -->
+            <p class="text-center"> 博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</p>
+            <p class="text-center"> Guido van zijef © 2015 - 2018  Power by Hexo Theme indigo</p>
+
+        </div>
+    </div>
+</body>
+</html>
