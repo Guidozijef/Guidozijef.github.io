@@ -122,7 +122,7 @@ $(function() {
 			// console.log(ui.position.left)
 			var noeleft = ui.position.left;
 			$('.icon .bar').css({ width: noeleft + 2 });
-			audio.volume = noeleft / 40; // 利用left转化为音量。
+			audio.volume = noeleft / 36; // 利用left转化为音量。
 			if (noeleft == 0) {
 				$('.icon a img').eq(3).attr({ src: '/img/music_img/sound-off.png' });
 			} else {
