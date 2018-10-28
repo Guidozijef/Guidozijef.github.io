@@ -6,7 +6,7 @@
 	height: 400px;
 	overflow: hidden;
 	position: relative;
-	top: 88px;
+	top: 40px;
 }
 .music_player .list li {
 	width: 100%;
@@ -46,8 +46,8 @@
 	margin: 0px;
 	border: 0px;
 	position: relative;
-	top: 63px;
-	left: -257px;
+	top: 46px;
+	left: -4px;
 }
 .music_player #btn {
 	height: 30px;
@@ -59,8 +59,8 @@
 	color: #fff;
 	border: 0px;
 	position: relative;
-	top: 63px;
-	left: -260px;
+	top: -4px;
+	left: 219px;
 }
 .music_player #img {
 	position: relative;
@@ -68,9 +68,10 @@
 	left: -254px;
 }
 .music_player {
-	position: absolute;
+	position: relative;
 	overflow: hidden;
 	margin: 0px 5px;
+	width: 260px;
 }
 .music_player .list .present {
 	display: block;
@@ -82,7 +83,7 @@
 }
 .music_player .icon {
 	position: relative;
-	top: 100px;
+	top: 127px;
 	left: 78px;
 }
 .music_player .icon img {
