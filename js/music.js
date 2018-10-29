@@ -84,6 +84,15 @@ $(function() {
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
 	});
+	$('.list li').eq(2).click(function() {
+		$('#audio').attr({ src: 'http://music.163.com/song/media/outer/url?id=190072.mp3' });
+		$('.music_player #img').attr({
+			src: 'http://p2.music.126.net/Y91B_GXc5d9t-0X0Uu_7xw==/109951163063096750.jpg?param=130y130'
+		});
+		imgplayer();
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+	});
 	// 点击图片控制播放和暂停
 	$('.icon a img').eq(1).click(function() {
 		if (audio.paused) {
