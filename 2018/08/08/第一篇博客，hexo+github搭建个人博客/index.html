@@ -169,6 +169,7 @@
             // });
             var width = $(window).width();
             $(".adver img").not(':first').css({left: width});
+            $('.header_blank').css({height: width/2.84});
             autoplay();
             var t;
             function autoplay() {
@@ -240,6 +241,7 @@
         position: absolute;
         top: 0px;
         left: 0px;
+        width: 100%;
     }
     .top-header {
         background: none!important;
@@ -343,9 +345,6 @@
     }
     .top-1 .logo img{
         height: 56px;
-    }
-    .header_blank {
-        height: 450px;
     }
 
 </style>
