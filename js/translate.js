@@ -1,7 +1,5 @@
 $(function() {
-	//在线翻译查询(百度翻译)
-	// $('#txt').blur().css({ borderColor: '#420c5c' });
-	$('#btn').click(function() {
+	$('.input-box #btn').click(function() {
 		$('.result-box').html('');
 		var $Txt = $('#txt').val();
 		var appid = '20181020000221992';
@@ -27,11 +25,12 @@ $(function() {
 			},
 			success: function(data) {
 				// console.log(data.trans_result[0].dst);
-				$('.result-box').html(data.trans_result[0].dst);
+				$('.result-box .result').html(data.trans_result[0].dst);
 			}
 		});
 		if ($Txt != '') {
-			$('.result-box').slideDown(300);
+			$('.result-box').slideDown(100);
 		}
+		$('.result-box span').html($Txt);
 	});
 });

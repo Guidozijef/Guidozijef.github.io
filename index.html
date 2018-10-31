@@ -173,6 +173,21 @@
         width: 200px;
         background: #fff;
     }
+    .result-box span{
+        padding: 5px;
+        font-weight: 700;
+        font-size: 20px;
+        width: 100px;
+        height: auto;
+        color: #420c5c;
+        font-family: "Microsoft Yahei";
+        
+    }
+    .result-box .result{
+        padding: 5px;
+        color: #4395FF;
+        font-family: "Microsoft Yahei";
+    }
     .im{
         width: 235px;
         margin: 20px;
@@ -265,31 +280,31 @@
             //     clearInterval(t);
             // })
             $(".li01").mouseover(function(){    
-                $(this).children("ul").stop().slideDown(300);    
+                $(this).children("ul").stop().slideDown(100);    
             });
             $(".li01").mouseout(function(){    
-                $(this).children("ul").stop().slideUp(300);  /*stop()是用来取消冒泡事件的*/  
+                $(this).children("ul").stop().slideUp(100);  /*stop()是用来取消冒泡事件的*/  
             });
   
             $(".li02").mouseover(function(){    
-                $(this).children("ul").stop().slideDown(300);    
+                $(this).children("ul").stop().slideDown(100);    
             });
             $(".li02").mouseout(function(){    
-                $(this).children("ul").stop().slideUp(300);  
+                $(this).children("ul").stop().slideUp(100);  
             });
 
             $(".li03").mouseover(function(){    
-                $(this).children("ul").stop().slideDown(300);    
+                $(this).children("ul").stop().slideDown(100);    
             });
             $(".li03").mouseout(function(){    
-                $(this).children("ul").stop().slideUp(300);    
+                $(this).children("ul").stop().slideUp(100);    
             });
 
             $(".li04").mouseover(function(){    
-                $(this).children("ul").stop().slideDown(300);    
+                $(this).children("ul").stop().slideDown(100);    
             });
             $(".li04").mouseout(function(){    
-                $(this).children("ul").stop().slideUp(300);    
+                $(this).children("ul").stop().slideUp(100);    
             });
 
         });
@@ -563,6 +578,8 @@
             <img id="btn" src="/img/搜索.png">
         </div>
         <div class="result-box">
+            <span></span>
+            <div class="result"></div>
         </div>
     </div>
     
