@@ -93,6 +93,18 @@ $(function() {
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
 	});
+	$('.list li').eq(3).click(function() {
+		$('#audio').attr({
+			src:
+				'https://m7.music.126.net/20181101005352/14e122132f4830533c15649287cd0d01/ymusic/e296/da1f/8907/612d0532f1c8fa22297b2270835b0e54.mp3'
+		});
+		$('.music_player #img').attr({
+			src: 'https://p3.music.126.net/5PI5cPypdVcn8rm2YerPsg==/109951163005769076.jpg?param=90y90'
+		});
+		imgplayer();
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+	});
 	// 点击图片控制播放和暂停
 	$('.icon a img').eq(1).click(function() {
 		if (audio.paused) {
