@@ -1,8 +1,8 @@
 .music_player {
 	position: relative;
-	overflow: hidden;
 	margin: 0px 5px;
 	width: 260px;
+	float: left;
 }
 .music_player .list {
 	background-color: #fff;
@@ -13,6 +13,7 @@
 	overflow: hidden;
 	position: relative;
 	top: 40px;
+	box-shadow: rgba(151, 151, 151, 0.58) 0px 1px 3px;
 }
 .music_player .list li {
 	width: 100%;
@@ -30,7 +31,7 @@
 	text-overflow: ellipsis;
 	float: left;
 	padding-left: 10px;
-	font-family: "Mricosoft Yahei";
+	font-family: "Microsoft Yahei";
 	font-size: 12px;
 	text-decoration: none;
 }
@@ -43,7 +44,7 @@
 	float: right;
 	padding-right: 10px;
 	font-size: 12px;
-	font-family: "Mricosoft Yahei";
+	font-family: "Microsoft Yahei";
 }
 .music_player #info {
 	width: 150px;
@@ -136,5 +137,5 @@
 	top: 5px;
 	font-size: 23px;
 	color: #420c5c;
-	font-family: "Mricosoft Yahei";
+	font-family: "Microsoft Yahei";
 }
