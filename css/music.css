@@ -1,5 +1,5 @@
 .music_player {
-	position: relative;
+	position: absolute;
 	margin: 0px 5px;
 	width: 260px;
 	float: left;

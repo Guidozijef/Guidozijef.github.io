@@ -143,14 +143,13 @@
 <link rel="stylesheet" type="text/css" href="/css/music.css">
 <style type="text/css">
     .translate{
-        position: relative;
+        position: absolute;
         top: 0;
         right: 0;
     }
     .input-box img{
         height: 24px;
         position: relative;
-        top: 7px;
         left: -36px;
         cursor: pointer;
     }
@@ -518,59 +517,60 @@
 <div class="jingshan">
     <script type="text/javascript" src="http://open.iciba.com/ds_open.php?id=60847&name=Gui%20van%20zijef&auth=67F3908A37D2017807D6EA4CF98BE84E" charset="utf-8"></script><!--金山词霸每日一练-->
 </div>
-        
-<div class="music_player">
-    <div class="header">
-        <a href="javascript:;"><img src="/img/music_img/music.png"></a>
-        <span>听风话雨眠</span>
-    </div>
-    <div class="icon">
-        <a href="javascript:;"><img src="/img/music_img/after.png"></a>&ensp;
-        <a href="javascript:;"><img src="/img/music_img/player.png"></a>&ensp;
-        <a href="javascript:;"><img src="/img/music_img/betton.png"></a>&ensp;
-        <a href="javascript:;"><img src="/img/music_img/sound.png"></a>
-        <div class="strip"></div>
-        <div class="circle">
-            <span></span>
+
+<div class="center-box">
+    <div class="music_player">
+        <div class="header">
+            <a href="javascript:;"><img src="/img/music_img/music.png"></a>
+            <span>听风话雨眠</span>
         </div>
-        <div class="bar"></div>
+        <div class="icon">
+            <a href="javascript:;"><img src="/img/music_img/after.png"></a>&ensp;
+            <a href="javascript:;"><img src="/img/music_img/player.png"></a>&ensp;
+            <a href="javascript:;"><img src="/img/music_img/betton.png"></a>&ensp;
+            <a href="javascript:;"><img src="/img/music_img/sound.png"></a>
+            <div class="strip"></div>
+            <div class="circle">
+                <span></span>
+            </div>
+            <div class="bar"></div>
+        </div>
+        <img id="img" style="width:70px;"
+            src="http://qukufile2.qianqian.com/data2/pic/0ce88c8cd9127e20ff576a6ad66fe870/576822355/576822355.jpg@s_1,w_90,h_90">
+        <input type="text" value="" id="info" placeholder="请输入歌曲、歌手" />
+        <button id="btn">搜索</button>
+        <div id="">
+            <audio id="audio" preload="auto" style="width:274px;" src="http://music.163.com/song/media/outer/url?id=449818741.mp3">浏览器太垃圾不支持h5音乐标签</audio>
+        </div>
+        <ul class="list" style="width:260px; heigth:30px;">
+                <li><span></span><a class="li" href="javascript:;">光年之外</a><div>邓紫棋</div></li>
+                <li><span></span><a class="li" href="javascript:;">半壶纱</a><div>刘珂矣</div></li>
+                <li><span></span><a class="li" href="javascript:;">黄昏</a><div>周传雄</div></li>
+        </ul>
     </div>
-    <img id="img" style="width:70px;"
-        src="http://qukufile2.qianqian.com/data2/pic/0ce88c8cd9127e20ff576a6ad66fe870/576822355/576822355.jpg@s_1,w_90,h_90">
-    <input type="text" value="" id="info" placeholder="请输入歌曲、歌手" />
-    <button id="btn">搜索</button>
-    <div id="">
-        <audio id="audio" preload="auto" style="width:274px;" src="http://music.163.com/song/media/outer/url?id=449818741.mp3">浏览器太垃圾不支持h5音乐标签</audio>
-    </div>
-    <ul class="list" style="width:260px; heigth:30px;">
-            <li><span></span><a class="li" href="javascript:;">光年之外</a><div>邓紫棋</div></li>
-            <li><span></span><a class="li" href="javascript:;">半壶纱</a><div>刘珂矣</div></li>
-            <li><span></span><a class="li" href="javascript:;">黄昏</a><div>周传雄</div></li>
-    </ul>
-</div>
-
-<div class="translate">
-    <div class="input-box">
-        <input type="text" id="txt" name="" placeholder="请输入要翻译的内容">
-        <img id="btn" src="/img/搜索.png">
-    </div>
-    <div class="result-box">
-    </div>
-</div>
-
-<div class="container body-wrap">
     
-    <ul class="post-list">
+    <div class="translate">
+        <div class="input-box">
+            <input type="text" id="txt" name="" placeholder="请输入要翻译的内容">
+            <img id="btn" src="/img/搜索.png">
+        </div>
+        <div class="result-box">
+        </div>
+    </div>
     
+    <div class="container body-wrap">
         
-        <li class="post-list-item fade">
+        <ul class="post-list">
+        
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/audio2.jpg" class="cover">
-                </div>
-                <article id="post-打造自己的音乐播放器（二）"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/audio2.jpg" class="cover">
+                    </div>
+                    <article id="post-打造自己的音乐播放器（二）"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -615,18 +615,18 @@
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/audio1.jpg" class="cover">
-                </div>
-                <article id="post-打造自己的音乐播放器（一）"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/audio1.jpg" class="cover">
+                    </div>
+                    <article id="post-打造自己的音乐播放器（一）"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -668,18 +668,18 @@
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/resume.jpg" class="cover">
-                </div>
-                <article id="post-python爬取简历模板"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/resume.jpg" class="cover">
+                    </div>
+                    <article id="post-python爬取简历模板"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -721,18 +721,18 @@
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/gitment.jpg" class="cover">
-                </div>
-                <article id="post-为博客添加Gitment评论系统"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/gitment.jpg" class="cover">
+                    </div>
+                    <article id="post-为博客添加Gitment评论系统"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -774,18 +774,18 @@
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/indigo.jpg" class="cover">
-                </div>
-                <article id="post-hexo主题—自定义样式"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/indigo.jpg" class="cover">
+                    </div>
+                    <article id="post-hexo主题—自定义样式"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -827,18 +827,18 @@
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/demo.jpg" class="cover">
-                </div>
-                <article id="post-python爬取爱情公寓电影评论并制作词云"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/demo.jpg" class="cover">
+                    </div>
+                    <article id="post-python爬取爱情公寓电影评论并制作词云"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -880,18 +880,18 @@
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/cover.jpg" class="cover">
-                </div>
-                <article id="post-第一篇博客，hexo+github搭建个人博客"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/cover.jpg" class="cover">
+                    </div>
+                    <article id="post-第一篇博客，hexo+github搭建个人博客"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -935,18 +935,18 @@ hexo+github搭建个人博客一...
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://guidozijef.github.io/img/excel.jpg" class="cover">
-                </div>
-                <article id="post-python使用lxwt模块操作Excel文件"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://guidozijef.github.io/img/excel.jpg" class="cover">
+                    </div>
+                    <article id="post-python使用lxwt模块操作Excel文件"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -988,18 +988,18 @@ hexo+github搭建个人博客一...
     
 </article>
 
-            </div>          
-        </li>
-    
+                </div>          
+            </li>
         
-        <li class="post-list-item fade">
             
-            <div class="rigth">
-                <div class="im">
-                    <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
-                    <img src="https://Guidozijef.github.io/img/helloworld.jpg" class="cover">
-                </div>
-                <article id="post-hello-world"
+            <li class="post-list-item fade">
+                
+                <div class="rigth">
+                    <div class="im">
+                        <!-- <img src="https://guidozijef.github.io/img/cover.jpg" alt="图片"> -->
+                        <img src="https://Guidozijef.github.io/img/helloworld.jpg" class="cover">
+                    </div>
+                    <article id="post-hello-world"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -1041,14 +1041,16 @@ hexo+github搭建个人博客一...
     
 </article>
 
-            </div>          
-        </li>
+                </div>          
+            </li>
+        
+        </ul>
     
-    </ul>
-
+        
     
-
+    </div>
 </div>
+
 <link rel="stylesheet" type="text/css" href="/css/defined.css">
 
         <style type="text/css">
