@@ -30,9 +30,9 @@ $(function() {
 			}
 		});
 		if ($Txt != '') {
-			$('.result-box').slideDown(100);
+			$('.result-box').slideDown(300);
 		}
 		$('.result-box span').html($Txt);
-		$('.result-box').blur().slideUp(100);
+		$('.input-box #btn').blur().slideUp(300);
 	});
 });
