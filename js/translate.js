@@ -27,12 +27,21 @@ $(function() {
 			success: function(data) {
 				// console.log(data.trans_result[0].dst);
 				$('.result-box .result').html(data.trans_result[0].dst);
+				var en = data.to;
+				if (en == 'en') {
+					$('.result-box .en').html('【英】');
+				}
+				if (en == 'zh') {
+					$('.result-box .en').html('【中】');
+				}
 			}
 		});
 		if ($Txt != '') {
 			$('.result-box').slideDown(300);
 		}
-		$('.result-box span').html($Txt);
-		$('.input-box #btn').blur().slideUp(300);
+
+		$('.input-box').blur(function() {
+			$('.result-box').slideUp(300);
+		});
 	});
 });

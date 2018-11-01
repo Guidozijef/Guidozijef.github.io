@@ -163,29 +163,39 @@
         border: 1px solid #420c5c;
         border-radius: 3px;
     }
-    .result-box{
-        border-radius: 3px;
-        box-shadow: rgba(151, 151, 151, 0.58) 0px 1px 5px;
+    .result-box {
         margin-top: 10px;
+        border-radius: 3px;
+        border: 1px solid #420c5c;
         display: none;
         height: 100px;
         width: 200px;
         background: #fff;
     }
     .result-box span{
+        display: inline-block;
+        border-radius: 3px;
         padding: 5px;
-        font-weight: 700;
-        font-size: 20px;
-        width: 100px;
+        margin: 8px;
+        font-size: 8px;
         height: auto;
-        color: #420c5c;
+        color: #fff;
         font-family: "Microsoft Yahei";
+        background-color: #FE6814;
         
+    }
+    .result-box .en{
+        color: #FE6814;
+        font-size: 16px;
+        float: left;
+        text-align: center;
+        line-height: 31px;
     }
     .result-box .result{
         padding: 5px;
-        color: #4395FF;
+        color: #8F8F8F;
         font-family: "Microsoft Yahei";
+
     }
     .im{
         width: 235px;
@@ -577,8 +587,11 @@
             <img id="btn" src="/img/搜索.png">
         </div>
         <div class="result-box">
-            <span></span>
-            <div class="result"></div>
+            <span>翻译结果</span><br/>
+            <div class="en-box">
+                <div class="en"></div>
+                <div class="result"></div>
+            </div>
         </div>
     </div>
     
