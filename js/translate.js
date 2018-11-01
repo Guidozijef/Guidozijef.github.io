@@ -33,5 +33,6 @@ $(function() {
 			$('.result-box').slideDown(100);
 		}
 		$('.result-box span').html($Txt);
+		$('.result-box').blur().slideUp(100);
 	});
 });
