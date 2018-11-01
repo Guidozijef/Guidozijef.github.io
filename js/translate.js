@@ -1,6 +1,7 @@
 $(function() {
 	$('.input-box #btn').click(function() {
-		$('.result-box').html('');
+		$('.result-box span').html('');
+		$('.result-box .result').html('');
 		var $Txt = $('#txt').val();
 		var appid = '20181020000221992';
 		var key = '9EkibaYlvrEQCvjRRLwV';
