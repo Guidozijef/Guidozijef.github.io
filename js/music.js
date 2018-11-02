@@ -163,4 +163,16 @@ $(function() {
 			false
 		);
 	}
+
+	// 手机端音乐播放器的隐藏和显示操作
+	$('.music_player .gt').click(function() {
+		var gt = $('.music_player .gt').text();
+		if (gt == '&gt;') {
+			$('.music_player .gt').text('&lt;');
+			$('.music_player').animate({ left: -260 });
+		} else {
+			$('.music_player .gt').text('&gt;');
+			$('.music_player').animate({ left: 0 });
+		}
+	});
 });
