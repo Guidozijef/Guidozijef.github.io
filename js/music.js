@@ -166,13 +166,13 @@ $(function() {
 
 	// 手机端音乐播放器的隐藏和显示操作
 	$('.music_player .gt').click(function() {
-		var gt = $('.music_player .gt').text();
+		var gt = $('.music_player .gt').html();
 		if (gt == '&gt;') {
-			$('.music_player .gt').text('&lt;');
-			$('.music_player').animate({ left: -260 });
+			$('.music_player .gt').html('&lt;');
+			$('.music_player').animate({ left: -265 });
 		} else {
-			$('.music_player .gt').text('&gt;');
-			$('.music_player').animate({ left: 0 });
+			$('.music_player .gt').html('&gt;');
+			$('.music_player').animate({ left: -5 });
 		}
 	});
 });
