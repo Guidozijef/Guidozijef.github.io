@@ -50,6 +50,11 @@ $(function() {
 						// 点击当前a标签就加显示前面的紫色条纹，注意：不能加在ajax里面。
 						$(this).prev('span').addClass('present');
 						$(this).parent().siblings().children('span').removeClass('present');
+						$(this)
+							.parent()
+							.css({ backgroundColor: '#E0DEE8' })
+							.siblings()
+							.css({ backgroundColor: '#fff' });
 					};
 				}
 			}
@@ -59,51 +64,54 @@ $(function() {
 	function imgplayer() {
 		if (audio.paused) {
 			audio.play();
-			$('.icon a img').eq(1).attr({ src: '/img/music_img/pause.png' });
+			$('.icon a img').eq(1).attr({ src: 'img/pause.png' });
 		} else {
 			audio.pause();
-			$('.icon a img').eq(1).attr({ src: '/img/music_img/player.png' });
+			$('.icon a img').eq(1).attr({ src: 'img/player.png' });
 		}
+	}
+	// 封装一个每个歌曲信息的函数，传入参数就可。
+	function info(mp3, img) {
+		$('#audio').attr({ src: mp3 });
+		$('.music_player #img').attr({ src: img });
+		imgplayer();
 	}
 	// 点击手动加入的歌曲后播放和显示图片
 	$('.list li').eq(0).click(function() {
-		$('#audio').attr({ src: 'http://music.163.com/song/media/outer/url?id=449818741.mp3' });
-		$('.music_player #img').attr({
-			src: 'http://p1.music.126.net/RDusqDuPhQz7E2SAbi5MoA==/109951162904611099.jpg?param=34y34'
-		});
-		imgplayer();
+		info(
+			'http://music.163.com/song/media/outer/url?id=449818741.mp3',
+			'http://p1.music.126.net/RDusqDuPhQz7E2SAbi5MoA==/109951162904611099.jpg?param=34y34'
+		);
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
 	});
 	$('.list li').eq(1).click(function() {
-		$('#audio').attr({ src: 'http://music.163.com/song/media/outer/url?id=28793140.mp3' });
-		$('.music_player #img').attr({
-			src: 'http://p1.music.126.net/SKujq5vqqv4KYOVFk7SiRA==/3407386538630284.jpg?param=34y34'
-		});
-		imgplayer();
+		info(
+			'http://music.163.com/song/media/outer/url?id=28793140.mp3',
+			'http://p1.music.126.net/SKujq5vqqv4KYOVFk7SiRA==/3407386538630284.jpg?param=34y34'
+		);
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
 	});
 	$('.list li').eq(2).click(function() {
-		$('#audio').attr({ src: 'http://music.163.com/song/media/outer/url?id=190072.mp3' });
-		$('.music_player #img').attr({
-			src: 'http://p2.music.126.net/Y91B_GXc5d9t-0X0Uu_7xw==/109951163063096750.jpg?param=130y130'
-		});
-		imgplayer();
+		info(
+			'http://music.163.com/song/media/outer/url?id=190072.mp3',
+			'http://p2.music.126.net/Y91B_GXc5d9t-0X0Uu_7xw==/109951163063096750.jpg?param=130y130'
+		);
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
 	});
 	$('.list li').eq(3).click(function() {
-		$('#audio').attr({
-			src:
-				'https://m7.music.126.net/20181101005352/14e122132f4830533c15649287cd0d01/ymusic/e296/da1f/8907/612d0532f1c8fa22297b2270835b0e54.mp3'
-		});
-		$('.music_player #img').attr({
-			src: 'https://p3.music.126.net/5PI5cPypdVcn8rm2YerPsg==/109951163005769076.jpg?param=90y90'
-		});
-		imgplayer();
+		info(
+			'https://m7.music.126.net/20181101005352/14e122132f4830533c15649287cd0d01/ymusic/e296/da1f/8907/612d0532f1c8fa22297b2270835b0e54.mp3',
+			'https://p3.music.126.net/5PI5cPypdVcn8rm2YerPsg==/109951163005769076.jpg?param=90y90'
+		);
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
 	});
 	// 点击图片控制播放和暂停
 	$('.icon a img').eq(1).click(function() {
