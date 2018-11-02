@@ -139,7 +139,7 @@
 	font-family: "Microsoft Yahei";
 }
 .music_player .gt {
-	position: none;
+	display: none;
 	left: 260px;
 	top: 100px;
 	width: 20px;
