@@ -68,6 +68,7 @@
 	}
 	.music_player .gt {
 		position: absolute;
+		display: block;
 	}
 	.page__container {
 		width: 100%;
