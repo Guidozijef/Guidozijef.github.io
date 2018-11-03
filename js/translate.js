@@ -40,8 +40,14 @@ $(function() {
 			$('.result-box').slideDown(300);
 		}
 
-		$('.input-box').blur(function() {
+		$('.input-box #txt').blur(function() {
 			$('.result-box').slideUp(300);
 		});
+	});
+	// 捕捉回车键
+	$('.input-box #txt').keypress(function(e) {
+		if (e.which == 13) {
+			$('.input-box #btn').click();
+		}
 	});
 });

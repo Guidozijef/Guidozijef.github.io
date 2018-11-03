@@ -60,6 +60,12 @@ $(function() {
 			}
 		});
 	});
+	// 捕捉回车键
+	$('#info').keypress(function(e) {
+		if (e.which == 13) {
+			$('#btn').click();
+		}
+	});
 	// imgplayer()函数用来判断点击li播放歌曲时更换播放或者暂停的图片并播放歌曲
 	function imgplayer() {
 		if (audio.paused) {
