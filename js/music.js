@@ -29,7 +29,7 @@ $(function() {
 					// $("list")[0].style.display = "block";
 					$('.music_player .list').append(li);
 					a.onclick = function() {
-						// console.log("a.src:" + this.src);
+						console.log('a.src:' + this.src);
 						$.ajax({
 							type: 'get',
 							url:
