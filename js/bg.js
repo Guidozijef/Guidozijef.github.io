@@ -10,7 +10,7 @@ $(function() {
 		var sizeflak = minSize + Math.random() * maxSize; //产生大小不等的雪花
 		var startLeft = Math.random() * dw; //雪花生成是随机的left值
 		var startopcity = 0.7 + Math.random() * 0.3; //随机透明度
-		var endpositionTop = dhight + 600; //雪花停止top的位置
+		var endpositionTop = dhight; //雪花停止top的位置
 		var endLeft = Math.random() * dw; //雪花停止的left位置
 		var durationfull = 50000 + Math.random() * 3000; //雪花飘落速度不同
 		$('xh img').css({
