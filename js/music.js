@@ -112,8 +112,44 @@ $(function() {
 	});
 	$('.list li').eq(3).click(function() {
 		info(
-			'https://m7.music.126.net/20181101005352/14e122132f4830533c15649287cd0d01/ymusic/e296/da1f/8907/612d0532f1c8fa22297b2270835b0e54.mp3',
+			'http://music.163.com/song/media/outer/url?id=32628933.mp3',
 			'https://p3.music.126.net/5PI5cPypdVcn8rm2YerPsg==/109951163005769076.jpg?param=90y90'
+		);
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
+	});
+	$('.list li').eq(4).click(function() {
+		info(
+			'http://music.163.com/song/media/outer/url?id=531295576.mp3',
+			'http://p2.music.126.net/mwCUI0iL3xEC2a4WVICHlA==/109951163115369030.jpg?param=34y34'
+		);
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
+	});
+	$('.list li').eq(5).click(function() {
+		info(
+			'http://music.163.com/song/media/outer/url?id=531295576.mp3',
+			'http://p1.music.126.net/WoR2LbM1IFauFpvhBWOjqA==/6642149743396577.jpg?param=34y34'
+		);
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
+	});
+	$('.list li').eq(6).click(function() {
+		info(
+			'http://music.163.com/song/media/outer/url?id=461347998.mp3',
+			'http://p2.music.126.net/ggnyubDdMxrhpqYvpZbhEQ==/3302932937412681.jpg?param=130y130'
+		);
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
+	});
+	$('.list li').eq(7).click(function() {
+		info(
+			'http://music.163.com/song/media/outer/url?id=521602388.mp3',
+			'http://p2.music.126.net/mJg8wJbIoM8d8xQ72eR2qw==/109951163073289601.jpg?param=34y34'
 		);
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
