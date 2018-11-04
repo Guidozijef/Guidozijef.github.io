@@ -1,7 +1,7 @@
 $(function() {
 	var minSize = 5; //最小字体
 	var maxSize = 50; //最大字体
-	var newOne = 1000; //生成雪花间隔
+	var newOne = 2000; //生成雪花间隔
 	var flakColor = '#fff'; //雪花颜色
 	var flak = $("<div class='xh'></div>").css({ position: 'absolute', top: '-10px' }).html("<img src='/img/枫叶.png'>"); //定义一个雪花
 	var dhight = $(document).height(); //定义页面高度
@@ -12,7 +12,7 @@ $(function() {
 		var startopcity = 0.7 + Math.random() * 0.3; //随机透明度
 		var endpositionTop = dhight + 600; //雪花停止top的位置
 		var endLeft = Math.random() * dw; //雪花停止的left位置
-		var durationfull = 20000 + Math.random() * 3000; //雪花飘落速度不同
+		var durationfull = 50000 + Math.random() * 3000; //雪花飘落速度不同
 		$('xh img').css({
 			height: sizeflak,
 			width: sizeflak
