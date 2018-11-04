@@ -70,10 +70,10 @@ $(function() {
 	function imgplayer() {
 		if (audio.paused) {
 			audio.play();
-			$('.icon a img').eq(1).attr({ src: 'img/pause.png' });
+			$('.icon a img').eq(1).attr({ src: '/img/music_img/pause.png' });
 		} else {
 			audio.pause();
-			$('.icon a img').eq(1).attr({ src: 'img/player.png' });
+			$('.icon a img').eq(1).attr({ src: '/img/music_img/player.png' });
 		}
 	}
 	// 封装一个每个歌曲信息的函数，传入参数就可。
