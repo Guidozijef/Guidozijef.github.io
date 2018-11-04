@@ -3,7 +3,7 @@ $(function() {
 	var maxSize = 50; //最大字体
 	var newOne = 2000; //生成雪花间隔
 	var flakColor = '#fff'; //雪花颜色
-	var flak = $("<div class='xh'></div>").css({ position: 'absolute', top: '-10px' }).html('<img src="/img/枫叶.png"'); //定义一个雪花
+	var flak = $("<div class='xh'></div>").css({ position: 'absolute', top: '-10px' }).html("<img src='/img/枫叶.png'>"); //定义一个雪花
 	var dhight = $(window).height(); //定义视图高度
 	var dw = $(window).width(); //定义视图宽度
 	setInterval(function() {
