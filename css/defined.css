@@ -57,14 +57,14 @@
 		background-color: #e0dee8;
 		position: fixed;
 		left: -265px;
-		height: auto;
+		height: 300px;
 	}
 	.music_player .header {
 		display: none;
 	}
 	.music_player .list {
 		background-color: #e0dee8;
-		height: auto;
+		height: 300px;
 	}
 	.music_player .gt {
 		position: absolute;

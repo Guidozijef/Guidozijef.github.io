@@ -54,7 +54,7 @@ $(function() {
 						// img.src =
 						// 	'https://y.gtimg.cn/music/photo_new/T001R300x300M000' + img.src + '.jpg?max_age=2592000';
 						audio.play();
-						$('.icon a img').eq(1).attr({ src: 'img/pause.png' });
+						$('.icon a img').eq(1).attr({ src: '/img/music_img/pause.png' });
 						// 点击当前a标签就加显示前面的紫色条纹，注意：不能加在ajax里面。
 						$(this).prev('span').addClass('present');
 						$(this).parent().siblings().children('span').removeClass('present');
