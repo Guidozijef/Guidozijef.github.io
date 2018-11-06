@@ -113,7 +113,7 @@ $(function() {
 	$('.list li').eq(3).click(function() {
 		info(
 			'http://music.163.com/song/media/outer/url?id=32628933.mp3',
-			'https://p3.music.126.net/5PI5cPypdVcn8rm2YerPsg==/109951163005769076.jpg?param=90y90'
+			'http://p2.music.126.net/5PI5cPypdVcn8rm2YerPsg==/109951163005769076.jpg?param=130y130'
 		);
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
