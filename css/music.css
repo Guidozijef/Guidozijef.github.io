@@ -10,10 +10,33 @@
 	padding: 0px;
 	width: 240px;
 	height: 400px;
-	overflow: hidden;
+	overflow: auto;
 	position: relative;
 	top: -20px;
 	box-shadow: rgba(151, 151, 151, 0.58) 0px 1px 3px;
+}
+.scrollbar {
+	width: 30px;
+	height: 300px;
+	margin: 0 auto;
+}
+.music_player .list::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 5px; /*  高宽分别对应横竖滚动条的尺寸 */
+	height: 1px;
+}
+
+.music_player .list::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 2.5px;
+	-webkit-box-shadow: inset 0 0 5px #420c5c;
+	background: #535353;
+}
+.music_player .list::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	border-radius: 2.5px;
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+	background: #ededed;
 }
 .music_player .list li {
 	width: 100%;
