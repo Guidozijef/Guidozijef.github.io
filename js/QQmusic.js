@@ -47,8 +47,8 @@ $(function() {
 					li.appendChild(div);
 					$('.music_player .list').append(li);
 					a.onclick = function() {
-						console.log('songmid:' + this.src);
-						console.log('imgmid:' + img.src);
+						// console.log('songmid:' + this.src);
+						// console.log('imgmid:' + img.src);
 						var audio = document.getElementById('audio');
 						audio.src = 'http://ws.stream.qqmusic.qq.com/C100' + this.src + '.m4a?fromtag=0&guid=126548448';
 						// img.src =
@@ -185,6 +185,15 @@ $(function() {
 		info(
 			'http://music.163.com/song/media/outer/url?id=400162138.mp3',
 			'http://p1.music.126.net/a9oLdcFPhqQyuouJzG2mAQ==/3273246124149810.jpg?param=130y130'
+		);
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
+	});
+	$('.list li').eq(11).click(function() {
+		info(
+			'http://music.163.com/song/media/outer/url?id=463352828.mp3',
+			'http://p1.music.126.net/ejLPvQsq-7TrU-3D1z2hrg==/19132601834939735.jpg?param=130y130'
 		);
 		$(this).children('span').addClass('present');
 		$(this).siblings().children('span').removeClass('present');
