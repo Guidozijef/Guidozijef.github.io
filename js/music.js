@@ -182,6 +182,15 @@ $(function() {
 		$(this).siblings().children('span').removeClass('present');
 		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
 	});
+	$('.list li').eq(11).click(function() {
+		info(
+			'http://music.163.com/song/media/outer/url?id=463352828.mp3',
+			'http://p1.music.126.net/ejLPvQsq-7TrU-3D1z2hrg==/19132601834939735.jpg?param=130y130'
+		);
+		$(this).children('span').addClass('present');
+		$(this).siblings().children('span').removeClass('present');
+		$(this).css({ backgroundColor: '#E0DEE8' }).siblings().css({ backgroundColor: '#fff' });
+	});
 	// 点击图片控制播放和暂停
 	$('.icon a img').eq(1).click(function() {
 		if (audio.paused) {
