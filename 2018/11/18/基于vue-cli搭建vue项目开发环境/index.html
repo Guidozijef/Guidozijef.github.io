@@ -26,27 +26,30 @@
     
     
     
-    <title>打造自己的音乐播放器（二） | Guido van zijef | 千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</title>
+    <title>基于vue-cli搭建vue项目开发环境 | Guido van zijef | 千里之堤，溃于蚁穴。剑锋所指，锋芒毕露。</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="css,html,前端,audio,javascript">
-    <meta name="description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;上一篇讲到了&amp;lt;audio&amp;gt;标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。   打造自己的音乐播放器（二）  一、播放器界面的实现&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢的">
-<meta name="keywords" content="css,html,前端,audio,javascript">
+    <meta name="keywords" content="web,vue,vue-cli">
+    <meta name="description" content="前言：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;手里面有一套vue的教程，因为之前了解到vue-cli脚手架工具，搭建项目很方便，但是教程中是自己一步一步在搭建，我想使用vue-cli自动搭建，但是毕竟教程中自己搭建和自动搭建的有一些不同，教程中讲的很详细，但是我自动搭建的不知道和他自己搭建出来有哪些功能相同，那些还需要自己来配置，哪些不需要配置，这些都不是很清楚，所有引申出来了一系列的问题">
+<meta name="keywords" content="web,vue,vue-cli">
 <meta property="og:type" content="article">
-<meta property="og:title" content="打造自己的音乐播放器（二）">
-<meta property="og:url" content="https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/index.html">
+<meta property="og:title" content="基于vue-cli搭建vue项目开发环境">
+<meta property="og:url" content="https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/index.html">
 <meta property="og:site_name" content="Guido van zijef">
-<meta property="og:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;上一篇讲到了&amp;lt;audio&amp;gt;标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。   打造自己的音乐播放器（二）  一、播放器界面的实现&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢的">
+<meta property="og:description" content="前言：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;手里面有一套vue的教程，因为之前了解到vue-cli脚手架工具，搭建项目很方便，但是教程中是自己一步一步在搭建，我想使用vue-cli自动搭建，但是毕竟教程中自己搭建和自动搭建的有一些不同，教程中讲的很详细，但是我自动搭建的不知道和他自己搭建出来有哪些功能相同，那些还需要自己来配置，哪些不需要配置，这些都不是很清楚，所有引申出来了一系列的问题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-e52da417bd614419.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-18T10:29:46.869Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-5092542522047409.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/14214683-376c3557c7bf6b46?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/14214683-8023729b013f2aaa?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14214683-bd9af429917d5732.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-11-18T12:13:20.029Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="打造自己的音乐播放器（二）">
-<meta name="twitter:description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;上一篇讲到了&amp;lt;audio&amp;gt;标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。   打造自己的音乐播放器（二）  一、播放器界面的实现&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢的">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/14214683-e52da417bd614419.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="基于vue-cli搭建vue项目开发环境">
+<meta name="twitter:description" content="前言：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;手里面有一套vue的教程，因为之前了解到vue-cli脚手架工具，搭建项目很方便，但是教程中是自己一步一步在搭建，我想使用vue-cli自动搭建，但是毕竟教程中自己搭建和自动搭建的有一些不同，教程中讲的很详细，但是我自动搭建的不知道和他自己搭建出来有哪些功能相同，那些还需要自己来配置，哪些不需要配置，这些都不是很清楚，所有引申出来了一系列的问题">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/14214683-5092542522047409.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
     
         <link rel="alternate" type="application/atom+xml" title="Guido van zijef" href="/atom.xml">
     
@@ -337,7 +340,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
             <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <!-- <div class="flex-col header-title ellipsis">打造自己的音乐播放器（二）</div> -->
+        <!-- <div class="flex-col header-title ellipsis">基于vue-cli搭建vue项目开发环境</div> -->
         <!-- <div class="flex-col header-title ellipsis"></div> -->
         <!-- <div class="top-1">
             <ul>
@@ -423,11 +426,11 @@
     </div>
 
     <div class="container fade-scale">
-        <h1 class="title">打造自己的音乐播放器（二）</h1>
+        <h1 class="title">基于vue-cli搭建vue项目开发环境</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-10-16T14:37:07.770Z" itemprop="datePublished" class="page-time">
-  2018-10-16
+                <time datetime="2018-11-18T12:10:14.430Z" itemprop="datePublished" class="page-time">
+  2018-11-18
 </time>
 
 
@@ -446,18 +449,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number"></span> <span class="post-toc-text">打造自己的音乐播放器（二）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、播放器界面的实现"><span class="post-toc-number"></span> <span class="post-toc-text">一、播放器界面的实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HTML"><span class="post-toc-number">1.</span> <span class="post-toc-text">HTML</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二、js功能实现"><span class="post-toc-number"></span> <span class="post-toc-text">二、js功能实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Javascript"><span class="post-toc-number">1.</span> <span class="post-toc-text">Javascript</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#前言："><span class="post-toc-number">1.</span> <span class="post-toc-text">前言：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、安装vue-cli"><span class="post-toc-number"></span> <span class="post-toc-text">一、安装vue-cli</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、使用vue-cli创建项目"><span class="post-toc-number"></span> <span class="post-toc-text">二、使用vue-cli创建项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#三、运行项目"><span class="post-toc-number"></span> <span class="post-toc-text">三、运行项目</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#四、总结"><span class="post-toc-number"></span> <span class="post-toc-text">四、总结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1、关于mint-ui"><span class="post-toc-number">1.</span> <span class="post-toc-text">1、关于mint-ui</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2、关于mui"><span class="post-toc-number">2.</span> <span class="post-toc-text">2、关于mui</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3、关于css样式"><span class="post-toc-number">3.</span> <span class="post-toc-text">3、关于css样式</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-打造自己的音乐播放器（二）"
+<article id="post-基于vue-cli搭建vue项目开发环境"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">打造自己的音乐播放器（二）</h1>
+        <h1 class="post-card-title">基于vue-cli搭建vue项目开发环境</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-10-16 22:37:07" datetime="2018-10-16T14:37:07.770Z"  itemprop="datePublished">2018-10-16</time>
+            <time class="post-time" title="2018-11-18 20:10:14" datetime="2018-11-18T12:10:14.430Z"  itemprop="datePublished">2018-11-18</time>
 
             
 
@@ -470,46 +473,74 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>&ensp;&ensp;&ensp;&ensp;上一篇讲到了<code>&lt;audio&gt;</code>标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。</p>
-<hr>
-
-<center><h2>打造自己的音乐播放器（二）</h2></center>
-
-<h4 id="一、播放器界面的实现"><a href="#一、播放器界面的实现" class="headerlink" title="一、播放器界面的实现"></a>一、播放器界面的实现</h4><p>&ensp;&ensp;&ensp;&ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢的风格，根据自己的喜好来，写自己风格的播放器，这里我把自己的代码和效果放上来。</p>
-<h5 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;referrer&quot; content=&quot;never&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;js/jquery-ui.min.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;js/music.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/music.css&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;music_player&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;header&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/music.png&quot;&gt;&lt;/a&gt;</span><br><span class="line">            &lt;span&gt;听风画雨眠&lt;/span&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        // 播放器面板</span><br><span class="line">        &lt;div class=&quot;icon&quot;&gt;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/after.png&quot;&gt;&lt;/a&gt;&amp;ensp;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/player.png&quot;&gt;&lt;/a&gt;&amp;ensp;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/betton.png&quot;&gt;&lt;/a&gt;&amp;ensp;</span><br><span class="line">            &lt;a href=&quot;javascript:;&quot;&gt;&lt;img src=&quot;img/sound.png&quot;&gt;&lt;/a&gt;</span><br><span class="line">            &lt;div class=&quot;strip&quot;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;circle&quot;&gt;</span><br><span class="line">                &lt;span&gt;&lt;/span&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;bar&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;img id=&quot;img&quot; style=&quot;width:70px;&quot;</span><br><span class="line">         src=&quot;http://qukufile2.qianqian.com/data2/pic/0ce88c8cd9127e20ff576a6ad66fe870/576822355/576822355.jpg@s_1,w_90,h_90&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; value=&quot;&quot; id=&quot;info&quot; placeholder=&quot;请输入歌曲、歌手&quot; /&gt;</span><br><span class="line">        &lt;button id=&quot;btn&quot;&gt;搜索&lt;/button&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;audio id=&quot;audio&quot; preload=&quot;auto&quot; style=&quot;width:274px;&quot; src=&quot;http://music.163.com/song/media/outer/url?id=449818741.mp3&quot;&gt;浏览器太垃圾不支持h5音乐标签&lt;/audio&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        // 播放列表</span><br><span class="line">        &lt;ul class=&quot;list&quot; style=&quot;width:260px; heigth:30px;&quot;&gt;</span><br><span class="line">            &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;a class=&quot;li&quot; href=&quot;javascript:;&quot;&gt;光年之外&lt;/a&gt;&lt;div&gt;邓紫棋&lt;/div&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;span&gt;&lt;/span&gt;&lt;a class=&quot;li&quot; href=&quot;javascript:;&quot;&gt;半壶纱&lt;/a&gt;&lt;div&gt;刘珂矣&lt;/div&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+            <h5 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h5><p>&ensp;&ensp;&ensp;&ensp;手里面有一套vue的教程，因为之前了解到vue-cli脚手架工具，搭建项目很方便，但是教程中是自己一步一步在搭建，我想使用vue-cli自动搭建，但是毕竟教程中自己搭建和自动搭建的有一些不同，教程中讲的很详细，但是我自动搭建的不知道和他自己搭建出来有哪些功能相同，那些还需要自己来配置，哪些不需要配置，这些都不是很清楚，所有引申出来了一系列的问题，所以学的时候就踩了很多坑（学过的应该知道vue各种报错），中途一直也在百度，但是大佬博客虽多，可能有的问题真是我们需要的，但是大佬在写解决办法的时候，实在是不清楚，导致花了大量的时间解决问题，（在此也呼吁各位大佬在写博客的时候，麻烦多谢几个字，毕竟好不容易看到能能解决问题的方法，但是有不清楚如何操作，那种感受不知道各位经历过没有），接下来，我把自己搭建的过程和中途的一些坑分享个大家</p>
+<p><hr></p>
+<h3 id="一、安装vue-cli"><a href="#一、安装vue-cli" class="headerlink" title="一、安装vue-cli"></a>一、安装vue-cli</h3><p>&ensp;&ensp;&ensp;&ensp;<a href="https://cli.vuejs.org/zh/guide/" target="_blank" rel="noopener">vue-cli</a>是vue的脚手架工具，用于快速搭建vue项目。让开发者只关心项目本身，而不去关注项目的开发环境。<br>&ensp;&ensp;&ensp;&ensp;在安装<strong>vue-cli</strong>之前，我们先安装<a href="https://www.webpackjs.com/" target="_blank" rel="noopener">webpack</a>，在命令行工具输入下面代码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev webpack</span><br></pre></td></tr></table></figure></p>
+<p>安装完成之后输入<code>webpack -v</code>，如果出现相应的版本号，则说明安装成功<br>&ensp;&ensp;&ensp;&ensp;再在命令行工具输入下面的代码，回车即可安装。（报错的可以使用cnpm试试，最后的图片中有提到），这里就默认你安装node.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g vue-cli</span><br></pre></td></tr></table></figure></p>
+<h3 id="二、使用vue-cli创建项目"><a href="#二、使用vue-cli创建项目" class="headerlink" title="二、使用vue-cli创建项目"></a>二、使用vue-cli创建项目</h3><p>&ensp;&ensp;&ensp;&ensp;命令行输入下面的代码开始搭建项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init &lt;template-name&gt; &lt;project-name&gt;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>css部分我就不发出来了，代码太长了，需要整套源码的可以去群里面下载（Q群：812307816）</p>
+<p>其中的<code>&lt;template-name&gt;</code>是项目模板，<code>&lt;project-name&gt;</code>是你的项目名称<br>template-name包括：</p>
+<ul>
+<li>webpack</li>
+<li>webpack-simple &ensp;&ensp;&ensp;&ensp; // 一个简单webpack+vue-loader的模板，不包含其他功能。</li>
+<li>browserify      &ensp;&ensp;&ensp;&ensp; //  一个全面的Browserify+vueify 的模板，功能包括热加载，linting,单元检测。</li>
+<li>browserify-simple &ensp;&ensp;&ensp;&ensp; // 一个简单Browserify+vueify的模板，不包含其他功能。</li>
+<li>pwa           &ensp;&ensp;&ensp;&ensp;// 基于webpack模板的vue-cli的PWA模板</li>
+<li>simple     &ensp;&ensp;&ensp;&ensp; //  一个最简单的单页应用模板</li>
+</ul>
 </blockquote>
-<p>我们直接到最关键的部分，js部分</p>
-<h4 id="二、js功能实现"><a href="#二、js功能实现" class="headerlink" title="二、js功能实现"></a>二、js功能实现</h4><h5 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h5><p>&ensp;&ensp;&ensp;&ensp;js部分是里面最重要的部分，做了上面的html、css后只是一个音乐播放器的壳子，js才是整个播放器的核心内容，我们先来屡屡思路</p>
-<blockquote>
-<p>1、如何做到搜索取别的播放器数据的效果。<br><br>2、得到数据后我们如何把歌曲信息显示到播放列表上面。<br><br>3、如何点击列表上面不同的歌曲自动获取该播放地址和图片。<br><br>4、如何实现本地的点击功能（控制、暂停、静音、上一曲、下一曲）。</p>
-</blockquote>
-<p>要实现索取别的播放器的音乐，我们需要用到AJAX发送跨域请求，首先需要找到一个音乐API，很多音乐播放器都是不可行的。而且我用的是jquery的ajax，只支持get请求方式的跨域。最后我也找到了一个，各种尝试最后请求成功。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#btn&apos;).click(function() &#123;</span><br><span class="line">		var value = $(&apos;#info&apos;).val();</span><br><span class="line">		$.ajax(&#123;</span><br><span class="line">			type: &apos;get&apos;,</span><br><span class="line">			url: &apos;http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&amp;query=&apos; + value,</span><br><span class="line">			async: true,</span><br><span class="line">			dataType: &apos;jsonp&apos;,</span><br><span class="line">			success: function(data1) &#123;</span><br><span class="line">				var songids = data1.song;</span><br><span class="line">				console.log(songids.length);</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>这部分代码就是实现发送搜索歌曲的请求，并返回搜索信息。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; songids.length; i++) &#123;</span><br><span class="line">	var songid = songids[i].songid;</span><br><span class="line">	var artistname = songids[i].artistname;</span><br><span class="line">	var li = document.createElement(&apos;li&apos;);</span><br><span class="line">	var span = document.createElement(&apos;span&apos;);</span><br><span class="line">	var a = document.createElement(&apos;a&apos;);</span><br><span class="line">	var div = document.createElement(&apos;div&apos;);</span><br><span class="line">	div.innerText = artistname;</span><br><span class="line">	a.href = &apos;javascript:;&apos;;</span><br><span class="line">	a.src = songid;</span><br><span class="line">	var songname = songids[i].songname;</span><br><span class="line">	a.textContent = songname;</span><br><span class="line">	li.appendChild(span);</span><br><span class="line">	li.appendChild(a);</span><br><span class="line">	li.appendChild(div);</span><br><span class="line">	$(&apos;.music_player .list&apos;).append(li);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>利用js将得到的歌曲信息显示到歌曲列表中</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">	type: &apos;get&apos;,</span><br><span class="line">	url:&apos;http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&amp;songid=&apos; +this.src,</span><br><span class="line">	async: true,</span><br><span class="line">	dataType: &apos;jsonp&apos;,</span><br><span class="line">	success: function(data2) &#123;</span><br><span class="line">		var audio = document.getElementById(&apos;audio&apos;);</span><br><span class="line">		var img = document.getElementById(&apos;img&apos;);</span><br><span class="line">		audio.src = data2.bitrate.file_link;</span><br><span class="line">		img.src = data2.songinfo.pic_small;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这部分代码是对单个歌曲发送请求，得到本歌曲的相关信息。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">// 点击图片控制播放和暂停</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(1).click(function() &#123;</span><br><span class="line">		if (audio.paused) &#123;</span><br><span class="line">			audio.play();</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/pause.png&apos; &#125;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			audio.pause();</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/player.png&apos; &#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	// 点击音量变成静音并且改变图标</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(3).click(function() &#123;</span><br><span class="line">		if (audio.muted) &#123;</span><br><span class="line">			audio.muted = false;</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/sound.png&apos; &#125;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			audio.muted = true;</span><br><span class="line">			$(this).attr(&#123; src: &apos;img/sound-off.png&apos; &#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	// 点击上一歌曲</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(0).click(function() &#123;</span><br><span class="line">		$(&apos;.list .present&apos;).parent().prev(&apos;li&apos;).children(&apos;span&apos;).addClass(&apos;present&apos;);</span><br><span class="line">		$(&apos;.list .present&apos;).parent().prev(&apos;li&apos;).children(&apos;a&apos;).click();</span><br><span class="line">	&#125;);</span><br><span class="line">	// 点击下一歌曲</span><br><span class="line">	$(&apos;.icon a img&apos;).eq(2).click(function() &#123;</span><br><span class="line">		$(&apos;.list .present&apos;).parent().next(&apos;li:first&apos;).children(&apos;span&apos;).addClass(&apos;present&apos;);</span><br><span class="line">		$(&apos;.list .present&apos;).parent().next(&apos;li:first&apos;).children(&apos;a&apos;).click();</span><br><span class="line">	&#125;);</span><br><span class="line">	// 控制音量</span><br><span class="line">	$(&apos;.icon .circle span&apos;).draggable(&#123;</span><br><span class="line">		axis: &apos;X&apos;,</span><br><span class="line">		containment: &apos;parent&apos;,</span><br><span class="line">		drag: function(ev, ui) &#123;</span><br><span class="line">			// console.log(ui.position.left)</span><br><span class="line">			var noeleft = ui.position.left;</span><br><span class="line">			$(&apos;.icon .bar&apos;).css(&#123; width: noeleft + 2 &#125;);</span><br><span class="line">			audio.volume = noeleft / 40; // 利用left转化为音量。</span><br><span class="line">			if (noeleft == 0) &#123;</span><br><span class="line">				$(&apos;.icon a img&apos;).eq(3).attr(&#123; src: &apos;img/sound-off.png&apos; &#125;);</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				$(&apos;.icon a img&apos;).eq(3).attr(&#123; src: &apos;img/sound.png&apos; &#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	// 自动播放下一首</span><br><span class="line">	if (audio) &#123;</span><br><span class="line">		audio.loop = false;</span><br><span class="line">		audio.addEventListener(</span><br><span class="line">			&apos;ended&apos;,</span><br><span class="line">			function() &#123;</span><br><span class="line">				$(&apos;.icon a img&apos;).eq(2).click();</span><br><span class="line">				//在这个方法里写相应的逻辑就可以了</span><br><span class="line">			&#125;,</span><br><span class="line">			false</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这部分就是控制歌曲的播放、暂停、上一曲、下一曲等功能了。</p>
-</blockquote>
-<p>最后我自己做的效果如下<a href="http://zijef.pw/" target="_blank" rel="noopener">demo</a>（demo要用电脑端查看才会有）：<br><figure class="image-bubble">
+<p>常用<code>webpack</code>就行了，其他模板我也没用过，感兴趣的自己可以去试试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack my-project</span><br></pre></td></tr></table></figure></p>
+<p>我们输入命令后会让用户输入几个选项<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://upload-images.jianshu.io/upload_images/14214683-e52da417bd614419.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                    <img src="https://upload-images.jianshu.io/upload_images/14214683-5092542522047409.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure></p>
-<p>我这里没做进度条和歌词效果，感兴趣的可以自己加进去，进度条的做法应该跟音量控制大同小异，需要用到jquery-ui。对了，给大家推荐一个图标下载的地方，是你马云爸爸家的<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">http://www.iconfont.cn/</a>，我上面用到的图标也是在上面下载的。</p>
-<p>好了，播放器打造完成了，今天除了皮，又啥也没干。</p>
+<p><strong>注意：项目的名称这里不能大写</strong></p>
+<ul>
+<li>Project name :&ensp;&ensp;项目名称 ，如果不需要更改直接回车就可以了。注意：这里不能使用大写。</li>
+<li>Project description:&ensp;&ensp;项目描述，默认为A Vue.js project,直接回车，不用编写。</li>
+<li>Author：&ensp;&ensp;作者，如果你有配置git，他会读取.ssh文件中的user。</li>
+<li>Install vue-router?&ensp;&ensp; 是否安装vue的路由插件，Y代表安装，N无需安装，下面的命令也是一样的，稍微大一点的项目一般我们都会用到的。</li>
+<li>Use ESLint to lint your code?&ensp;&ensp; 是否用ESLint来限制你的代码错误和风格。这个可以选NO，不然，提示太多了说很烦。<br>setup unit tests with Karma + Mocha? &ensp;&ensp;是否需要安装单元测试工具Karma+Mocha。</li>
+<li>Setup e2e tests with Nightwatch?&ensp;&ensp;是否安装e2e来进行用户行为模拟测试。</li>
+<li>Should we run npm install for you after the project has been created?(recommended)npm</li>
+</ul>
+<p>&ensp;&ensp;询问你使用<code>npm</code>安装还是<code>yarn</code>安装包依赖，我这里选择的是<code>npm</code>，<code>yarn</code>更快更好，使用yarn之前确保你的电脑已经安装<code>yarn</code>。</p>
+<h4 id="三、运行项目"><a href="#三、运行项目" class="headerlink" title="三、运行项目"></a>三、运行项目</h4><p>&ensp;&ensp;&ensp;&ensp;项目搭建完成后，我们需要进入项目跟目录中初始化项目，cd进项目跟目录，输入npm i（npm init）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i</span><br></pre></td></tr></table></figure></p>
+<p>项目初始化完成后就会在跟目录中多一个<strong>node-modules</strong>文件夹，这里面放了项目中用到的依赖。<br>我们来看一下项目目录<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/14214683-376c3557c7bf6b46?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>接下来我们的操作一般都在<strong>src</strong>文件夹中，其他的文件中有一些配置，配置好了就不用去关心，我简单说下这几个重要的文件夹</p>
+<blockquote>
+<p>assets&ensp;&ensp; 这个文件夹中存放一些资源，比如我们需要的css样式文件，字体文件，JS文件一般都放在这个文件夹里面<br>component &ensp;&ensp;这个文件夹是放组件的文件夹，就是相当于是项目中的每个小项目的文件放的是.vue文件<br>router &ensp;&ensp;是存放路由文件夹，里面有个.js文件，用来配置路由，<br>App.vue&ensp;&ensp;相当于是我们的整个项目的一个汇总文件。<br>main.js &ensp;&ensp;页面的入口文件，所有用到的文件都需要在这里面导入，最终渲染到页面。<br>另外还有两个配置文件<strong>build</strong>文件下的<strong>webpack.base.conf.js</strong>和package.json，这两个进行项目的一些其他配置，</p>
+</blockquote>
+<p>运行下面命令（工具安装完成后，其他命令都是在项目的跟目录下运行的）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>
+<p>这样我们的项目就可以跑起来<br>在浏览输入<code>http://localhost:8080</code>就可以看到默认的项目了，<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://upload-images.jianshu.io/upload_images/14214683-8023729b013f2aaa?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>项目搭建就说到这里了，接下来我说一下我在搭建和运行中的一些问题，</p>
+<h4 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h4><h5 id="1、关于mint-ui"><a href="#1、关于mint-ui" class="headerlink" title="1、关于mint-ui"></a>1、关于mint-ui</h5><p>&ensp;&ensp;&ensp;&ensp;我在项目开发中用到<a href="http://mint-ui.github.io/" target="_blank" rel="noopener">mint-ui</a>组件和<a href="http://dev.dcloud.net.cn/mui/" target="_blank" rel="noopener">mui</a>库，mint-ui是需要安装依赖的，大家可以去官网看看API文档，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm  install mint-ui --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>依赖安装完成后，如果要样式生效的话，还需要导入样式文件，但是。我们为了避免导入样式文件的话我们还需要安装<code>babel-plugin-component</code> 插件，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install babel-plugin-component -D</span><br></pre></td></tr></table></figure></p>
+<p>安装完<code>babel-plugin-component</code> 插件后，还需要在<code>.babelrc</code>文件中进行配置，即是在<code>plugins</code>属性后面添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[&quot;component&quot;, [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;libraryName&quot;: &quot;mint-ui&quot;,</span><br><span class="line">      &quot;style&quot;: true</span><br><span class="line">    &#125;</span><br><span class="line">  ]]</span><br></pre></td></tr></table></figure></p>
+<p>这样ming-ui样式才能生效</p>
+<h5 id="2、关于mui"><a href="#2、关于mui" class="headerlink" title="2、关于mui"></a>2、关于mui</h5><p>&ensp;&ensp;&ensp;&ensp;在使用<code>mui</code>过程中，<code>mui</code>就想是<code>bootstrap</code>一样，需要引入样式文件，<strong>这里需要注意的，样式文件不只是css文件，还需要一些字体文件，但是字体文件并不需要导入到项目，我大胆猜测，应该是css文件中引入了字体文件，用的路径是基于css文件的，所以我们在使用<code>mui</code>时一定要将css文件和fonts文件一并放入到项目中</strong>。</p>
+<h5 id="3、关于css样式"><a href="#3、关于css样式" class="headerlink" title="3、关于css样式"></a>3、关于css样式</h5><p>&ensp;&ensp;&ensp;&ensp;在导入公共样式的时候，如果用的是scss的话是需要安装依赖的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i scss-loader -D</span><br></pre></td></tr></table></figure></p>
+<p>安装完成后，打开<strong>webpack.config.js</strong> 配置这个文件，在<strong>module</strong>节点里面的<strong>rules</strong>属性，这个属性是个数组，存放所有第三方的匹配和处理规则。</p>
+<p>这是我们在项目中遇到的一些问题，希望对大家有所帮助，这么一总结感觉没什么太大问题了， 我们在网上看到了一张<strong>vue-cli</strong>的图总结得很不错，我加了一些东西在上面。综上所述全凭个人理解总结，若表述有误，还望各位及时告知，以免混淆。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://upload-images.jianshu.io/upload_images/14214683-bd9af429917d5732.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
 
         </div>
 
@@ -518,12 +549,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-10-18T10:29:46.869Z" itemprop="dateUpdated">2018-10-18 18:29:46</time>
+    最后更新时间：<time datetime="2018-11-18T12:13:20.029Z" itemprop="dateUpdated">2018-11-18 20:13:20</time>
 </span><br>
 
 
         
-        感谢您的阅读，本文由 Guido van zijef 版权所有。如若转载，请注明出处：<a href="/2018/10/16/打造自己的音乐播放器（二）/" target="_blank" rel="external">https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/</a>
+        感谢您的阅读，本文由 Guido van zijef 版权所有。如若转载，请注明出处：<a href="/2018/11/18/基于vue-cli搭建vue项目开发环境/" target="_blank" rel="external">https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/</a>
         
     </div>
     
@@ -544,7 +575,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/audio/">audio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-cli/">vue-cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
 
 
             
@@ -554,7 +585,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/&title=《基于vue-cli搭建vue项目开发环境》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -564,22 +595,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/&title=《基于vue-cli搭建vue项目开发环境》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《打造自己的音乐播放器（二）》 — Guido van zijef&url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&via=https://guidozijef.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《基于vue-cli搭建vue项目开发环境》 — Guido van zijef&url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/&via=https://guidozijef.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -599,21 +630,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/11/18/基于vue-cli搭建vue项目开发环境/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">基于vue-cli搭建vue项目开发环境</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/10/16/打造自己的音乐播放器（一）/" id="post-next" class="post-nav-link">
+      <a href="/2018/10/16/打造自己的音乐播放器（二）/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">打造自己的音乐播放器（一）</h4>
+        <h4 class="title">打造自己的音乐播放器（二）</h4>
       </a>
     </div>
   
@@ -638,7 +662,7 @@
     <script src="https://billts.site/js/gitment.js"></script>
     <script>
         var gitment = new Gitment({
-            id: 'Tue Oct 16 2018 22:37:07 GMT+0800',
+            id: 'Sun Nov 18 2018 20:10:14 GMT+0800',
             owner: 'Guidozijef',
             repo: 'Guidozijef.github.io',
             oauth: {
@@ -991,7 +1015,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/&title=《基于vue-cli搭建vue项目开发环境》 — Guido van zijef&pic=https://guidozijef.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -1001,22 +1025,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&title=《打造自己的音乐播放器（二）》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/&title=《基于vue-cli搭建vue项目开发环境》 — Guido van zijef&source=专注于互联网发展和人工智能的未来" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《打造自己的音乐播放器（二）》 — Guido van zijef&url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/&via=https://guidozijef.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《基于vue-cli搭建vue项目开发环境》 — Guido van zijef&url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/&via=https://guidozijef.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1027,7 +1051,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://guidozijef.github.io/2018/11/18/基于vue-cli搭建vue项目开发环境/" alt="微信分享二维码">
 </div>
 
 
