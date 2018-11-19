@@ -8,6 +8,15 @@
     #main {
         padding: 0px!important;
     }
+    #particles{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    #intro{
+        position: absolute;
+        top: 0;
+    }
 </style>
 <html>
 <head>
@@ -61,9 +70,10 @@
 
 <body>
     <div id="particles">
-        <div id="loading" class="active"></div>
+        <div id="intro">
+            <div id="loading" class="active"></div>
 
-        <aside id="menu" class="hide"  >
+            <aside id="menu" class="hide"  >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -136,8 +146,8 @@
   </div>
 </aside>
 
-        <main id="main">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <main id="main">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="http://zijef.pw/js/jquery-3.3.1.min.js"></script>
 <!-- <script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script> -->
 <script type="text/javascript">
@@ -618,7 +628,7 @@
 
 </div>
 
-            <style type="text/css">
+                <style type="text/css">
     .page__footer {
         margin: 0;
         padding: 0;
@@ -909,8 +919,8 @@
 
 </footer>
 
-        </main>
-        <div class="mask" id="mask"></div>
+            </main>
+            <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
@@ -960,7 +970,7 @@
 
 
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
@@ -1017,6 +1027,7 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 
+        </div>
     </div>
 </body>
 </html>
