@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <script type="text/javascript" src="F:\IT\hexo\themes\indigo\source\js\set_root.js"></script> -->
+<script src="/js/jquery.particleground.js" type="text/javascript"></script>
+<script src="/js/demo.js" type="text/javascript"></script>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <style type="text/css">
     #main {
         padding: 0px!important;
@@ -32,9 +35,9 @@
     <meta name="theme-color" content="#673AB7">
     
     
-    <meta name="keywords" content="前端,audio,javascript,css,html">
+    <meta name="keywords" content="css,html,前端,audio,javascript">
     <meta name="description" content="前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;上一篇讲到了&amp;lt;audio&amp;gt;标签的一些属性和事件，下面我们就看看如何利用这些属性来实现我们自己的播放器，这里需要对前端知识有一定了解。   打造自己的音乐播放器（二）  一、播放器界面的实现&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这里就利用html、css写一个前端的音乐播放界面就好了，这个没什么好说的，每个人都可以写自己喜欢的">
-<meta name="keywords" content="前端,audio,javascript,css,html">
+<meta name="keywords" content="css,html,前端,audio,javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="打造自己的音乐播放器（二）">
 <meta property="og:url" content="https://guidozijef.github.io/2018/10/16/打造自己的音乐播放器（二）/index.html">
@@ -60,9 +63,10 @@
 </head>
 
 <body>
-    <div id="loading" class="active"></div>
+    <div id="particles">
+        <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" class="hide" >
+        <aside id="menu" class="hide" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -135,8 +139,8 @@
   </div>
 </aside>
 
-    <main id="main">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <main id="main">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="http://zijef.pw/js/jquery-3.3.1.min.js"></script>
 <!-- <script src="http://o7m41tvmg.bkt.clouddn.com/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script> -->
 <script type="text/javascript">
@@ -691,7 +695,7 @@
 
 </div>
 
-        <style type="text/css">
+            <style type="text/css">
     .page__footer {
         margin: 0;
         padding: 0;
@@ -982,8 +986,8 @@
 
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
+        </main>
+        <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
@@ -1033,7 +1037,7 @@
 
 
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.4/waves.min.js"></script>
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
@@ -1090,5 +1094,6 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 
+    </div>
 </body>
 </html>
