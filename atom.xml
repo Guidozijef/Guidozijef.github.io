@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://guidozijef.github.io/"/>
-  <updated>2018-11-18T12:13:20.029Z</updated>
+  <updated>2018-12-13T08:06:01.661Z</updated>
   <id>https://guidozijef.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue项目——Vue Router路由的使用</title>
+    <link href="https://guidozijef.github.io/2018/12/13/vue%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94Vue%20Router%E8%B7%AF%E7%94%B1%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>https://guidozijef.github.io/2018/12/13/vue项目——Vue Router路由的使用/</id>
+    <published>2018-12-13T07:55:50.417Z</published>
+    <updated>2018-12-13T08:06:01.661Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h6><p>&ensp;&ensp;&ensp;&ensp;学习vue也有一段时间了，这里把学习整个vue项目中的一些知识点和问题，整理下方便自己记录，也希望给大家带来方便。我会连续写几篇系统的文章，讲解一个完整的vue项目中用到的各个使用模块。今天先来学习路由的的使用。</p><hr><h4 id="一、Vue-Router"><a href="#一、Vue-Router" class="headerlink" title="一、Vue Router"></a>一、Vue Router</h4><p>&ensp;&ensp;&ensp;&ensp;<a href="https://router.vuejs.org/zh/" target="_blank" rel="noopener">Vue Router</a> 是 <a href="http://cn.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> 官方的路由管理器。它和 <code>Vue.js</code> 的核心深度集成，让构建单页面应用变得易如反掌。我简单理解就是我们在有的页面中看到我们点击一个链接他并不是整个页面全部渲染，而是局部页面的一个重新渲染（比如：有的页面跳转的时候可以看到他的<code>title</code>每个页面都是固定的，并不会改变，这一部分是没有重新渲染的），而且上面的链接也会发生相应的变化，整个就是使用路由的结果，可以大大减少我们的资源请求和页面的渲染。这就是路由的作用了，路由一般跟vue 的组件配合使用，大家可以理解为就是<code>a链接</code>的跳转，我们只是指定跳转到我们想要的另一个页面上。</p><h4 id="二、安装Vue-Router"><a href="#二、安装Vue-Router" class="headerlink" title="二、安装Vue Router"></a>二、安装Vue Router</h4><p>&ensp;&ensp;&ensp;&ensp;如果你的项目是用<code>vue-cli</code>搭建的话(至于vue-cli脚手架工具如何安装和搭建，大家可以看我前一篇文章)，在建立项目的时候回让你选择是否安装<code>Vue Router</code>，如果你安装了，就不需要在安装了，如果你的项目是直接搭建的话，那么就需要安装了，直接在项目根目录中输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-router</span><br></pre></td></tr></table></figure></p><p>如果你安装了cnpm的话，直接输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vue-router</span><br></pre></td></tr></table></figure></p><p>这里推荐使用cnpm，速度会快很多。<br>运行完成后我们就安装完成了，因为我是用vue-cli搭建的项目，所有这里就以vue-cli环境为主了，如果大家自己搭建的话也差不多（在学习vue中，推荐大家使用vue-cli脚手架工具搭建项目，毕竟跟vue配套的，在IT届东西太多，要学会站在巨人的肩膀上），我们安装完成后还需要在我们的项目的<code>main.js</code>中添加上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 1.1导入路由的包</span><br><span class="line">import VueRouter from &apos;vue-router&apos;;</span><br><span class="line">// 1.2安装路由</span><br><span class="line">Vue.use(VueRouter);</span><br><span class="line">// 1.3 导入自己的 router.js 模块</span><br><span class="line">import router from &apos;./router/router.js&apos;;</span><br></pre></td></tr></table></figure></p><blockquote><p>注意：1.3中的名字vue-cli生成的叫index.js，我不喜欢这个名字，自己改成了router.js，还有大家的路径可能也不一样，vue-cli生成的模块在Router文件夹下的index.js。</p></blockquote><p>到此我们就安装完成了，并且可以正常使用了。</p><h4 id="三、Vue-Router的使用"><a href="#三、Vue-Router的使用" class="headerlink" title="三、Vue Router的使用"></a>三、Vue Router的使用</h4><p>&ensp;&ensp;&ensp;&ensp;我们安装好了，如何使用呢？刚才说<code>router</code>就像是<code>a</code>标签一样的页面跳转， 在roter中我们用专门的标签<code>&lt;router-link&gt;&lt;/router-link&gt;</code>，<code>a</code>标签要定义<code>herf=&quot;&quot;</code>跳转地址，这里我们用<code>to=&quot;/home&quot;</code>来定义跳转的页面，这里<code>/home</code>是一个路由地址，就相当于点击了就会去这个链接。</p><blockquote><p>那么这个<code>/home</code>路由链接里面显示的什么东西呢？</p></blockquote><p>&ensp;&ensp;&ensp;&ensp;这就需要我们提前先定义一个组件了即是一个<strong>vue</strong>文件，这个vue文件包含了<strong>template</strong>、<strong>style</strong>、<strong>script</strong>，在这个vue文件里面我们就可以写我们需要显示的一套页面了。向这种类似的组件会有有很多，我们一般是放在components文件夹下面的。<br>&ensp;&ensp;&ensp;&ensp;然后我们在前面生成的<strong>router.js</strong>中去写上对应的匹配规则，导入这个组件就可以了。<br><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="https://upload-images.jianshu.io/upload_images/14214683-aae653c79d7ce4be.gif?imageMogr2/auto-orient/strip" alt="" title="">                </div>                <div class="image-caption"></div>            </figure></p><p>我上面写的就是导入的组件，下面就是每个组件的匹配规则。</p><blockquote><p>总的来说分为两步：</p><ul><li>一是将一个标签为改造<code>&lt;router-link&gt;&lt;/router-link&gt;</code>为他指定<code>to=&quot;&quot;</code>属性，链接地址。</li><li>二是在router.js中定义匹配规则和导入组件。</li></ul></blockquote><p>这种跳转方式大家会发现一个问题，就是我们页面的网页源代码中会出现<code>&lt;router-link&gt;&lt;/router-link&gt;</code>标签，我们想他变成我们想要的标签怎么办呢？这里我们可以给这个标签加一个<code>tag=&quot;&quot;</code>属性，自动渲染成我们指定的标签名称。这里还有一个办法就是我们的编程式导航。</p><h4 id="四、编程式导航"><a href="#四、编程式导航" class="headerlink" title="四、编程式导航"></a>四、编程式导航</h4><p>&ensp;&ensp;&ensp;&ensp;编程式导航是页面的另一种跳转方式，我们在需要点击跳转的标签中用<code>@click=&quot;goDetail()&quot;</code>定义一个点击方法，然后在<strong>methods</strong>中定义方法的具体实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    methods: &#123;</span><br><span class="line">        goDetail()&#123;// 使用编程式导航</span><br><span class="line">            this.$router.push(&apos;/home/goodsinfo/&apos;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>或者改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">goDetail()&#123;// 使用编程式导航</span><br><span class="line">            this.$router.push(&#123; name: &quot;goodsdesc&quot;&#125;)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p><blockquote><p>后面这个需要在定义匹配规则的时候增加一个<strong>name</strong>属性值就可。</p></blockquote><p>然后我们同样的需要在router.js中去定义匹配规则和导入对应的组件。这样我们就把标签改造成了编程式导航了。</p><h4 id="五、路由传参"><a href="#五、路由传参" class="headerlink" title="五、路由传参"></a>五、路由传参</h4><p>&ensp;&ensp;&ensp;&ensp;有的时候我们需要利用路由进行传递参数，以区分当前是那一个数据，这个参数一般都是唯一的标记，我们需要在定义<code>@click=&quot;goDetail(id)&quot;</code>点击方法的时候拼接一个<strong>id</strong>值，然后路由链接也相应的变为<code>this.$router.push(&#39;/home/goodsinfo/:id&#39;)</code>，后面这种写法加一个params属性<code>this.$router.push({ name: &quot;goodsdesc&quot;, params: {id}})</code>，我们在路由匹配的时候也需要变成<code>&#39;/home/goodsinfo/:id&#39;</code>这种链接，到时候点击链接，<strong>id</strong>就会替换为传入的值。<br>&ensp;&ensp;&ensp;&ensp;好了，<strong>Vue Router</strong>路由的使用就说到这里了，大家也可以去看<a href="https://router.vuejs.org/zh/" target="_blank" rel="noopener">Vue Router</a> 的API文档（你尽管去看，能看懂算我输），下一节我们来讲一下<strong>vue</strong>中的组件的使用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h6 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h6&gt;&lt;p&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;学习vue也有一段时间了，这里把学习整个vue项目中的一些知识点和问题，整理下方便自
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://guidozijef.github.io/tags/vue/"/>
+    
+      <category term="Vue Router" scheme="https://guidozijef.github.io/tags/Vue-Router/"/>
+    
+  </entry>
   
   <entry>
     <title>基于vue-cli搭建vue项目开发环境</title>
