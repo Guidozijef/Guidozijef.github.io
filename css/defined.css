@@ -11,6 +11,9 @@
 		font-size: 24px;
 		line-height: 30px;
 	}
+	.center-box {
+		width: 100%;
+	}
 
 	.content-header .subtitle {
 		font-size: 14px;
@@ -98,7 +101,7 @@
 		display: none;
 	}
 	.flex-row a:nth-child(1) {
-		width: 100%;
+		width: 71px;
 	}
 	.flex-row #menuShare {
 		margin-left: 272px;
@@ -114,12 +117,10 @@
 }
 @media screen and (max-width: 400px) {
 	.content-header .title {
-		font-size: 6px;
-		line-height: 30px;
+		font-size: 18px;
 	}
 	.content-header .title {
 		font-size: 6px;
-		line-height: 30px;
 		padding: none;
 	}
 	.jingshan {
