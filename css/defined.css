@@ -16,7 +16,9 @@
 		font-size: 14px;
 		line-height: 20px;
 	}
-
+	.center-box .container {
+		width: 100%;
+	}
 	.post-header .title {
 		display: block;
 		font-size: 24px;
@@ -96,7 +98,7 @@
 		display: none;
 	}
 	.flex-row a:nth-child(1) {
-		width: 71px;
+		width: 100%;
 	}
 	.flex-row #menuShare {
 		margin-left: 272px;
@@ -107,6 +109,23 @@
 	.page__footer,
 	.page__footer .footer__top,
 	.page__footer .footer__top .page__container {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.content-header .title {
+		font-size: 6px;
+		line-height: 30px;
+	}
+	.content-header .title {
+		font-size: 6px;
+		line-height: 30px;
+		padding: none;
+	}
+	.jingshan {
+		display: none;
+	}
+	.center-box .container {
 		width: 100%;
 	}
 }
