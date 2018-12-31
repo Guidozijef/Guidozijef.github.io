@@ -1,7 +1,7 @@
 $(function() {
 	$.ajax({
 		type: 'get',
-		url: 'open.iciba.com/dsapi/',
+		url: 'http://open.iciba.com/dsapi/',
 		async: true,
 		dataType: 'jsonp',
 		jsonpCallback: 'info',
