@@ -7,8 +7,8 @@ $(function() {
 		jsonpCallback: 'info',
 		success: function info(response) {
 			// console.log(response);
-			document.getElementById('jingshan-img').src = response.picture2;
-			// $('.jingshan .jingshan-img img').attr({ src: response.picture2 });
+			// document.getElementById('jingshan-img').src = response.picture2; // 原生js
+			$('.jingshan .jingshan-img img').attr({ src: response.picture2 }); // jquery
 			$('.jingshan-content p').html(response.content);
 			$('.jingshan-content span').html(response.note);
 		}
