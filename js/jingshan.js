@@ -6,7 +6,7 @@ $(function() {
 		dataType: 'jsonp',
 		jsonpCallback: 'info',
 		success: function info(response) {
-			console(response);
+			console.log(response);
 			// $('.jingshan .jingshan-img img').src = response.picture2;
 			$('.jingshan .jingshan-img img').attr({ src: response.picture2 });
 			$('.jingshan-content p').html(response.content);
