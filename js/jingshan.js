@@ -7,7 +7,7 @@ $(function() {
 		jsonpCallback: 'info',
 		success: function info(response) {
 			// console.log(response);
-			$('.jingshan .jingshan-img img').src = response.picture2;
+			document.getElementById('jingshan-img').src = response.picture2;
 			// $('.jingshan .jingshan-img img').attr({ src: response.picture2 });
 			$('.jingshan-content p').html(response.content);
 			$('.jingshan-content span').html(response.note);
