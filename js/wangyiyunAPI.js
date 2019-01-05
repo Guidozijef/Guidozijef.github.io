@@ -54,7 +54,7 @@ $(function() {
 								var audio = document.getElementById('audio');
 								audio.src = data_url.url;
 								audio.play();
-								$('.icon a img').eq(1).attr({ src: 'img/pause.png' });
+								$('.icon a img').eq(1).attr({ src: '/img/music_img/pause.png' });
 							}
 						});
 						// 获取图片发的请求
@@ -74,7 +74,7 @@ $(function() {
 								var img = document.getElementById('img');
 								img.src = data_img.url;
 								audio.play();
-								$('.icon a img').eq(1).attr({ src: 'img/pause.png' });
+								$('.icon a img').eq(1).attr({ src: '/img/music_img/pause.png' });
 							}
 						});
 
@@ -101,10 +101,10 @@ $(function() {
 	function imgplayer() {
 		if (audio.paused) {
 			audio.play();
-			$('.icon a img').eq(1).attr({ src: 'img/pause.png' });
+			$('.icon a img').eq(1).attr({ src: '/img/music_img/pause.png' });
 		} else {
 			audio.pause();
-			$('.icon a img').eq(1).attr({ src: 'img/player.png' });
+			$('.icon a img').eq(1).attr({ src: '/img/music_img/player.png' });
 		}
 	}
 	// 封装一个每个歌曲信息的函数，传入参数就可。
@@ -226,20 +226,20 @@ $(function() {
 	$('.icon a img').eq(1).click(function() {
 		if (audio.paused) {
 			audio.play();
-			$(this).attr({ src: 'img/pause.png' });
+			$(this).attr({ src: '/img/music_img/pause.png' });
 		} else {
 			audio.pause();
-			$(this).attr({ src: 'img/player.png' });
+			$(this).attr({ src: '/img/music_img/player.png' });
 		}
 	});
 	// 点击音量变成静音并且改变图标
 	$('.icon a img').eq(3).click(function() {
 		if (audio.muted) {
 			audio.muted = false;
-			$(this).attr({ src: 'img/sound.png' });
+			$(this).attr({ src: '/img/music_img/sound.png' });
 		} else {
 			audio.muted = true;
-			$(this).attr({ src: 'img/sound-off.png' });
+			$(this).attr({ src: '/img/music_img/sound-off.png' });
 		}
 	});
 	// 点击上一歌曲
@@ -262,9 +262,9 @@ $(function() {
 			$('.icon .bar').css({ width: noeleft + 2 });
 			audio.volume = noeleft / 36; // 利用left转化为音量。
 			if (noeleft == 0) {
-				$('.icon a img').eq(3).attr({ src: 'img/sound-off.png' });
+				$('.icon a img').eq(3).attr({ src: '/img/music_img/sound-off.png' });
 			} else {
-				$('.icon a img').eq(3).attr({ src: 'img/sound.png' });
+				$('.icon a img').eq(3).attr({ src: '/img/music_img/sound.png' });
 			}
 		}
 	});
@@ -281,7 +281,6 @@ $(function() {
 			false
 		);
 	}
-
 	// 手机端音乐播放器的隐藏和显示操作
 	$('.music_player .gt').click(function() {
 		var gt = $('.music_player .gt').html();
