@@ -4,7 +4,7 @@ $(function() {
 		var value = $('#info').val();
 		$.ajax({
 			type: 'post',
-			url: 'http://www.gequdaquan.net/gqss/api.php?callback=jQuery111305528945978577899_1546681698136',
+			url: 'http://www.gequdaquan.net/gqss/api.php?',
 			data: {
 				types: 'search',
 				count: '20',
@@ -40,8 +40,7 @@ $(function() {
 						// 获取播放链接地址发的请求
 						$.ajax({
 							type: 'post',
-							url:
-								'http://www.gequdaquan.net/gqss/api.php?callback=jQuery111305528945978577899_1546681698136',
+							url: 'http://www.gequdaquan.net/gqss/api.php?',
 							async: true,
 							data: {
 								types: 'url',
@@ -60,8 +59,7 @@ $(function() {
 						// 获取图片发的请求
 						$.ajax({
 							type: 'post',
-							url:
-								'http://www.gequdaquan.net/gqss/api.php?callback=jQuery111305528945978577899_1546681698136',
+							url: 'http://www.gequdaquan.net/gqss/api.php?',
 							async: true,
 							data: {
 								types: 'pic',
@@ -73,8 +71,6 @@ $(function() {
 								// console.log(data_img);
 								var img = document.getElementById('img');
 								img.src = data_img.url;
-								audio.play();
-								$('.icon a img').eq(1).attr({ src: '/img/music_img/pause.png' });
 							}
 						});
 

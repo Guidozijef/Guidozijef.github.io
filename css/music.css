@@ -72,12 +72,12 @@
 .music_player #info {
 	width: 150px;
 	height: 30px;
-	padding: 0px;
+	padding: 0px 0px 0px 5px;
 	margin: 0px;
 	border: 0px;
 	position: relative;
 	top: -15px;
-	left: -4px;
+	left: -3px;
 }
 .music_player #btn {
 	height: 30px;
