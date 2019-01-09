@@ -14,8 +14,17 @@ $(function() {
 		}
 	});
 	$('.jingshan-content p img').click(function() {
-		$('.jingshan .voice').attr({ src: response.tts });
-		// console.log('成功');
-		audio.play();
+		$.ajax({
+			type: 'get',
+			url: 'http://open.iciba.com/dsapi/',
+			async: true,
+			dataType: 'jsonp',
+			jsonpCallback: 'info',
+			success: function info(response) {
+				// console.log('成功');
+				$('.jingshan .voice').attr({ src: response.tts });
+				audio.play();
+			}
+		});
 	});
 });
