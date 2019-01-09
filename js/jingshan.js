@@ -9,9 +9,10 @@ $(function() {
 			// console.log(response);
 			// document.getElementById('jingshan-img').src = response.picture2; // 原生js
 			$('.jingshan .jingshan-img img').attr({ src: response.picture2 }); // jquery
-			$('.jingshan-content p').html(response.content);
-			$('.jingshan-content p img').click(function(e) {
+			$('.jingshan-content p').html(response.content + '<img src="/img/music_img/sound.png">');
+			$('.jingshan p img').click(function(e) {
 				$('.jingshan .voice').attr({ src: response.tts });
+				console.log('成功');
 			});
 			$('.jingshan-content span').html(response.note);
 		}
