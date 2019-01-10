@@ -9,7 +9,9 @@ $(function() {
 			// console.log(response);
 			// document.getElementById('jingshan-img').src = response.picture2; // 原生js
 			$('.jingshan .jingshan-img img').attr({ src: response.picture2 }); // jquery
-			$('.jingshan-content p').html(response.content + '<img src="/img/music_img/sound.png">');
+			$('.jingshan-content p').html(
+				response.content + '<a herf="javascript:;"><img src="/img/music_img/sound.png"></a>'
+			);
 			$('.jingshan-content span').html(response.note);
 		}
 	});
@@ -21,7 +23,7 @@ $(function() {
 			dataType: 'jsonp',
 			jsonpCallback: 'info',
 			success: function info(response) {
-				// console.log('成功');
+				console.log('成功');
 				$('.jingshan .voice').attr({ src: response.tts });
 				audio.play();
 			}
