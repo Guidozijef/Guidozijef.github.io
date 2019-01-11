@@ -17,7 +17,8 @@ $(function() {
 		}
 	});
 	$('.jingshan-content p img').click(function() {
-		$('.jingshan .voice').play();
-		console.log('chengg ');
+		var voice = document.getElementById('voice');
+		voice.play(); // 用jquery没有play()这个写法，所以用原生JS
+		// console.log('成功');
 	});
 });
