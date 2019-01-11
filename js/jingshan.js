@@ -18,5 +18,6 @@ $(function() {
 	});
 	$('.jingshan-content p img').click(function() {
 		$('.jingshan .voice').play();
+		console.log('chengg ');
 	});
 });
