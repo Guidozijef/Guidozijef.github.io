@@ -13,12 +13,12 @@ $(function() {
 				response.content + '<a herf="javascript:;"><img src="/img/music_img/sound.png"></a>'
 			);
 			$('.jingshan-content span').html(response.note);
-			$('.jingshan #voice').attr({ src: response.tts });
+			var voice = document.getElementById('voice');
+			voice.src = response.tts;
+			$('.jingshan-content p img').click(function() {
+				voice.play(); // 用jquery没有play()这个写法，所以用原生JS
+				// console.log('成功');
+			});
 		}
-	});
-	var voice = document.getElementById('voice');
-	$('.jingshan-content p img').click(function() {
-		voice.play(); // 用jquery没有play()这个写法，所以用原生JS
-		// console.log('成功');
 	});
 });
