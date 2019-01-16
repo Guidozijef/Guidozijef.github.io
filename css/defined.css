@@ -78,6 +78,9 @@
 	.translate #txt {
 		display: none;
 	}
+	.translate #btn {
+		display: none;
+	}
 	.page__container {
 		width: 100%;
 		margin: 0px;
