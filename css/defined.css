@@ -61,7 +61,7 @@
 		z-index: 2;
 		background-color: #e0dee8;
 		position: fixed;
-		left: -265px;
+		left: -275px;
 		height: 300px;
 	}
 	.music_player .header {
@@ -74,6 +74,9 @@
 	.music_player .gt {
 		position: absolute;
 		display: block;
+	}
+	.translate #txt {
+		display: none;
 	}
 	.page__container {
 		width: 100%;
@@ -118,9 +121,6 @@
 @media screen and (max-width: 400px) {
 	.content-header .title {
 		font-size: 18px;
-	}
-	.content-header .title {
-		font-size: 6px;
 		padding: none;
 	}
 	.jingshan {

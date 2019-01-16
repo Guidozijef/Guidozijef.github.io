@@ -282,10 +282,10 @@ $(function() {
 		var gt = $('.music_player .gt').html();
 		if (gt == '&gt;') {
 			$('.music_player .gt').html('&lt;');
-			$('.music_player').animate({ left: -5 });
+			$('.music_player').animate({ left: -15 });
 		} else {
 			$('.music_player .gt').html('&gt;');
-			$('.music_player').animate({ left: -265 });
+			$('.music_player').animate({ left: -275 });
 		}
 	});
 });
